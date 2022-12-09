@@ -29,14 +29,24 @@ public class PlayerController : MonoBehaviour
     private void movimiento()
     {
         float axisVertical = Input.GetAxisRaw("Vertical");
-
-        Debug.Log(camara.transform.forward.z);
+        float axisHorizontal = Input.GetAxisRaw("Vertical");
         
-        movement = new Vector3(0, 0,axisVertical * camara.transform.forward.z);
+        movement = new Vector3(axisHorizontal, 0,axisVertical) * speed * Time.deltaTime;
+        transform.Translate(movement, Space.Self);
 
-        if (axisVertical > 0)
+        if (axisVertical != 0)
         {
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                speed = 4;
+            }
+            else
+            {
+                speed = 2;
+            }
+            
             animator.SetBool("run", true);
+            animator.SetFloat("velocity", speed);
         }
         else
         {
