@@ -7,17 +7,18 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody rigidbody;
     private Vector3 movement;
-    public float speed;
+
+    public float minSpeed = 1;
+    public float maxSpeed = 1;
+    
+    private float speed = 1;
 
     private Animator animator;
-
-    private GameObject camara;
     
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
-        camara = GameObject.Find("Camara");
     }
 
     
@@ -29,34 +30,30 @@ public class PlayerController : MonoBehaviour
     private void movimiento()
     {
         float axisVertical = Input.GetAxisRaw("Vertical");
-        float axisHorizontal = Input.GetAxisRaw("Vertical");
-        
-        movement = new Vector3(axisHorizontal, 0,axisVertical) * speed * Time.deltaTime;
-        transform.Translate(movement, Space.Self);
+        float axisHorizontal = Input.GetAxisRaw("Horizontal");
 
-        if (axisVertical != 0)
+        Debug.Log(axisVertical);
+        
+        if (axisVertical != 0 || axisHorizontal != 0)
         {
             if (Input.GetKey(KeyCode.LeftShift))
             {
-                speed = 4;
+                speed = 1.5f;
             }
             else
             {
-                speed = 2;
+                speed = 1;
             }
             
             animator.SetBool("run", true);
-            animator.SetFloat("velocity", speed);
+            animator.SetFloat("velocidad", speed);
         }
         else
         {
             animator.SetBool("run", false);
         }
-    }
-
-    private void FixedUpdate()
-    {
-        float verticalVelocity = movement.normalized.z * speed;
-        rigidbody.velocity = new Vector3(rigidbody.velocity.x, rigidbody.velocity.y, verticalVelocity);
+        
+        movement = new Vector3(axisHorizontal, 0,axisVertical) * speed * Time.deltaTime;
+        transform.Translate(movement, Space.Self);
     }
 }

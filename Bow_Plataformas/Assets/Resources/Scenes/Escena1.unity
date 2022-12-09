@@ -453,6 +453,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7f23e2f6f535754e94fbe7dee4573e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minSpeed: 0
+  maxSpeed: 0
   speed: 2
 --- !u!1001 &2391104021479584104
 PrefabInstance:
@@ -515,7 +517,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5901031007660038367, guid: 3f73d67bfa39a554a944f73b8e94cf8a, type: 3}
       propertyPath: speed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5901031007660038367, guid: 3f73d67bfa39a554a944f73b8e94cf8a, type: 3}
+      propertyPath: maxSpeed
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5901031007660038367, guid: 3f73d67bfa39a554a944f73b8e94cf8a, type: 3}
+      propertyPath: minSpeed
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f73d67bfa39a554a944f73b8e94cf8a, type: 3}
