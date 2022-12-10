@@ -27,7 +27,7 @@ public class PlayerCamara : MonoBehaviour
     {
         mouseX += Input.GetAxis("Mouse X") * lookSensitivity;
         mouseY += Input.GetAxis("Mouse Y") * lookSensitivity;
-        mouseY = Mathf.Clamp(mouseY, -35, 60);
+        mouseY = Mathf.Clamp(mouseY, -20, 10);
         
         transform.LookAt(target);
         
