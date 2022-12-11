@@ -18,18 +18,16 @@ public class PlayerController : MonoBehaviour
     public bool hachaLanzada = false;
 
     private GameObject hacha;
-    private GameObject padreHacha;
+    private GameObject padreHachaMano;
+    public GameObject padreHachaCintura;
+    
 
     private GameObject camara;
     private GameObject mirilla;
 
-    private Vector3 rotacionInicialHacha;
-    private Vector3 posicionInicialHacha;
-
-    private Transform transformInicialhacha;
-
     private bool recogiendoHacha = false;
     private bool puedeRecoger = false;
+    private bool hachaEquipada = true;
 
     public int interpolationFramesCount = 60;
 
@@ -38,15 +36,10 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         camaraAnimator = transform.Find("Camera").GetComponent<Animator>();
         hacha = GameObject.Find("Hacha");
-        padreHacha = hacha.transform.parent.gameObject;
+        padreHachaMano = hacha.transform.parent.gameObject;
         camara = transform.Find("Camera").gameObject;
         mirilla = GameObject.Find("Mirilla");
         mirilla.SetActive(false);
-
-        transformInicialhacha = hacha.transform;
-        
-        rotacionInicialHacha = new Vector3(-29.175f, 90, 0);
-        posicionInicialHacha = new Vector3(0.108f, 0.09f, -0.005f);
     }
 
     
@@ -58,6 +51,8 @@ public class PlayerController : MonoBehaviour
         }
 
         lanzarHacha();
+        
+        guardarHacha();
     }
 
     private void movimiento()
@@ -92,7 +87,7 @@ public class PlayerController : MonoBehaviour
 
             if (axisVertical > 0)
             {
-                if (Input.GetKey(KeyCode.LeftShift))
+                if (Input.GetButton("Sprint"))
                 {
                     speed = 1.5f;
                 }
@@ -112,42 +107,70 @@ public class PlayerController : MonoBehaviour
 
     private void lanzarHacha()
     {
-        if (!recogiendoHacha)
+        if (hachaEquipada)
         {
-            if (!hachaLanzada)
+            if (!recogiendoHacha)
             {
-                if (Input.GetButton("Fire2"))
+                if (!hachaLanzada)
                 {
-                    mirilla.SetActive(true);
-                    mov = false;
-                    animator.SetBool("run", false);
-                    animator.SetBool("pointing", true);
-                    camaraAnimator.SetBool("acercar", true);
-                    if (Input.GetButtonDown("Fire1"))
+                    if (Input.GetButton("Fire2"))
                     {
-                        hachaLanzada = true;
-                        animator.SetBool("throw", true);
+                        mirilla.SetActive(true);
+                        mov = false;
+                        animator.SetBool("run", false);
+                        animator.SetBool("pointing", true);
+                        camaraAnimator.SetBool("acercar", true);
+                        if (Input.GetButtonDown("Fire1"))
+                        {
+                            hachaLanzada = true;
+                            animator.SetBool("throw", true);
+                            animator.SetBool("pointing", false);
+                        }
+                    }
+                    else
+                    {
+                        mirilla.SetActive(false);
+                        mov = true;
                         animator.SetBool("pointing", false);
+                        camaraAnimator.SetBool("acercar", false);
                     }
                 }
                 else
                 {
                     mirilla.SetActive(false);
-                    mov = true;
-                    animator.SetBool("pointing", false);
                     camaraAnimator.SetBool("acercar", false);
+                    animator.SetBool("pointing", false);
+                    if (Input.GetButtonDown("Fire1"))
+                    {
+                        puedeRecoger = false;
+                        recogiendoHacha = true;
+                        recogerHacha();
+                    }
                 }
             }
-            else
+        }
+    }
+
+    private void guardarHacha()
+    {
+        if (!recogiendoHacha && !hachaLanzada)
+        {
+            if (Input.GetButtonDown("Fire3"))
             {
-                mirilla.SetActive(false);
+                mov = false;
+                
                 camaraAnimator.SetBool("acercar", false);
                 animator.SetBool("pointing", false);
-                if (Input.GetButtonDown("Fire1"))
+                animator.SetBool("run", false);
+
+                if (hachaEquipada)
                 {
-                    puedeRecoger = false;
-                    recogiendoHacha = true;
-                    recogerHacha();
+                    hachaEquipada = false;
+                    animator.SetTrigger("desequipar");
+                }
+                else
+                {
+                    animator.SetTrigger("equipar");
                 }
             }
         }
@@ -157,7 +180,7 @@ public class PlayerController : MonoBehaviour
     {
         Vector3 puntoInicio = hacha.transform.position;
         int elapsedFrames = 0;
-        float contadorPosicionFinal = Vector3.Distance(puntoInicio, padreHacha.transform.position);
+        float contadorPosicionFinal = Vector3.Distance(puntoInicio, padreHachaMano.transform.position);
         float numRestar = 0;
 
         numRestar = (contadorPosicionFinal * 0.1f) / 5;
@@ -180,14 +203,14 @@ public class PlayerController : MonoBehaviour
                     contadorPosicionFinal = 0;
                 }
 
-                Vector3 posicionFinal = new Vector3(padreHacha.transform.position.x + contadorPosicionFinal,
-                    padreHacha.transform.position.y, padreHacha.transform.position.z);
+                Vector3 posicionFinal = new Vector3(padreHachaMano.transform.position.x + contadorPosicionFinal,
+                    padreHachaMano.transform.position.y, padreHachaMano.transform.position.z);
             
                 hacha.transform.position = Vector3.Slerp(puntoInicio, posicionFinal, interpolationRatio);
             
                 elapsedFrames = (elapsedFrames + 1) % (interpolationFramesCount + 1);
 
-                float distancia = Vector3.Distance(hacha.transform.position, padreHacha.transform.position);
+                float distancia = Vector3.Distance(hacha.transform.position, padreHachaMano.transform.position);
 
                 if (distancia < 1)
                 {
@@ -199,7 +222,7 @@ public class PlayerController : MonoBehaviour
 
         hacha.GetComponent<Rigidbody>().velocity = Vector3.zero;
 
-        hacha.transform.SetParent(padreHacha.transform);
+        hacha.transform.SetParent(padreHachaMano.transform);
         
         hacha.GetComponent<HachaController>().hachaMano = true;
         hacha.GetComponent<HachaController>().lanzado = false;
@@ -253,5 +276,24 @@ public class PlayerController : MonoBehaviour
     public void setThrowFalse()
     {
         animator.SetBool("throw", false);
+    }
+
+    public void setHachaEquipadaTrue()
+    {
+        hachaEquipada = true;
+    }
+
+    public void setPadreHachaCintura()
+    {
+        hacha.GetComponent<HachaController>().hachaMano = false;
+        hacha.GetComponent<HachaController>().hachaCintura = true;
+        hacha.transform.SetParent(padreHachaCintura.transform);
+    }
+    
+    public void setPadreHachaMano()
+    {
+        hacha.GetComponent<HachaController>().hachaMano = true;
+        hacha.GetComponent<HachaController>().hachaCintura = false;
+        hacha.transform.SetParent(padreHachaMano.transform);
     }
 }
