@@ -11,7 +11,14 @@ public class PlayerCamara : MonoBehaviour
 
     private float mouseX;
     private float mouseY;
-    
+
+    private PlayerController playerController;
+
+    private void Awake()
+    {
+        playerController = GetComponentInParent<PlayerController>();
+    }
+
     void Start()
     {
         Cursor.visible = false;
@@ -20,7 +27,10 @@ public class PlayerCamara : MonoBehaviour
 
     private void FixedUpdate()
     {
-        controlCamera();
+        if (playerController.mov)
+        {
+            controlCamera();
+        }
     }
 
     private void controlCamera()

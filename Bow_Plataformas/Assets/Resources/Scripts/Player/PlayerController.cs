@@ -14,7 +14,8 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private Animator camaraAnimator;
 
-    private bool mov = true;
+    public bool mov = true;
+    public bool saltando = false;
     public bool hachaLanzada = false;
 
     private GameObject hacha;
@@ -45,14 +46,17 @@ public class PlayerController : MonoBehaviour
     
     void Update()
     {
-        if (mov)
+        if (!saltando)
         {
-            movimiento();
-        }
+            if (mov)
+            {
+                movimiento();
+            }
 
-        lanzarHacha();
+            lanzarHacha();
         
-        guardarHacha();
+            guardarHacha();   
+        }
     }
 
     private void movimiento()
