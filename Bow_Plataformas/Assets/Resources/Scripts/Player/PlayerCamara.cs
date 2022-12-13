@@ -27,7 +27,7 @@ public class PlayerCamara : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (playerController.mov)
+        if (!playerController.saltando)
         {
             controlCamera();
         }

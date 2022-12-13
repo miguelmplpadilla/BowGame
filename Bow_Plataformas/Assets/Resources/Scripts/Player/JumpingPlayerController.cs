@@ -14,6 +14,7 @@ public class JumpingPlayerController : MonoBehaviour
     private PlayerController playerController;
 
     private bool dejarSaltar = false;
+    private bool empezarMoverse = false;
 
     private void Awake()
     {
@@ -24,33 +25,46 @@ public class JumpingPlayerController : MonoBehaviour
 
     void Update()
     {
-        if (saltar)
+        /*if (saltar)
         {
             if (Input.GetButtonDown("Jump"))
             {
+                jumpingBlock.GetComponentInParent<BoxCollider>().enabled = false;
+                
                 dejarSaltar = false;
+                animator.SetBool("jumpBlock", true);
+                
                 playerController.mov = false;
                 playerController.saltando = true;
-                animator.SetBool("run", false);
-                animator.SetTrigger("jumpBlock");
-                StartCoroutine("saltando");
+
+                player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, 
+                    jumpingBlock.transform.position.z);
+
+                Vector3 rotacionPlayer;
+
+                if (player.transform.position.z > jumpingBlock.transform.position.z)
+                {
+                    rotacionPlayer = new Vector3(jumpingBlock.transform.forward.x, -jumpingBlock.transform.forward.y,
+                        jumpingBlock.transform.forward.z);
+                }
+                else
+                {
+                    rotacionPlayer = new Vector3(jumpingBlock.transform.forward.x, jumpingBlock.transform.forward.y,
+                        jumpingBlock.transform.forward.z);
+                }
+                
+                player.transform.rotation = Quaternion.Euler(rotacionPlayer.x,rotacionPlayer.y,
+                    rotacionPlayer.z);
             }
-        }
+        }*/
     }
 
     IEnumerator saltando()
     {
-        jumpingBlock.GetComponentInParent<BoxCollider>().enabled = false;
-        
-        player.transform.rotation = Quaternion.Euler(jumpingBlock.transform.forward.x,jumpingBlock.transform.forward.y,
-            jumpingBlock.transform.forward.z);
-
-        StartCoroutine("pararSalto");
-        
         while (true)
         {
             Vector3 movement = new Vector3(player.transform.forward.x,player.transform.forward.y,
-                player.transform.forward.z) * 0.5f * Time.deltaTime;
+                player.transform.forward.z) * 1f * Time.deltaTime;
             player.transform.Translate(movement, Space.Self);
 
             if (dejarSaltar)
@@ -69,12 +83,6 @@ public class JumpingPlayerController : MonoBehaviour
         yield return null;
     }
 
-    IEnumerator pararSalto()
-    {
-        yield return new WaitForSeconds(1f);
-        dejarSaltar = true;
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("JumpingBlock"))
@@ -90,5 +98,15 @@ public class JumpingPlayerController : MonoBehaviour
         {
             saltar = false;
         }
+    }
+
+    public void startSaltando()
+    {
+        StartCoroutine("saltando");
+    }
+
+    public void setDejarSaltarTrue()
+    {
+        dejarSaltar = true;
     }
 }

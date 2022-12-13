@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     private GameObject hacha;
     private GameObject padreHachaMano;
     public GameObject padreHachaCintura;
-    
+    private JumpingPlayerController jumpingPlayerController;
 
     private GameObject camara;
     private GameObject mirilla;
@@ -32,9 +32,14 @@ public class PlayerController : MonoBehaviour
 
     public int interpolationFramesCount = 60;
 
+    private void Awake()
+    {
+        jumpingPlayerController = GetComponentInChildren<JumpingPlayerController>();
+        animator = GetComponent<Animator>();
+    }
+
     void Start()
     {
-        animator = GetComponent<Animator>();
         camaraAnimator = transform.Find("Camera").GetComponent<Animator>();
         hacha = GameObject.Find("Hacha");
         padreHachaMano = hacha.transform.parent.gameObject;
@@ -299,5 +304,20 @@ public class PlayerController : MonoBehaviour
         hacha.GetComponent<HachaController>().hachaMano = true;
         hacha.GetComponent<HachaController>().hachaCintura = false;
         hacha.transform.SetParent(padreHachaMano.transform);
+    }
+
+    public void startSalntando()
+    {
+        jumpingPlayerController.startSaltando();
+    }
+
+    public void setDejarSaltarTrue()
+    {
+        jumpingPlayerController.setDejarSaltarTrue();
+    }
+
+    public void setJumpBlockFalse()
+    {
+        animator.SetBool("jumpBlock", false);
     }
 }
