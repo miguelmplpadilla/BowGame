@@ -719,9 +719,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2784439586383786746}
   - component: {fileID: 2391104020755064124}
+  - component: {fileID: 543450652676490131}
+  - component: {fileID: 2662081497176855522}
   - component: {fileID: 919132149004425516}
   - component: {fileID: 4019885951665048480}
-  - component: {fileID: 543450652676490131}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -767,6 +768,36 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &543450652676490131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3310006781882705984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7f23e2f6f535754e94fbe7dee4573e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuerzaLanzamientoHacha: 5
+  mov: 1
+  saltando: 0
+  hachaLanzada: 0
+  padreHachaCintura: {fileID: 768971558946185020}
+  interpolationFramesCount: 60
+--- !u!114 &2662081497176855522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3310006781882705984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3794cd776b2bb44af4155f05a39676, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!54 &919132149004425516
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -796,22 +827,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.17193851, y: 0.47300643, z: 0.1105264}
   m_Center: {x: -0.000305593, y: 0.23960492, z: 0.007793501}
---- !u!114 &543450652676490131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3310006781882705984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7f23e2f6f535754e94fbe7dee4573e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fuerzaLanzamientoHacha: 5
-  hachaLanzada: 0
-  padreHachaCintura: {fileID: 768971558946185020}
-  interpolationFramesCount: 60
 --- !u!1 &3327008853712784155
 GameObject:
   m_ObjectHideFlags: 0

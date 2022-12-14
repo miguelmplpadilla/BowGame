@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Hacha
   - JumpingBlock
+  - Ground
   layers:
   - Default
   - TransparentFX

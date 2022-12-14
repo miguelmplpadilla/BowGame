@@ -306,7 +306,7 @@ public class PlayerController : MonoBehaviour
         hacha.transform.SetParent(padreHachaMano.transform);
     }
 
-    public void startSalntando()
+    /*public void startSalntando()
     {
         jumpingPlayerController.startSaltando();
     }
@@ -314,10 +314,10 @@ public class PlayerController : MonoBehaviour
     public void setDejarSaltarTrue()
     {
         jumpingPlayerController.setDejarSaltarTrue();
-    }
+    }*/
 
-    public void setJumpBlockFalse()
+    public void setJumpFalse()
     {
-        animator.SetBool("jumpBlock", false);
+        animator.SetBool("jump", false);
     }
 }

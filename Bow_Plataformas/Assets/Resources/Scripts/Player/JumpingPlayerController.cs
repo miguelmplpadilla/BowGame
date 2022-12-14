@@ -5,22 +5,24 @@ using UnityEngine;
 
 public class JumpingPlayerController : MonoBehaviour
 {
-
-    private bool saltar = false;
+    public bool saltar = true;
     private GameObject jumpingBlock;
     private GameObject player;
     
     private Animator animator;
     private PlayerController playerController;
+    private Rigidbody rigidbody;
 
     private bool dejarSaltar = false;
     private bool empezarMoverse = false;
 
+    public float jumpingForce = 1f;
+
     private void Awake()
     {
-        player = transform.parent.gameObject;
         playerController = GetComponentInParent<PlayerController>();
         animator = GetComponentInParent<Animator>();
+        rigidbody = GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -57,9 +59,19 @@ public class JumpingPlayerController : MonoBehaviour
                     rotacionPlayer.z);
             }
         }*/
+
+        if (saltar)
+        {
+            if (Input.GetButtonDown("Jump"))
+            {
+                animator.SetTrigger("jump");
+                rigidbody.AddForce(Vector3.up * jumpingForce, ForceMode.Impulse);
+                saltar = false;
+            }
+        }
     }
 
-    IEnumerator saltando()
+    /*IEnumerator saltando()
     {
         while (true)
         {
@@ -83,15 +95,6 @@ public class JumpingPlayerController : MonoBehaviour
         yield return null;
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("JumpingBlock"))
-        {
-            jumpingBlock = other.gameObject;
-            saltar = true;
-        }
-    }
-
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("JumpingBlock"))
@@ -108,5 +111,5 @@ public class JumpingPlayerController : MonoBehaviour
     public void setDejarSaltarTrue()
     {
         dejarSaltar = true;
-    }
+    }*/
 }
