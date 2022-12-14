@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
 {
     private Vector3 movement;
     
-    private float speed = 1;
+    public float speed = 1;
     public float fuerzaLanzamientoHacha = 1;
 
     private Animator animator;
@@ -26,9 +26,9 @@ public class PlayerController : MonoBehaviour
     private GameObject camara;
     private GameObject mirilla;
 
-    private bool recogiendoHacha = false;
+    public bool recogiendoHacha = false;
     private bool puedeRecoger = false;
-    private bool hachaEquipada = true;
+    public bool hachaEquipada = true;
 
     public int interpolationFramesCount = 60;
 

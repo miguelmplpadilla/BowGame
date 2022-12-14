@@ -721,6 +721,7 @@ GameObject:
   - component: {fileID: 2391104020755064124}
   - component: {fileID: 543450652676490131}
   - component: {fileID: 2662081497176855522}
+  - component: {fileID: 9195092230234238144}
   - component: {fileID: 919132149004425516}
   - component: {fileID: 4019885951665048480}
   m_Layer: 3
@@ -796,6 +797,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d3794cd776b2bb44af4155f05a39676, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saltar: 1
+  jumpingForce: 1
+--- !u!114 &9195092230234238144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3310006781882705984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3b70918e0c0ad54aa606f05460da8d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!54 &919132149004425516

@@ -1,11 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="de905aa9-cf14-4e92-a33c-a2617a55a2d3" name="Changes" comment="" />
+    <list default="true" id="de905aa9-cf14-4e92-a33c-a2617a55a2d3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Bow_Plataformas/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Bow_Plataformas/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Player/PlayerAnimator.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Animations/Player/PlayerAnimator.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Player/Run.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Player/Run.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Player/Walk.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Player/Walk.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Player/Walk_Back.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Player/Walk_Back.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Player/Walk_Left.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Player/Walk_Left.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Player/Walk_Right.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/Player/Walk_Right.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/Player/PlayerController.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/../../TheGuanchoGame/The_Guancho_Game/Assets/Resources/Scripts/Personajes/Player/PlayerMovement.cs" root0="SKIP_HIGHLIGHTING" />
@@ -19,13 +42,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  }
-}</component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="rider.run.widget.enabled.cache" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.12f1\Editor\Unity.exe" />
@@ -78,6 +100,7 @@
       <workItem from="1670886515369" duration="3482000" />
       <workItem from="1670937574358" duration="1442000" />
       <workItem from="1671013261276" duration="663000" />
+      <workItem from="1671044059777" duration="3517000" />
     </task>
     <servers />
   </component>
