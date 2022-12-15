@@ -13,10 +13,15 @@ public class PlayerCamara : MonoBehaviour
     private float mouseY;
 
     private PlayerController playerController;
+    private CombateController combateController;
+
+    private Animator animator;
 
     private void Awake()
     {
+        animator = GetComponent<Animator>();
         playerController = GetComponentInParent<PlayerController>();
+        combateController = GetComponentInParent<CombateController>();
     }
 
     void Start()
@@ -27,9 +32,18 @@ public class PlayerCamara : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!playerController.saltando)
+        if (!playerController.saltando && !combateController.fijado)
         {
             controlCamera();
+        }
+
+        if (combateController.fijado)
+        {
+            animator.SetBool("fijado", true);
+        }
+        else
+        {
+            animator.SetBool("fijado", false);
         }
     }
 

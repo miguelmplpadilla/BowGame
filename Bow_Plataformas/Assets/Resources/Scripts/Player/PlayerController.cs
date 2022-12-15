@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     public bool mov = true;
     public bool saltando = false;
     public bool hachaLanzada = false;
+    public bool atacando = false;
 
     private GameObject hacha;
     private GameObject padreHachaMano;
@@ -51,7 +52,7 @@ public class PlayerController : MonoBehaviour
     
     void Update()
     {
-        if (!saltando)
+        if (!saltando && !atacando)
         {
             if (mov)
             {
