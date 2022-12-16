@@ -34,16 +34,8 @@ public class PlayerCamara : MonoBehaviour
     {
         if (!playerController.saltando && !combateController.fijado)
         {
+            Debug.Log("Ejecutando controlCamera");
             controlCamera();
-        }
-
-        if (combateController.fijado)
-        {
-            animator.SetBool("fijado", true);
-        }
-        else
-        {
-            animator.SetBool("fijado", false);
         }
     }
 

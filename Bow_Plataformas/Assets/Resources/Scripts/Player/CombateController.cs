@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -20,12 +21,21 @@ public class CombateController : MonoBehaviour
     private GameObject enemigoFijado;
     
     public bool fijado = false;
+
+    private Camera camara;
+
+    public float velocidadAcercarsePersonaje = 2;
     
     private void Awake()
     {
         playerController = GetComponent<PlayerController>();
         animator = GetComponent<Animator>();
         rigidbody = GetComponent<Rigidbody>();
+    }
+
+    private void Start()
+    {
+        camara = GameObject.Find("Camera").GetComponent<Camera>();
     }
 
     private void Update()
@@ -56,12 +66,11 @@ public class CombateController : MonoBehaviour
                             {
                                 float distanciaPlayerEnemigo =
                                     Vector3.Distance(enemigoFijado.transform.position, transform.position);
-
-                                Debug.Log(distanciaPlayerEnemigo);
                                 
-                                if (distanciaPlayerEnemigo > 5)
+                                if (distanciaPlayerEnemigo > 0.5f)
                                 {
-                                    rigidbody.AddForce(transform.forward * fuerzaAtaqueImpulso, ForceMode.Impulse);
+                                    //rigidbody.AddForce(transform.forward * fuerzaAtaqueImpulso, ForceMode.Impulse);
+                                    StartCoroutine("acercarAEnemigo");
                                 }
                             }
                         }
@@ -91,6 +100,26 @@ public class CombateController : MonoBehaviour
         }
     }
 
+    IEnumerator acercarAEnemigo()
+    {
+
+        while (true)
+        {
+            Vector3 posicionAcercarEnemigo = new Vector3(enemigoFijado.transform.position.x, transform.position.y, enemigoFijado.transform.position.z);
+            float disranciaAEnemigo = Vector3.Distance(transform.position, posicionAcercarEnemigo);
+            transform.position = Vector3.MoveTowards(transform.position, posicionAcercarEnemigo, velocidadAcercarsePersonaje * Time.deltaTime);
+
+            if (disranciaAEnemigo < 0.5f)
+            {
+                break;
+            }
+            
+            yield return null;
+        }
+        
+        yield return null;
+    }
+
     private GameObject enemigoVistaCercano()
     {
         GameObject[] enemigos = GameObject.FindGameObjectsWithTag("Enemigo");
@@ -113,8 +142,10 @@ public class CombateController : MonoBehaviour
             Physics.Raycast(rayOrigin, out hitInfo);
 
             Debug.DrawRay(transform.position, direccionEnemigo, Color.red);
+
+            bool enemigoVisible = RendererController.isVisibleFrom(enemigo.GetComponentInParent<Renderer>(), camara);
             
-            if (enemigo.GetComponent<RendererController>().visible && hitInfo.collider.tag.Equals("Enemigo"))
+            if (enemigoVisible && hitInfo.collider.tag.Equals("Enemigo"))
             {
                 float distancia = Vector3.Distance(enemigo.transform.position, transform.position);
 
@@ -136,6 +167,10 @@ public class CombateController : MonoBehaviour
         {
             fijado = false;
             enemigoCercano = null;
+        }
+        else
+        {
+            camara.GetComponent<Animator>().SetBool("fijado", true);
         }
 
         return enemigoCercano;
