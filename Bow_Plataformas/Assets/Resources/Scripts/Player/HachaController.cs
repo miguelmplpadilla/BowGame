@@ -35,7 +35,7 @@ public class HachaController : MonoBehaviour
     {
         if (lanzado)
         {
-            transform.Rotate(new Vector3(0,rotateSpeed, 0) * Time.fixedDeltaTime, Space.Self);
+            transform.Rotate(new Vector3(0,rotateSpeed, 0) * Time.fixedDeltaTime);
         }
 
         if (hachaMano)
@@ -53,9 +53,8 @@ public class HachaController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!other.CompareTag("Player"))
+        if (!other.CompareTag("Player") && !other.CompareTag("CuboDestruir") && !other.CompareTag("CachitosCuboDestruir"))
         {
-            
             //transform.rotation = new Quaternion(player.transform.forward.x, player.transform.forward.y, player.transform.forward.z, 1);
             rigidbody.isKinematic = true;
             lanzado = false;
@@ -64,7 +63,7 @@ public class HachaController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (!collision.gameObject.tag.Equals("Player"))
+        if (!collision.gameObject.tag.Equals("Player") && !collision.gameObject.tag.Equals("CuboDestruir") && !collision.gameObject.tag.Equals("CachitosCuboDestruir"))
         {
             rigidbody.isKinematic = true;
             lanzado = false;

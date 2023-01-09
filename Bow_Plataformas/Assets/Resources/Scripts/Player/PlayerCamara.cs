@@ -10,12 +10,15 @@ public class PlayerCamara : MonoBehaviour
     public Transform player;
 
     private float mouseX;
-    private float mouseY;
+    public float mouseY;
 
     private PlayerController playerController;
     private CombateController combateController;
 
     private Animator animator;
+
+    public Vector3 direccionDisparo;
+    public RaycastHit hitInfo;
 
     private void Awake()
     {
@@ -34,7 +37,6 @@ public class PlayerCamara : MonoBehaviour
     {
         if (!playerController.saltando && !combateController.fijado)
         {
-            Debug.Log("Ejecutando controlCamera");
             controlCamera();
         }
     }
@@ -43,7 +45,7 @@ public class PlayerCamara : MonoBehaviour
     {
         mouseX += Input.GetAxis("Mouse X") * lookSensitivity;
         mouseY += Input.GetAxis("Mouse Y") * lookSensitivity;
-        mouseY = Mathf.Clamp(mouseY, -20, 10);
+        mouseY = Mathf.Clamp(mouseY, -30, 90);
         
         transform.LookAt(target);
         

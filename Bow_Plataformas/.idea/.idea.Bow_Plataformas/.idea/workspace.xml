@@ -16,6 +16,11 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Escenario/Plataforma/PlataformaHorizontalController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Escenario/Puente/PuenteController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Escenario/Puerta/PuertaController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Escenario/Totem/PuertaTotemController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Editor/CanvasRenderer/ChangingHierarchyOfCanvasRenderer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../TheGuanchoGame/The_Guancho_Game/Assets/Resources/Scripts/Personajes/Player/PlayerGanchoController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../TheGuanchoGame/The_Guancho_Game/Assets/Resources/Scripts/Personajes/Player/PlayerMovement.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -90,6 +95,20 @@
       <workItem from="1671044059777" duration="3517000" />
       <workItem from="1671089590364" duration="9126000" />
       <workItem from="1671176997062" duration="4065000" />
+      <workItem from="1672358725635" duration="3097000" />
+      <workItem from="1672407828910" duration="2291000" />
+      <workItem from="1672421898666" duration="47000" />
+      <workItem from="1672703857437" duration="4052000" />
+      <workItem from="1672752293705" duration="4395000" />
+      <workItem from="1672844450059" duration="2084000" />
+      <workItem from="1672857863270" duration="1556000" />
+      <workItem from="1672873868966" duration="856000" />
+      <workItem from="1672931239557" duration="294000" />
+      <workItem from="1672963257119" duration="1945000" />
+      <workItem from="1673048798092" duration="554000" />
+      <workItem from="1673095865876" duration="2120000" />
+      <workItem from="1673126313223" duration="4628000" />
+      <workItem from="1673254915543" duration="1540000" />
     </task>
     <servers />
   </component>

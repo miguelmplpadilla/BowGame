@@ -9,6 +9,11 @@ TagManager:
   - Ground
   - Enemigo
   - HitBoxPlayer
+  - CuboDestruir
+  - CachitosCuboDestruir
+  - LanzaFlechas
+  - LimitePlataforma
+  - Plataforma
   layers:
   - Default
   - TransparentFX
@@ -18,9 +23,9 @@ TagManager:
   - UI
   - Hacha
   - Enemigo
-  - 
-  - 
-  - 
+  - CachitosCuboDestruir
+  - Puente
+  - LimitePlataforma
   - 
   - 
   - 

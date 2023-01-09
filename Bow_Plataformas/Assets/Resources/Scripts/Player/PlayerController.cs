@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     private GameObject padreHachaMano;
     public GameObject padreHachaCintura;
     private JumpingPlayerController jumpingPlayerController;
+    private PlayerCamara playerCamara;
 
     private GameObject camara;
     private GameObject mirilla;
@@ -37,6 +38,7 @@ public class PlayerController : MonoBehaviour
     {
         jumpingPlayerController = GetComponentInChildren<JumpingPlayerController>();
         animator = GetComponent<Animator>();
+        playerCamara = GetComponentInChildren<PlayerCamara>();
     }
 
     void Start()
@@ -257,10 +259,12 @@ public class PlayerController : MonoBehaviour
         //rigidbodyHacha.useGravity = true;
         rigidbodyHacha.isKinematic = false;
 
-        hacha.transform.rotation = Quaternion.Euler(0,0,0);
-        hacha.GetComponent<HachaController>().hachaMano = false;
-        rigidbodyHacha.AddForce(camara.transform.forward * fuerzaLanzamientoHacha * Time.fixedDeltaTime, ForceMode.Impulse);
         HachaController hachaController = hacha.GetComponent<HachaController>();
+
+        hacha.transform.rotation = Quaternion.Euler(0,0,0);
+        
+        hachaController.hachaMano = false;
+        rigidbodyHacha.AddForce(camara.transform.forward * fuerzaLanzamientoHacha * Time.fixedDeltaTime, ForceMode.Impulse);
         hachaController.lanzado = true;
 
     }

@@ -64,11 +64,13 @@ public class JumpingPlayerController : MonoBehaviour
         {
             if (Input.GetButtonDown("Jump"))
             {
-                animator.SetTrigger("jump");
+                animator.SetBool("jump", true);
                 rigidbody.AddForce(Vector3.up * jumpingForce, ForceMode.Impulse);
                 saltar = false;
             }
         }
+        
+        animator.SetBool("jump", !saltar);
     }
 
     /*IEnumerator saltando()
