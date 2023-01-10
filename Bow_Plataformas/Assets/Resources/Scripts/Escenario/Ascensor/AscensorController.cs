@@ -6,20 +6,13 @@ public class AscensorController : MonoBehaviour
 {
     
     public bool subiendoBajando = false;
+    
     public GameObject puntoInicio;
     public GameObject puntoFinal;
+
+    public GameObject puerta1;
+    public GameObject puerta2;
     
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void startSubirBajar(int direccion)
     {
         subiendoBajando = true;
@@ -28,14 +21,44 @@ public class AscensorController : MonoBehaviour
 
     IEnumerator subirBajar(int direccion)
     {
-        Vector3 direccionMover = puntoFinal.transform.position;
+        Vector3 direccionMover;
         if (direccion == 1)
         {
             direccionMover = puntoFinal.transform.position;
+            puerta2.SetActive(true);
         }
+        else
+        {
+            direccionMover = puntoInicio.transform.position;
+            puerta1.SetActive(true);
+        }
+        
         while (true)
         {
-            Vector3.MoveTowards(transform.position, puntoFinal.transform.position, 2*Time.deltaTime);
+            float distancia = Vector3.Distance(transform.position, direccionMover);
+            Debug.Log("Distancia: "+distancia);
+            if (distancia > 1)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, direccionMover, 2*Time.deltaTime);
+            }
+            else
+            {
+                transform.position = direccionMover;
+                if (direccion == 1)
+                {
+                    puerta1.SetActive(false);
+                }
+                else
+                {
+                    puerta2.SetActive(false);
+                }
+
+                subiendoBajando = false;
+                break;
+            }
+            yield return null;
         }
+
+        yield return null;
     }
 }

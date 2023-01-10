@@ -15,7 +15,10 @@ public class InteractuarController : MonoBehaviour
     {
         if (interactuable)
         {
-            objetoInteractuable.SendMessage("inter");
+            if (Input.GetKeyDown(KeyCode.C))
+            {
+                objetoInteractuable.SendMessage("inter");
+            }
         }
     }
 
@@ -23,6 +26,7 @@ public class InteractuarController : MonoBehaviour
     {
         if (other.CompareTag("Inter"))
         {
+            objetoInteractuable = other.gameObject;
             interactuable = true;
         }
     }
@@ -31,6 +35,7 @@ public class InteractuarController : MonoBehaviour
     {
         if (other.CompareTag("Inter"))
         {
+            objetoInteractuable = null;
             interactuable = false;
         }
     }

@@ -199,7 +199,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1850627031}
   - component: {fileID: 1850627032}
-  m_Layer: 3
+  - component: {fileID: 1850627033}
+  m_Layer: 11
   m_Name: IntaractuarController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -232,8 +233,22 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.7581751, y: 0.64472926, z: 0.3540535}
-  m_Center: {x: -0.12091246, y: 0.31651384, z: 0.032297134}
+  m_Size: {x: 0.41180724, y: 0.64472926, z: 0.3540535}
+  m_Center: {x: 0.017634682, y: 0.31651384, z: 0.032297134}
+--- !u!114 &1850627033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850627030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4bb172021ef1534ab77567ea523e650, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactuable: 0
+  objetoInteractuable: {fileID: 0}
 --- !u!1 &2119426260
 GameObject:
   m_ObjectHideFlags: 0

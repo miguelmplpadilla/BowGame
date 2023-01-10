@@ -24,7 +24,7 @@ public class FlechaController : MonoBehaviour
             other.GetComponent<LifeController>().vida--;
         }
         
-        if (!other.CompareTag("LanzaFlechas"))
+        if (!other.CompareTag("LanzaFlechas") && !other.name.Equals("InteractuarController"))
         {
             Destroy(gameObject);
         }

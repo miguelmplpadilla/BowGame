@@ -14,17 +14,32 @@ public class PalancaAscensorController : MonoBehaviour
         ascensorController = transform.parent.GetComponent<AscensorController>();
     }
 
-    public void inter()
+    private void Update()
     {
-        if (subirBajar > 0)
+        if (ascensorController.subiendoBajando)
         {
-            subirBajar = 1;
+            GetComponent<Renderer>().material.color = Color.red;
         }
         else
         {
-            subirBajar = -1;
+            GetComponent<Renderer>().material.color = Color.green;
         }
+    }
 
-        ascensorController.startSubirBajar(subirBajar);
+    public void inter()
+    {
+        if (!ascensorController.subiendoBajando)
+        {
+            if (subirBajar > 0)
+            {
+                subirBajar = -1;
+            }
+            else
+            {
+                subirBajar = 1;
+            }
+
+            ascensorController.startSubirBajar(subirBajar);
+        }
     }
 }
