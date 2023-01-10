@@ -189,6 +189,51 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0024494869, y: 0.002024387, z: 0.0061793425}
   m_Center: {x: 0.00048603132, y: -0.0000041099406, z: 0.0068962574}
+--- !u!1 &1850627030
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1850627031}
+  - component: {fileID: 1850627032}
+  m_Layer: 3
+  m_Name: IntaractuarController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1850627031
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850627030}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2784439586383786746}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1850627032
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850627030}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7581751, y: 0.64472926, z: 0.3540535}
+  m_Center: {x: -0.12091246, y: 0.31651384, z: 0.032297134}
 --- !u!1 &2119426260
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,7 +465,7 @@ Transform:
   - {fileID: 8174948708591912489}
   m_Father: {fileID: 2610401203630228862}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 84.74207, y: -72.825676, z: 123.13435}
+  m_LocalEulerAnglesHint: {x: 86.733284, y: 103.80066, z: -89.58883}
 --- !u!1 &637419966329479613
 GameObject:
   m_ObjectHideFlags: 0
@@ -590,7 +635,7 @@ Transform:
   - {fileID: 4760387224037307340}
   m_Father: {fileID: 7706788992607228526}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 4.037098, y: -5.0259047, z: 125.03403}
+  m_LocalEulerAnglesHint: {x: 13.118297, y: -21.10989, z: 111.75133}
 --- !u!1 &825110121847002897
 GameObject:
   m_ObjectHideFlags: 0
@@ -622,7 +667,7 @@ Transform:
   - {fileID: 123419962790628128}
   m_Father: {fileID: 192107332812516114}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 12.053651, y: -9.72529, z: 66.602005}
+  m_LocalEulerAnglesHint: {x: 9.267855, y: 4.315906, z: 118.82463}
 --- !u!1 &1441027790578021766
 GameObject:
   m_ObjectHideFlags: 0
@@ -654,7 +699,7 @@ Transform:
   - {fileID: 5659477059540280091}
   m_Father: {fileID: 2981340188995695469}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 70.40054, y: 32.06397, z: 35.252636}
+  m_LocalEulerAnglesHint: {x: 25.304146, y: 4.4850416, z: -5.7317076}
 --- !u!1 &1642005032504762473
 GameObject:
   m_ObjectHideFlags: 0
@@ -686,7 +731,7 @@ Transform:
   - {fileID: 8126961006367072377}
   m_Father: {fileID: 2610401203630228862}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 6.767791, y: 19.405981, z: 33.18832}
+  m_LocalEulerAnglesHint: {x: 1.5502772, y: 4.624532, z: 22.149452}
 --- !u!1 &1721366463427362906
 GameObject:
   m_ObjectHideFlags: 0
@@ -718,7 +763,7 @@ Transform:
   - {fileID: 8868305268730953938}
   m_Father: {fileID: 8174948708591912489}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 19.601215, y: 40.632175, z: -12.286996}
+  m_LocalEulerAnglesHint: {x: -0.031465292, y: -10.146585, z: -44.178463}
 --- !u!1 &2256208055244365021
 GameObject:
   m_ObjectHideFlags: 0
@@ -781,7 +826,7 @@ Transform:
   - {fileID: 8244774526349232660}
   m_Father: {fileID: 2610401203630228862}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 64.58815, y: 152.30818, z: 173.68538}
+  m_LocalEulerAnglesHint: {x: 88.722664, y: -48.149498, z: -50.89222}
 --- !u!1 &2536030217048479575
 GameObject:
   m_ObjectHideFlags: 0
@@ -813,7 +858,7 @@ Transform:
   - {fileID: 197514727246389433}
   m_Father: {fileID: 4833000867367922828}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 42.153484, y: -141.6579, z: -60.203716}
+  m_LocalEulerAnglesHint: {x: 0.34091917, y: 167.56555, z: 6.854107}
 --- !u!1 &3310006781882705984
 GameObject:
   m_ObjectHideFlags: 0
@@ -855,6 +900,7 @@ Transform:
   - {fileID: 2127864886}
   - {fileID: 76631833}
   - {fileID: 2119426261}
+  - {fileID: 1850627031}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -913,7 +959,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   saltar: 1
-  jumpingForce: 3
+  jumpingForce: 4
 --- !u!114 &9195092230234238144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -941,6 +987,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ed820d9d4246db4fb097540400d4a47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fullVida: 10
+  vida: 10
+  numIncrementVida: 25
 --- !u!54 &919132149004425516
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1017,7 +1066,7 @@ Transform:
   - {fileID: 7970520416134685181}
   m_Father: {fileID: 2784439586383786746}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 2.8406034, y: 78.15571, z: -2.646668}
+  m_LocalEulerAnglesHint: {x: -17.327185, y: 66.4314, z: -2.563644}
 --- !u!1 &3727741580740584188
 GameObject:
   m_ObjectHideFlags: 0
@@ -1049,7 +1098,7 @@ Transform:
   - {fileID: 1817060372617781353}
   m_Father: {fileID: 123419962790628128}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 39.143276, y: -13.14102, z: -2.387386}
+  m_LocalEulerAnglesHint: {x: 23.741728, y: -0.72393996, z: 4.6967716}
 --- !u!1 &3789646726283753898
 GameObject:
   m_ObjectHideFlags: 0
@@ -1081,7 +1130,7 @@ Transform:
   - {fileID: 3567209779663828245}
   m_Father: {fileID: 7706788992607228526}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 2.5931056, y: -5.4539537, z: 8.241088}
+  m_LocalEulerAnglesHint: {x: 0.22585385, y: 2.4678178, z: 9.627049}
 --- !u!1 &4773721746858676645
 GameObject:
   m_ObjectHideFlags: 0
@@ -1113,7 +1162,7 @@ Transform:
   - {fileID: 8692639186367325631}
   m_Father: {fileID: 4760387224037307340}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 61.590843, y: 97.56234, z: 7.801375}
+  m_LocalEulerAnglesHint: {x: 49.57787, y: 76.28129, z: -15.489629}
 --- !u!1 &5073782083521009269
 GameObject:
   m_ObjectHideFlags: 0
@@ -1145,7 +1194,7 @@ Transform:
   - {fileID: 6454094620626183319}
   m_Father: {fileID: 8881834895429945603}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0.36126027, y: 11.441868, z: -23.980154}
+  m_LocalEulerAnglesHint: {x: 0.8438163, y: 3.0873122, z: -24.077894}
 --- !u!1 &5292542732346367312
 GameObject:
   m_ObjectHideFlags: 0
@@ -1239,7 +1288,7 @@ Transform:
   - {fileID: 673101016907809721}
   m_Father: {fileID: 7866719531155823563}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 78.356186, y: -13.037052, z: 159.38454}
+  m_LocalEulerAnglesHint: {x: 60.278645, y: -175.8373, z: 13.789635}
 --- !u!1 &6546514714869885678
 GameObject:
   m_ObjectHideFlags: 0
@@ -1271,7 +1320,7 @@ Transform:
   - {fileID: 4078929453892659929}
   m_Father: {fileID: 8244774526349232660}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 19.28051, y: -1.7308782, z: -43.533016}
+  m_LocalEulerAnglesHint: {x: -3.996591, y: 6.707984, z: -25.101591}
 --- !u!1 &6589206204209520786
 GameObject:
   m_ObjectHideFlags: 0
@@ -1303,7 +1352,7 @@ Transform:
   - {fileID: 5186361279042792424}
   m_Father: {fileID: 51968587144107493}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 27.722908, y: -8.167197, z: 21.016945}
+  m_LocalEulerAnglesHint: {x: -18.491688, y: 19.588703, z: -15.295593}
 --- !u!1 &6630751221239740694
 GameObject:
   m_ObjectHideFlags: 0
@@ -1335,7 +1384,7 @@ Transform:
   - {fileID: 2610401203630228862}
   m_Father: {fileID: 7970520416134685181}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 4.6045685, y: -12.293002, z: 8.020128}
+  m_LocalEulerAnglesHint: {x: 4.582169, y: 0.9228517, z: 10.482516}
 --- !u!1 &7129702274661480537
 GameObject:
   m_ObjectHideFlags: 0
@@ -1367,7 +1416,7 @@ Transform:
   - {fileID: 2981340188995695469}
   m_Father: {fileID: 5796574861327148369}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 62.12493, y: -18.917057, z: 48.174816}
+  m_LocalEulerAnglesHint: {x: 40.45227, y: 83.26134, z: 172.33421}
 --- !u!1 &8069268547012619212
 GameObject:
   m_ObjectHideFlags: 0
@@ -1401,7 +1450,7 @@ Transform:
   - {fileID: 4833000867367922828}
   m_Father: {fileID: 3567209779663828245}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 4.6093607, y: -12.291247, z: -3.827993}
+  m_LocalEulerAnglesHint: {x: 4.521802, y: 1.0627232, z: -1.3514489}
 --- !u!1 &8359858143064400282
 GameObject:
   m_ObjectHideFlags: 0
@@ -1433,4 +1482,4 @@ Transform:
   - {fileID: 7866719531155823563}
   m_Father: {fileID: 7706788992607228526}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: -34.34074, y: 22.278555, z: 176.44255}
+  m_LocalEulerAnglesHint: {x: 25.313229, y: 15.491692, z: 85.54461}
