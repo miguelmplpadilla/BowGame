@@ -45,7 +45,14 @@ public class PlayerCamara : MonoBehaviour
 
     private void Update()
     {
-        shake();
+        if (combateController.fijado)
+        {
+            shake();
+        }
+        else
+        {
+            shakeDuration = 0;
+        }
     }
 
     private void FixedUpdate()
