@@ -35,15 +35,15 @@ public class AscensorController : MonoBehaviour
         
         while (true)
         {
-            float distancia = Vector3.Distance(transform.position, direccionMover);
+            float distancia = Vector3.Distance(transform.parent.position, direccionMover);
             Debug.Log("Distancia: "+distancia);
             if (distancia > 1)
             {
-                transform.position = Vector3.MoveTowards(transform.position, direccionMover, 2*Time.deltaTime);
+                transform.parent.position = Vector3.MoveTowards(transform.position, direccionMover, 2*Time.deltaTime);
             }
             else
             {
-                transform.position = direccionMover;
+                transform.parent.position = direccionMover;
                 if (direccion == 1)
                 {
                     puerta1.SetActive(false);

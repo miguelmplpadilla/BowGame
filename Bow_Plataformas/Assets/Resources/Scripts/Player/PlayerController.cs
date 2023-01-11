@@ -325,4 +325,9 @@ public class PlayerController : MonoBehaviour
     {
         animator.SetBool("jump", false);
     }
+
+    public void startCameraShake()
+    {
+        playerCamara.shakeDuration = 0.1f;
+    }
 }

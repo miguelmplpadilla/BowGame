@@ -2,6 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
+using Cursor = UnityEngine.Cursor;
+using Random = UnityEngine.Random;
 
 public class PlayerCamara : MonoBehaviour
 {
@@ -20,17 +23,29 @@ public class PlayerCamara : MonoBehaviour
     public Vector3 direccionDisparo;
     public RaycastHit hitInfo;
 
+    public float shakeDuration = 0;
+    public float shakeAmount = 2;
+    public float decreaseFactor = 1;
+    private Vector3 originalPos;
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
         playerController = GetComponentInParent<PlayerController>();
         combateController = GetComponentInParent<CombateController>();
+
+        originalPos = transform.position;
     }
 
     void Start()
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    private void Update()
+    {
+        shake();
     }
 
     private void FixedUpdate()
@@ -43,14 +58,42 @@ public class PlayerCamara : MonoBehaviour
 
     private void controlCamera()
     {
-        mouseX += Input.GetAxis("Mouse X") * lookSensitivity;
-        mouseY += Input.GetAxis("Mouse Y") * lookSensitivity;
-        mouseY = Mathf.Clamp(mouseY, -30, 90);
-        
-        transform.LookAt(target);
-        
-        player.rotation = Quaternion.Euler(0, mouseX, 0);
-        
-        target.rotation = Quaternion.Euler(-mouseY, mouseX, 0);
+        if (shakeDuration <= 0)
+        {
+            mouseX += Input.GetAxis("Mouse X") * lookSensitivity;
+            mouseY += Input.GetAxis("Mouse Y") * lookSensitivity;
+            mouseY = Mathf.Clamp(mouseY, -30, 90);
+
+            transform.LookAt(target);
+
+            player.rotation = Quaternion.Euler(0, mouseX, 0);
+
+            target.rotation = Quaternion.Euler(-mouseY, mouseX, 0);
+        }
+    }
+
+    public void shake()
+    {
+        if (shakeDuration > 0)
+        {
+            if (animator.enabled)
+            {
+                originalPos = transform.localPosition;
+                animator.enabled = false;
+                transform.localPosition = originalPos;
+            }
+            transform.localPosition = originalPos + Random.insideUnitSphere * shakeAmount;
+			
+            shakeDuration -= Time.deltaTime * decreaseFactor;
+        }
+        else
+        {
+            if (!animator.enabled)
+            {
+                animator.enabled = true;
+            }
+            shakeDuration = 0f;
+            transform.localPosition = originalPos;
+        }
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,7 +9,7 @@ public class PlataformaAscensorController : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            other.transform.parent = gameObject.transform;
+            other.transform.parent = gameObject.transform.parent;
         }
     }
 
