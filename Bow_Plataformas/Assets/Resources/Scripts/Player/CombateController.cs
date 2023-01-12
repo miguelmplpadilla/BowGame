@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -21,6 +22,7 @@ public class CombateController : MonoBehaviour
     private GameObject enemigoFijado;
     
     public bool fijado = false;
+    public int numVecesFijado = 0;
 
     private Camera camara;
 
@@ -90,7 +92,32 @@ public class CombateController : MonoBehaviour
 
         if (Input.GetButtonDown("Fijar"))
         {
-            enemigoFijado = enemigoVistaCercano();
+            if (!fijado)
+            {
+                enemigoFijado = enemigoVistaCercano(null);
+            }
+            else
+            {
+                if (numVecesFijado == 0)
+                {
+                    StartCoroutine("tiempoNumVecesFijado");
+                }
+
+                numVecesFijado++;
+
+                if (numVecesFijado > 1)
+                {
+                    Debug.Log("Ejecutar enemigoVistaCercano, ReFijar");
+                    GameObject enemigoReFijado = enemigoVistaCercano(enemigoFijado);
+
+                    if (enemigoReFijado != null)
+                    {
+                        enemigoFijado = enemigoReFijado;
+                    }
+                    
+                    numVecesFijado = 0;
+                }
+            }
         }
 
         if (fijado)
@@ -98,6 +125,13 @@ public class CombateController : MonoBehaviour
             Vector3 posicionEnemigoMirar = new Vector3(enemigoFijado.transform.position.x, transform.position.y, enemigoFijado.transform.position.z);
             transform.LookAt(posicionEnemigoMirar);
         }
+    }
+
+    IEnumerator tiempoNumVecesFijado()
+    {
+        yield return new WaitForSeconds(0.5f);
+        Debug.Log("NumVecesFijado a 0");
+        numVecesFijado = 0;
     }
 
     IEnumerator acercarAEnemigo()
@@ -120,9 +154,23 @@ public class CombateController : MonoBehaviour
         yield return null;
     }
 
-    private GameObject enemigoVistaCercano()
+    private GameObject enemigoVistaCercano(GameObject ignorar)
     {
-        GameObject[] enemigos = GameObject.FindGameObjectsWithTag("Enemigo");
+        Debug.Log(ignorar);
+        
+        List<GameObject> enemigos = GameObject.FindGameObjectsWithTag("Enemigo").ToList();
+
+        if (ignorar != null)
+        {
+            enemigos.Remove(ignorar);
+        }
+
+        for (int i = 0; i < enemigos.Count; i++)
+        {
+            Debug.Log("Enemigo Lista: "+enemigos[i]);
+        }
+
+        Debug.Log("Enemigos tamaño: "+enemigos.Count);
         
         GameObject enemigoCercano = enemigos[0];
         float distanciaMasCercana = 100000;
@@ -130,6 +178,7 @@ public class CombateController : MonoBehaviour
 
         foreach (var enemigo in enemigos)
         {
+            Debug.Log("Enemigo: "+enemigo);
             GetComponent<BoxCollider>().enabled = false;
             
             Vector3 direccionEnemigo = new Vector3(enemigo.transform.position.x - transform.position.x,

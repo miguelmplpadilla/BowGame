@@ -17,6 +17,7 @@ public class PlayerCamara : MonoBehaviour
 
     private PlayerController playerController;
     private CombateController combateController;
+    private LifeController lifeController;
 
     private Animator animator;
 
@@ -33,6 +34,7 @@ public class PlayerCamara : MonoBehaviour
         animator = GetComponent<Animator>();
         playerController = GetComponentInParent<PlayerController>();
         combateController = GetComponentInParent<CombateController>();
+        lifeController = GetComponentInParent<LifeController>();
 
         originalPos = transform.position;
     }
@@ -45,13 +47,16 @@ public class PlayerCamara : MonoBehaviour
 
     private void Update()
     {
-        if (combateController.fijado)
+        if (!lifeController.muerto)
         {
-            shake();
-        }
-        else
-        {
-            shakeDuration = 0;
+            if (combateController.fijado)
+            {
+                shake();
+            }
+            else
+            {
+                shakeDuration = 0;
+            }
         }
     }
 
@@ -65,17 +70,24 @@ public class PlayerCamara : MonoBehaviour
 
     private void controlCamera()
     {
-        if (shakeDuration <= 0)
+        if (!lifeController.muerto)
         {
-            mouseX += Input.GetAxis("Mouse X") * lookSensitivity;
-            mouseY += Input.GetAxis("Mouse Y") * lookSensitivity;
-            mouseY = Mathf.Clamp(mouseY, -30, 90);
+            if (shakeDuration <= 0)
+            {
+                mouseX += Input.GetAxis("Mouse X") * lookSensitivity;
+                mouseY += Input.GetAxis("Mouse Y") * lookSensitivity;
+                mouseY = Mathf.Clamp(mouseY, -30, 90);
 
-            transform.LookAt(target);
+                transform.LookAt(target);
 
-            player.rotation = Quaternion.Euler(0, mouseX, 0);
+                player.rotation = Quaternion.Euler(0, mouseX, 0);
 
-            target.rotation = Quaternion.Euler(-mouseY, mouseX, 0);
+                target.rotation = Quaternion.Euler(-mouseY, mouseX, 0);
+            }
+        }
+        else
+        {
+            target.rotation = Quaternion.Euler(20, mouseX, 0);
         }
     }
 

@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public float fuerzaLanzamientoHacha = 1;
 
     private Animator animator;
+    private Rigidbody rigidbody;
     private Animator camaraAnimator;
 
     public bool mov = true;
@@ -23,6 +24,7 @@ public class PlayerController : MonoBehaviour
     private GameObject padreHachaMano;
     public GameObject padreHachaCintura;
     private JumpingPlayerController jumpingPlayerController;
+    private CombateController combateController;
     private PlayerCamara playerCamara;
 
     private GameObject camara;
@@ -34,11 +36,15 @@ public class PlayerController : MonoBehaviour
 
     public int interpolationFramesCount = 60;
 
+    public bool dash = false;
+
     private void Awake()
     {
         jumpingPlayerController = GetComponentInChildren<JumpingPlayerController>();
+        combateController = GetComponent<CombateController>();
         animator = GetComponent<Animator>();
         playerCamara = GetComponentInChildren<PlayerCamara>();
+        rigidbody = GetComponent<Rigidbody>();
     }
 
     void Start()
@@ -71,49 +77,88 @@ public class PlayerController : MonoBehaviour
     {
         float axisVertical = Input.GetAxis("Vertical");
         float axisHorizontal = Input.GetAxis("Horizontal");
-        
-        if (axisVertical != 0 || axisHorizontal != 0)
-        {
-            if (axisVertical > 0)
-            {
-                animator.SetInteger("direccion", 0);
-            }
-            else
-            {
-                animator.SetInteger("direccion", 1);
-            }
 
-            if (axisVertical == 0)
+        if (Input.GetButtonDown("Jump"))
+        {
+            if (!dash && combateController.fijado)
             {
-                if (axisHorizontal > 0)
+                if (axisVertical != 0)
                 {
-                    animator.SetInteger("direccion", 2);
+                    if (axisVertical > 0)
+                    {
+                        movement = new Vector3(0, 0,0.02f);
+                    }
+                    else
+                    {
+                        movement = new Vector3(0, 0,-0.02f);
+                    }
                 }
                 else
                 {
-                    animator.SetInteger("direccion", 3);
+                    if (axisHorizontal != 0)
+                    {
+                        if (axisHorizontal > 0)
+                        {
+                            movement = new Vector3(0.02f, 0,0);
+                        }
+                        else
+                        {
+                            movement = new Vector3(-0.02f, 0,0);
+                        }
+                    }
                 }
-            }
-            
-            speed = 0.5f;
 
-            if (axisVertical > 0)
+                Debug.Log("Movimiento: "+movement);
+                
+                rigidbody.velocity = Vector3.zero;
+                animator.SetTrigger("dash");
+                dash = true;
+            }
+        }
+
+        if (!dash)
+        {
+            if (axisVertical != 0 || axisHorizontal != 0)
             {
+                if (axisVertical > 0)
+                {
+                    animator.SetInteger("direccion", 0);
+                }
+                else
+                {
+                    animator.SetInteger("direccion", 1);
+                }
+
+                if (axisVertical == 0)
+                {
+                    if (axisHorizontal > 0)
+                    {
+                        animator.SetInteger("direccion", 2);
+                    }
+                    else
+                    {
+                        animator.SetInteger("direccion", 3);
+                    }
+                }
+            
+                speed = 0.5f;
+
                 if (Input.GetButton("Sprint"))
                 {
                     speed = 1.5f;
                 }
+
+                animator.SetBool("run", true);
+                animator.SetFloat("velocidad", speed);
+            }
+            else
+            {
+                animator.SetBool("run", false);
             }
             
-            animator.SetBool("run", true);
-            animator.SetFloat("velocidad", speed);
+            movement = new Vector3(axisHorizontal, 0,axisVertical) * speed * Time.deltaTime;
         }
-        else
-        {
-            animator.SetBool("run", false);
-        }
-
-        movement = new Vector3(axisHorizontal, 0,axisVertical) * speed * Time.deltaTime;
+        
         transform.Translate(movement, Space.Self);
     }
 
@@ -329,5 +374,10 @@ public class PlayerController : MonoBehaviour
     public void startCameraShake()
     {
         playerCamara.shakeDuration = 0.1f;
+    }
+
+    public void setDashFalse()
+    {
+        dash = false;
     }
 }
