@@ -6,10 +6,13 @@ using Random = UnityEngine.Random;
 
 public class PlayerController : MonoBehaviour
 {
-    private Vector3 movement;
+    public Vector3 movement;
     
     public float speed = 1;
     public float fuerzaLanzamientoHacha = 1;
+
+    public float axisVertical;
+    public float axisHorizontal;
 
     private Animator animator;
     private Rigidbody rigidbody;
@@ -75,8 +78,8 @@ public class PlayerController : MonoBehaviour
 
     private void movimiento()
     {
-        float axisVertical = Input.GetAxis("Vertical");
-        float axisHorizontal = Input.GetAxis("Horizontal");
+        axisVertical = Input.GetAxis("Vertical");
+        axisHorizontal = Input.GetAxis("Horizontal");
 
         if (Input.GetButtonDown("Jump"))
         {

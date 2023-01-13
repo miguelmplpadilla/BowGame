@@ -10,8 +10,8 @@ public class CombateController : MonoBehaviour
 {
     private PlayerController playerController;
     private Animator animator;
-
-    private bool atacando;
+    
+    public bool atacando;
 
     private int ataqueAnterior = 0;
 
@@ -19,7 +19,7 @@ public class CombateController : MonoBehaviour
 
     public float fuerzaAtaqueImpulso = 2;
 
-    private GameObject enemigoFijado;
+    public GameObject enemigoFijado;
     
     public bool fijado = false;
     public int numVecesFijado = 0;
@@ -28,6 +28,9 @@ public class CombateController : MonoBehaviour
 
     public float velocidadAcercarsePersonaje = 2;
     
+    private int numAtaque = 0;
+    private Vector3 movement;
+
     private void Awake()
     {
         playerController = GetComponent<PlayerController>();
@@ -48,46 +51,80 @@ public class CombateController : MonoBehaviour
             {
                 if (!atacando)
                 {
-                    if (Input.GetButton("Fire1"))
+                    if (playerController.axisVertical >= 0)
                     {
-                        if (playerController.speed < 1.5f)
+                        if (Input.GetButtonDown("Fire1"))
                         {
-                            int numAtaque = 0;
-                            while (true)
+                            if (playerController.speed < 1.5f || playerController.axisHorizontal != 0)
                             {
-                                numAtaque = Random.Range(1, 3 + 1);
-                                if (numAtaque != ataqueAnterior)
+                                numAtaque = 0;
+                                while (true)
                                 {
-                                    ataqueAnterior = numAtaque;
-                                    break;
+                                    numAtaque = Random.Range(1, 3 + 1);
+                                    if (numAtaque != ataqueAnterior)
+                                    {
+                                        ataqueAnterior = numAtaque;
+                                        break;
+                                    }
                                 }
-                            }
-                            
-                            animator.SetInteger("ataque", numAtaque);
-                            if (enemigoFijado != null)
-                            {
-                                float distanciaPlayerEnemigo =
-                                    Vector3.Distance(enemigoFijado.transform.position, transform.position);
                                 
-                                if (distanciaPlayerEnemigo > 0.5f)
+                                animator.SetInteger("ataque", numAtaque);
+                                if (enemigoFijado != null)
                                 {
-                                    //rigidbody.AddForce(transform.forward * fuerzaAtaqueImpulso, ForceMode.Impulse);
-                                    StartCoroutine("acercarAEnemigo");
+                                    float distanciaPlayerEnemigo =
+                                        Vector3.Distance(enemigoFijado.transform.position, transform.position);
+                                    
+                                    if (distanciaPlayerEnemigo > 0.5f)
+                                    {
+                                        //rigidbody.AddForce(transform.forward * fuerzaAtaqueImpulso, ForceMode.Impulse);
+                                        StartCoroutine("acercarAEnemigo");
+                                    }
+                                }
+
+                                playerController.speed = 0.5f;
+                                playerController.atacando = true;
+                                playerController.mov = false;
+                                animator.SetBool("run", false);
+                                atacando = true;
+                            }
+                            else
+                            {
+                                if (playerController.axisVertical > 0)
+                                {
+                                    numAtaque = 4;
+                                    animator.SetInteger("ataque", 4);
+                                    playerController.dash = true;
+                                    movement = new Vector3(0, 0,0.015f);
+                                    
+                                    playerController.atacando = true;
+                                    playerController.mov = false;
+                                    animator.SetBool("run", false);
+                                    atacando = true;
                                 }
                             }
-                        }
-                        else
-                        {
-                            animator.SetInteger("ataque", 4);
-                        }
 
-                        playerController.atacando = true;
-                        playerController.mov = false;
-                        animator.SetBool("run", false);
-                        atacando = true;
+                            
+                        }
                     }
                 }
             }
+        }
+
+        if (numAtaque == 4 && playerController.dash)
+        {
+            
+            if (enemigoFijado != null)
+            {
+                float distanciaEnemigo =
+                    Vector3.Distance(enemigoFijado.transform.position, transform.position);
+
+                if (distanciaEnemigo < 0.5f)
+                {
+                    playerController.dash = false;
+                }
+            }
+            
+            transform.Translate(movement, Space.Self);
         }
 
         if (Input.GetButtonDown("Fijar"))
