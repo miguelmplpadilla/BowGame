@@ -86,11 +86,11 @@ public class PlayerController : MonoBehaviour
                 {
                     if (axisVertical > 0)
                     {
-                        movement = new Vector3(0, 0,0.02f);
+                        movement = new Vector3(0, 0,0.015f);
                     }
                     else
                     {
-                        movement = new Vector3(0, 0,-0.02f);
+                        movement = new Vector3(0, 0,-0.015f);
                     }
                 }
                 else
@@ -99,11 +99,11 @@ public class PlayerController : MonoBehaviour
                     {
                         if (axisHorizontal > 0)
                         {
-                            movement = new Vector3(0.02f, 0,0);
+                            movement = new Vector3(0.015f, 0,0);
                         }
                         else
                         {
-                            movement = new Vector3(-0.02f, 0,0);
+                            movement = new Vector3(-0.015f, 0,0);
                         }
                     }
                 }
