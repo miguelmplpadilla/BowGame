@@ -6,25 +6,24 @@ using UnityEngine;
 public class DesmontarEnemigo : MonoBehaviour
 {
 
-    public GameObject padeDesmontar;
-    public GameObject padreSecundario;
-    
-    private void Update()
+    public Rigidbody[] rigidbodysRaghdoll;
+
+    private void Awake()
     {
-        if (Input.GetKeyDown(KeyCode.F1))
+        foreach (var rigidbody in rigidbodysRaghdoll)
         {
-            desmontar(padeDesmontar);
+            rigidbody.GetComponent<Collider>().enabled = false;
+            rigidbody.isKinematic = true;
         }
     }
 
-    private void desmontar(GameObject objetoDesmontar)
+    public void desmontar()
     {
-        foreach (var objeto in padeDesmontar.GetComponentsInChildren<Rigidbody>())
+        GetComponent<Animator>().enabled = false;
+        foreach (var rigidbody in rigidbodysRaghdoll)
         {
-            objeto.isKinematic = false;
-            objeto.useGravity = true;
-            objeto.transform.parent = padreSecundario.transform;
-            desmontar(objeto.gameObject);
+            rigidbody.GetComponent<Collider>().enabled = true;
+            rigidbody.isKinematic = false;
         }
     }
     
