@@ -12,7 +12,7 @@ public class PlayerCamara : MonoBehaviour
     public Transform target;
     public Transform player;
 
-    private float mouseX;
+    public float mouseX;
     public float mouseY;
 
     private PlayerController playerController;

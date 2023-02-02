@@ -8,7 +8,7 @@ public class HurtEnemyController : MonoBehaviour
     private int vida = 3;
     private DesmontarEnemigo desmontarEnemigo;
 
-    private bool muerto = false;
+    public bool muerto = false;
 
     private void Awake()
     {
@@ -25,6 +25,7 @@ public class HurtEnemyController : MonoBehaviour
             {
                 if (!muerto)
                 {
+                    gameObject.tag = "Untagged";
                     transform.parent.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * 2, ForceMode.Impulse);
                     desmontarEnemigo.desmontar();
                     muerto = true;

@@ -30,6 +30,7 @@ public class CombateController : MonoBehaviour
     
     private int numAtaque = 0;
     private Vector3 movement;
+    private Quaternion rotacionPlayer;
 
     private void Awake()
     {
@@ -144,7 +145,7 @@ public class CombateController : MonoBehaviour
 
                 if (numVecesFijado > 1)
                 {
-                    Debug.Log("Ejecutar enemigoVistaCercano, ReFijar");
+                    //Enemigo Vista Cercano, ReFijar
                     GameObject enemigoReFijado = enemigoVistaCercano(enemigoFijado);
 
                     if (enemigoReFijado != null)
@@ -161,6 +162,17 @@ public class CombateController : MonoBehaviour
         {
             Vector3 posicionEnemigoMirar = new Vector3(enemigoFijado.transform.position.x, transform.position.y, enemigoFijado.transform.position.z);
             transform.LookAt(posicionEnemigoMirar);
+
+            rotacionPlayer = transform.rotation;
+
+            if (enemigoFijado.GetComponentInChildren<HurtEnemyController>().muerto || Input.GetKeyDown(KeyCode.R))
+            {
+                enemigoFijado = null;
+                camara.GetComponent<PlayerCamara>().mouseX = rotacionPlayer.y;
+                camara.GetComponent<Animator>().enabled = true;
+                camara.GetComponent<Animator>().SetBool("fijado", false);
+                fijado = false;
+            }
         }
     }
 
@@ -193,21 +205,12 @@ public class CombateController : MonoBehaviour
 
     private GameObject enemigoVistaCercano(GameObject ignorar)
     {
-        Debug.Log(ignorar);
-        
         List<GameObject> enemigos = GameObject.FindGameObjectsWithTag("Enemigo").ToList();
 
         if (ignorar != null)
         {
             enemigos.Remove(ignorar);
         }
-
-        for (int i = 0; i < enemigos.Count; i++)
-        {
-            Debug.Log("Enemigo Lista: "+enemigos[i]);
-        }
-
-        Debug.Log("Enemigos tamaño: "+enemigos.Count);
         
         GameObject enemigoCercano = enemigos[0];
         float distanciaMasCercana = 100000;
@@ -215,7 +218,6 @@ public class CombateController : MonoBehaviour
 
         foreach (var enemigo in enemigos)
         {
-            Debug.Log("Enemigo: "+enemigo);
             GetComponent<BoxCollider>().enabled = false;
             
             Vector3 direccionEnemigo = new Vector3(enemigo.transform.position.x - transform.position.x,
