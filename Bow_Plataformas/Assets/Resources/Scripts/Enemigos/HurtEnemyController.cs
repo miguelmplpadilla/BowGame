@@ -29,10 +29,15 @@ public class HurtEnemyController : MonoBehaviour
                     transform.parent.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * 2, ForceMode.Impulse);
                     desmontarEnemigo.desmontar();
                     muerto = true;
+
+                    transform.parent.gameObject.layer = LayerMask.NameToLayer("NoInterPlayer");
                 }
             }
-            
-            transform.parent.gameObject.GetComponent<Rigidbody>().AddForce(other.transform.forward * 2, ForceMode.Impulse);
+
+            transform.parent.gameObject.SendMessage("takeHit");
+
+            transform.parent.gameObject.GetComponent<Rigidbody>()
+                .AddForce(other.transform.forward * 2, ForceMode.Impulse);
         }
     }
 }
