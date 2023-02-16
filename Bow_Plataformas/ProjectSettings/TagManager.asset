@@ -15,6 +15,7 @@ TagManager:
   - LimitePlataforma
   - Plataforma
   - Inter
+  - HitBoxEnemigo
   layers:
   - Default
   - TransparentFX

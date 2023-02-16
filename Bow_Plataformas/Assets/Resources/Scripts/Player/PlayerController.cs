@@ -110,8 +110,6 @@ public class PlayerController : MonoBehaviour
                         }
                     }
                 }
-
-                Debug.Log("Movimiento: "+movement);
                 
                 rigidbody.velocity = Vector3.zero;
                 animator.SetTrigger("dash");

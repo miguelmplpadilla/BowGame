@@ -38,6 +38,7 @@ public class EsqueletoController : MonoBehaviour
             else
             {
                 animator.SetBool("run", false);
+                transform.LookAt(player.transform);
                 if (!atacando)
                 {
                     StartCoroutine("atacar");
@@ -50,8 +51,11 @@ public class EsqueletoController : MonoBehaviour
     IEnumerator atacar()
     {
         yield return new WaitForSeconds(1f);
-        animator.SetTrigger("atacar");
-        StartCoroutine("setAtacandoFalse");
+        if (atacando)
+        {
+            animator.SetTrigger("atacar");
+            StartCoroutine("setAtacandoFalse");
+        }
         yield return null;
     }
 
@@ -64,8 +68,8 @@ public class EsqueletoController : MonoBehaviour
 
     public void takeHit()
     {
-        animator.SetTrigger("hit");
         atacando = false;
         StopCoroutine("atacar");
+        animator.SetTrigger("hit");
     }
 }

@@ -19,11 +19,11 @@ public class HurtEnemyController : MonoBehaviour
     {
         if (other.CompareTag("HitBoxPlayer"))
         {
-            vida--;
-
-            if (vida <= 0)
+            if (!muerto)
             {
-                if (!muerto)
+                vida--;
+
+                if (vida <= 0)
                 {
                     gameObject.tag = "Untagged";
                     transform.parent.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * 2, ForceMode.Impulse);
@@ -32,12 +32,12 @@ public class HurtEnemyController : MonoBehaviour
 
                     transform.parent.gameObject.layer = LayerMask.NameToLayer("NoInterPlayer");
                 }
+
+                transform.parent.gameObject.SendMessage("takeHit");
+
+                transform.parent.gameObject.GetComponent<Rigidbody>()
+                    .AddForce(other.transform.forward * 2, ForceMode.Impulse);
             }
-
-            transform.parent.gameObject.SendMessage("takeHit");
-
-            transform.parent.gameObject.GetComponent<Rigidbody>()
-                .AddForce(other.transform.forward * 2, ForceMode.Impulse);
         }
     }
 }
