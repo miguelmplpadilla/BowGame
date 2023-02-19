@@ -10,7 +10,11 @@ public class Player2DAtack : MonoBehaviour
     private Animator animator;
     private Rigidbody2D rigidbody;
 
+    public GameObject bala;
+    public GameObject shootPoint;
+
     public float velocidadDeslizarDividir = 2;
+    public float bulletForce = 2;
 
     public bool shoot = false;
 
@@ -34,6 +38,12 @@ public class Player2DAtack : MonoBehaviour
 
                 if (Input.GetButtonDown("Fire1"))
                 {
+                    GameObject balaInstanciada = Instantiate(bala);
+
+                    balaInstanciada.transform.position = shootPoint.transform.position;
+                    
+                    balaInstanciada.GetComponent<Rigidbody2D>().AddForce(new Vector2(transform.localScale.x, 0) * bulletForce, ForceMode2D.Impulse);
+                    
                     animator.SetTrigger("shoot");
                     shoot = true;
                 }
