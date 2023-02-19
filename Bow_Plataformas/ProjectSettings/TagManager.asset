@@ -16,6 +16,7 @@ TagManager:
   - Plataforma
   - Inter
   - HitBoxEnemigo
+  - Borde
   layers:
   - Default
   - TransparentFX
