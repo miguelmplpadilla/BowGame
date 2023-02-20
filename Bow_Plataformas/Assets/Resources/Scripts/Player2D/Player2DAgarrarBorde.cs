@@ -10,7 +10,7 @@ public class Player2DAgarrarBorde : MonoBehaviour
     private Player2DGroundController groundController;
 
     private bool isBorde = false;
-    private bool enganchado = false;
+    public bool enganchado = false;
 
     private Rigidbody2D rigidbody;
     private Animator animator;

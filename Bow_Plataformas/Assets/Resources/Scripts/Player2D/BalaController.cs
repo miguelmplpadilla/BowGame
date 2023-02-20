@@ -6,15 +6,16 @@ using UnityEngine;
 
 public class BalaController : MonoBehaviour
 {
+    public float numDamage = 1;
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (!col.CompareTag("Player"))
+        if (col.CompareTag("HurtBoxEnemigo"))
         {
-            if (col.CompareTag("Enemigo"))
-            {
-                col.SendMessage("hit");
-            }
-
+            col.SendMessage("hit", numDamage);
+        }
+        
+        if (!col.CompareTag("Player") && !col.CompareTag("Enemigo"))
+        {
             Destroy(gameObject);
         }
     }
