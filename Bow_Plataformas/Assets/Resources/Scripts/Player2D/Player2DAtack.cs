@@ -52,14 +52,6 @@ public class Player2DAtack : MonoBehaviour
 
                 if (Input.GetButtonDown("Fire1"))
                 {
-                    GameObject balaInstanciada = Instantiate(bala);
-
-                    balaInstanciada.transform.position = shootPoint.transform.position;
-                    
-                    balaInstanciada.GetComponent<Rigidbody2D>().AddForce(new Vector2(transform.localScale.x, 0) * bulletForce, ForceMode2D.Impulse);
-
-                    balas--;
-                    
                     animator.SetTrigger("shoot");
                     
                     shoot = true;
@@ -98,6 +90,17 @@ public class Player2DAtack : MonoBehaviour
         }
     }
 
+    public void disparar()
+    {
+        GameObject balaInstanciada = Instantiate(bala);
+
+        balaInstanciada.transform.position = shootPoint.transform.position;
+                    
+        balaInstanciada.GetComponent<Rigidbody2D>().AddForce(new Vector2(transform.localScale.x, 0) * bulletForce, ForceMode2D.Impulse);
+
+        balas--;
+    }
+
     private void LateUpdate()
     {
         rectTransformBalas.sizeDelta = new Vector2(50 * balas, rectTransformBalas.sizeDelta.y);
@@ -132,12 +135,12 @@ public class Player2DAtack : MonoBehaviour
         if (balas < 3)
         {
             balas++;
-
-            if (balas >= 3)
-            {
-                setReloadFalse();
-                animator.SetTrigger("stopReloading");
-            }
+        }
+        else
+        {
+            player2DMovement.mov = true;
+            setReloadFalse();
+            animator.SetTrigger("stopReloading");
         }
     }
 

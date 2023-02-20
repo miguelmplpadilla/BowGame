@@ -1,0 +1,519 @@
+fileFormatVersion: 2
+guid: 6cd2ab3b4389a8343a8952eeea923038
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Enemigo1_Turn_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 78
+        height: 49
+      alignment: 9
+      pivot: {x: 0.4230769, y: 0.04081633}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9072f1228b02814497886398c730a5f
+      internalID: -1387840281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemigo1_Turn_1
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 0
+        width: 78
+        height: 49
+      alignment: 9
+      pivot: {x: 0.4230769, y: 0.04081633}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d4d2b2019691fc44af51274ebff7234
+      internalID: -554280061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemigo1_Turn_2
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 0
+        width: 78
+        height: 49
+      alignment: 9
+      pivot: {x: 0.4230769, y: 0.04081633}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca54ac467aaa5ed43bc22d73f1d12553
+      internalID: 2130986083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemigo1_Turn_3
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 0
+        width: 78
+        height: 49
+      alignment: 9
+      pivot: {x: 0.4230769, y: 0.04081633}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31dd263c90869054cbb6810baa5c88c3
+      internalID: 1612753336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemigo1_Turn_4
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 0
+        width: 78
+        height: 49
+      alignment: 9
+      pivot: {x: 0.4230769, y: 0.04081633}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6db3c4ee3faa56846b37401c1865cb59
+      internalID: -1351322510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemigo1_Turn_5
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 0
+        width: 78
+        height: 49
+      alignment: 9
+      pivot: {x: 0.4230769, y: 0.04081633}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0805930debc838543be997ae3317a126
+      internalID: -194112990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemigo1_Turn_6
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 0
+        width: 78
+        height: 49
+      alignment: 9
+      pivot: {x: 0.4230769, y: 0.04081633}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 631f14434eb47e343880c50b8c05abc5
+      internalID: 296617109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemigo1_Turn_7
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 0
+        width: 78
+        height: 49
+      alignment: 9
+      pivot: {x: 0.4230769, y: 0.04081633}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bd7e42347d21d348b45bcf4bfc243a0
+      internalID: -1748359590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemigo1_Turn_8
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 0
+        width: 78
+        height: 49
+      alignment: 9
+      pivot: {x: 0.4230769, y: 0.04081633}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16b44c41d6f534943957b8c244f489c3
+      internalID: -437784141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemigo1_Turn_9
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 0
+        width: 78
+        height: 49
+      alignment: 9
+      pivot: {x: 0.4230769, y: 0.04081633}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c433be7e8ff6254d9048f6b7c2b0ae3
+      internalID: -1783299237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemigo1_Turn_10
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 0
+        width: 78
+        height: 49
+      alignment: 9
+      pivot: {x: 0.4230769, y: 0.04081633}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1076012468eacf24181cf9990e1ce08e
+      internalID: 453840854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemigo1_Turn_11
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 0
+        width: 78
+        height: 49
+      alignment: 9
+      pivot: {x: 0.4230769, y: 0.04081633}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d86d51dcd09d124490ca621b9991b71
+      internalID: -1547278648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemigo1_Turn_12
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 0
+        width: 78
+        height: 49
+      alignment: 9
+      pivot: {x: 0.4230769, y: 0.04081633}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8da493e13f6ecdb48a1d5e9dbfd21c4d
+      internalID: 1878058240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemigo1_Turn_13
+      rect:
+        serializedVersion: 2
+        x: 1014
+        y: 0
+        width: 78
+        height: 49
+      alignment: 9
+      pivot: {x: 0.4230769, y: 0.04081633}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40add2cc90149444fb812b60daf11bfe
+      internalID: 2042488387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemigo1_Turn_14
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 0
+        width: 78
+        height: 49
+      alignment: 9
+      pivot: {x: 0.4230769, y: 0.04081633}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 721447f11d9f63c45aa13d1866802399
+      internalID: 2138495933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemigo1_Turn_15
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 0
+        width: 78
+        height: 49
+      alignment: 9
+      pivot: {x: 0.4230769, y: 0.04081633}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4cfdf5cb8d6e4641b0850a5ac62ef70
+      internalID: 155015554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemigo1_Turn_16
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 0
+        width: 78
+        height: 49
+      alignment: 9
+      pivot: {x: 0.4230769, y: 0.04081633}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7e1589e0fb5df740af6fa7ed7231ce6
+      internalID: -229576026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemigo1_Turn_17
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 0
+        width: 78
+        height: 49
+      alignment: 9
+      pivot: {x: 0.4230769, y: 0.04081633}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29c4b595e91ed3a46929c5e962c13ca4
+      internalID: -1609050516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 378cad4bf564b7047a1e1dfae734aa12
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Enemigo1_Turn_17: -1609050516
+      Enemigo1_Turn_15: 155015554
+      Enemigo1_Turn_0: -1387840281
+      Enemigo1_Turn_2: 2130986083
+      Enemigo1_Turn_11: -1547278648
+      Enemigo1_Turn_4: -1351322510
+      Enemigo1_Turn_8: -437784141
+      Enemigo1_Turn_6: 296617109
+      Enemigo1_Turn_3: 1612753336
+      Enemigo1_Turn_10: 453840854
+      Enemigo1_Turn_14: 2138495933
+      Enemigo1_Turn_1: -554280061
+      Enemigo1_Turn_13: 2042488387
+      Enemigo1_Turn_9: -1783299237
+      Enemigo1_Turn_5: -194112990
+      Enemigo1_Turn_7: -1748359590
+      Enemigo1_Turn_12: 1878058240
+      Enemigo1_Turn_16: -229576026
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

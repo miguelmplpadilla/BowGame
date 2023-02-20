@@ -22,8 +22,6 @@ public class Enemigo2DController : MonoBehaviour
         {
             float distancia = Vector2.Distance(transform.position, player.transform.position);
 
-            Debug.Log(distancia);
-            
             if (distancia < 2)
             {
                 if (distancia > 0.4f)
