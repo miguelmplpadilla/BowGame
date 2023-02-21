@@ -38,7 +38,7 @@ public class Enemigo2DController : MonoBehaviour
 
             if (distancia < 2)
             {
-                if (distancia > 0.4f)
+                if (distancia > 0.3f)
                 {
                     Vector2 seguirPlayer = new Vector2(player.transform.position.x, transform.position.y);
                     transform.position = Vector2.MoveTowards(transform.position, seguirPlayer, speed * Time.deltaTime);
@@ -69,6 +69,7 @@ public class Enemigo2DController : MonoBehaviour
                     {
                         StartCoroutine("atacar");
                         atacando = true;
+                        mov = false;
                         
                         if (!girando)
                         {
@@ -112,6 +113,7 @@ public class Enemigo2DController : MonoBehaviour
         yield return new WaitForSeconds(3f);
 
         atacando = false;
+        mov = true;
 
         yield return null;
     }
@@ -126,5 +128,10 @@ public class Enemigo2DController : MonoBehaviour
     public void setMovEnemigoTrue()
     {
         mov = true;
+    }
+
+    public void destruir()
+    {
+        Destroy(gameObject);
     }
 }

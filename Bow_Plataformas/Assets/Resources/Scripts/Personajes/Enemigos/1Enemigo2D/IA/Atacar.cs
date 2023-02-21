@@ -6,14 +6,10 @@ using UnityEngine.AI;
 
 public class Atacar : Estado
 {
-    private GameObject player;
-    private GameObject self;
     
-    public Atacar(GameObject p, GameObject s) : base(p,s)
+    public Atacar()
     {
         Debug.Log("ATACAR");
-        player = p;
-        self = s;
         nombre = ESTADO.ATACAR; // Guardamos el nombre del estado en el que nos encontramos.
     }
 
@@ -25,12 +21,23 @@ public class Atacar : Estado
 
     public override void Actualizar()
     {
-
+        Debug.Log("Atacando");
         if (!PuedeAtacar())
         {
-            siguienteEstado = new Vigilar(player, self); // Si el NPC no puede atacar al jugador, lo ponemos a vigilar (por ejemplo).
-            faseActual = EVENTO.SALIR; // Cambiamos de FASE ya que pasamos de ATACAR a VIGILAR.
+            if (!PuedeVerJugador())
+            {
+                siguienteEstado = new Vigilar(); // Si el NPC no puede atacar al jugador, lo ponemos a vigilar (por ejemplo).
+                faseActual = EVENTO.SALIR; // Cambiamos de FASE ya que pasamos de ATACAR a VIGILAR.
+            }
+            
+            Vector2 seguirPlayer = new Vector2(player.transform.position.x, self.transform.position.y);
+            self.transform.position = Vector2.MoveTowards(self.transform.position, seguirPlayer, speed * Time.deltaTime);
         }
+        else
+        {
+            
+        }
+        
     }
 
     public override void Salir()
@@ -42,5 +49,10 @@ public class Atacar : Estado
     public bool PuedeAtacar()
     {
         return Vector2.Distance(self.transform.position, player.transform.position) > 0.4f;
+    }
+
+    public bool PuedeVerJugador()
+    {
+        return  Vector2.Distance(self.transform.position, player.transform.position) < 2;
     }
 }

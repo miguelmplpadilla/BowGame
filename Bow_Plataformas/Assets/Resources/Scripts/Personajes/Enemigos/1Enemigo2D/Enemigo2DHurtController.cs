@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class Enemigo2DHurtController : MonoBehaviour
 {
-
     public float vida = 3;
 
     private Rigidbody2D rigidbody;
@@ -34,14 +33,16 @@ public class Enemigo2DHurtController : MonoBehaviour
         vida -= damage;
 
         enemigo2DController.mov = false;
-        
-        animator.SetTrigger("hit");
-            
+
         StartCoroutine("cambiarColor");
-            
+
         if (vida <= 0)
         {
-            Destroy(transform.parent.gameObject);
+            animator.SetTrigger("morir");
+        }
+        else
+        {
+            animator.SetTrigger("hit");
         }
     }
 

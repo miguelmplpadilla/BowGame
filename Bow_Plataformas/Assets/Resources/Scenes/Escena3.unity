@@ -844,14 +844,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1949013064096390545, guid: e4c45a8337a87584db193d53620fd7fd, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1949013064096390546, guid: e4c45a8337a87584db193d53620fd7fd, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1949013064096390559, guid: e4c45a8337a87584db193d53620fd7fd, type: 3}
       propertyPath: m_Name
       value: Enemigo2D

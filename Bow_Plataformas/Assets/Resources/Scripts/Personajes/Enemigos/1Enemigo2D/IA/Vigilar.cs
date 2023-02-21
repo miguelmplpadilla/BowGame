@@ -6,12 +6,8 @@ using UnityEngine.AI;
 // Constructor para VIGILAR
 public class Vigilar : Estado
 {
-    private GameObject player;
-    private GameObject self;
-    public Vigilar(GameObject p, GameObject s) : base(p,s)
+    public Vigilar() : base()
     {
-        player = p;
-        self = s;
         Debug.Log("VIGILAR");
         nombre = ESTADO.VIGILAR; // Guardamos el nombre del estado en el que nos encontramos.
     }
@@ -25,9 +21,11 @@ public class Vigilar : Estado
     {
         // Le decimos que se vaya moviendo y patrullando...
 
+        Debug.Log("Vigilando");
+
         if (PuedeVerJugador())
         {
-            siguienteEstado = new Atacar(player, self);
+            siguienteEstado = new Atacar();
             faseActual = EVENTO.SALIR; // Cambiamos de FASE ya que pasamos de VIGILAR a ATACAR.
         }
     }

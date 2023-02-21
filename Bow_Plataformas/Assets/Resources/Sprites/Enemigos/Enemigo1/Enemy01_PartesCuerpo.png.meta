@@ -1,0 +1,409 @@
+fileFormatVersion: 2
+guid: c816af7ea4c02d445aa80183aea4f0fe
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Enemy01_PartesCuerpo_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 196
+        width: 78
+        height: 49
+      alignment: 9
+      pivot: {x: 0.4230769, y: 0.04081633}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d33c264f1946d024faa6035a91c47df0
+      internalID: -1031985278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy01_PartesCuerpo_1
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 196
+        width: 78
+        height: 49
+      alignment: 9
+      pivot: {x: 0.4230769, y: 0.04081633}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6835dab8e8dafb24d81453b162412b8d
+      internalID: 758964431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy01_PartesCuerpo_2
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 196
+        width: 78
+        height: 49
+      alignment: 9
+      pivot: {x: 0.4230769, y: 0.04081633}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78c2e227ada847f418eb7ce4f80e26c4
+      internalID: -744705389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy01_PartesCuerpo_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 147
+        width: 78
+        height: 49
+      alignment: 9
+      pivot: {x: 0.4230769, y: 0.04081633}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aa6d43832dee4f4dbcb2c1c1455652f
+      internalID: -408352423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy01_PartesCuerpo_4
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 147
+        width: 78
+        height: 49
+      alignment: 9
+      pivot: {x: 0.4230769, y: 0.04081633}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c8d2bc0766340e42b1585e9e1570c7c
+      internalID: 542197803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy01_PartesCuerpo_5
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 147
+        width: 78
+        height: 49
+      alignment: 9
+      pivot: {x: 0.4230769, y: 0.04081633}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8671b50d45d36604585d006c25138030
+      internalID: -906054905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy01_PartesCuerpo_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 98
+        width: 78
+        height: 49
+      alignment: 9
+      pivot: {x: 0.4230769, y: 0.04081633}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e02dc4a96a44fad40810060464870343
+      internalID: -988503466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy01_PartesCuerpo_7
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 98
+        width: 78
+        height: 49
+      alignment: 9
+      pivot: {x: 0.4230769, y: 0.04081633}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1b7e5198f9e8a342865fe83b3659713
+      internalID: 1862090162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy01_PartesCuerpo_8
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 98
+        width: 78
+        height: 49
+      alignment: 9
+      pivot: {x: 0.4230769, y: 0.04081633}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21818fda5daeb124ab03e1c639abd4f7
+      internalID: 1122218342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy01_PartesCuerpo_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 49
+        width: 78
+        height: 49
+      alignment: 9
+      pivot: {x: 0.4230769, y: 0.04081633}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb85a23547069bb449f1a13988d79606
+      internalID: 1396133207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy01_PartesCuerpo_10
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 49
+        width: 78
+        height: 49
+      alignment: 9
+      pivot: {x: 0.4230769, y: 0.04081633}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03f0f10866acf2a4cb54822966cb46a7
+      internalID: 1777512284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy01_PartesCuerpo_11
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 49
+        width: 78
+        height: 49
+      alignment: 9
+      pivot: {x: 0.4230769, y: 0.04081633}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baef5d188d9c5f34bb3f30e960819b31
+      internalID: 711593718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy01_PartesCuerpo_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 78
+        height: 49
+      alignment: 9
+      pivot: {x: 0.4230769, y: 0.04081633}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 262c53e9be3b2f84bb586e752cbbb02a
+      internalID: 1802312300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 2a66bfbf5a4712342911b06ec2cf9224
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Enemy01_PartesCuerpo_12: 1802312300
+      Enemy01_PartesCuerpo_7: 1862090162
+      Enemy01_PartesCuerpo_4: 542197803
+      Enemy01_PartesCuerpo_0: -1031985278
+      Enemy01_PartesCuerpo_1: 758964431
+      Enemy01_PartesCuerpo_3: -408352423
+      Enemy01_PartesCuerpo_8: 1122218342
+      Enemy01_PartesCuerpo_9: 1396133207
+      Enemy01_PartesCuerpo_6: -988503466
+      Enemy01_PartesCuerpo_5: -906054905
+      Enemy01_PartesCuerpo_11: 711593718
+      Enemy01_PartesCuerpo_10: 1777512284
+      Enemy01_PartesCuerpo_2: -744705389
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

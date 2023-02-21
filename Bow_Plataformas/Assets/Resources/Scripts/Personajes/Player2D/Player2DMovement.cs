@@ -9,12 +9,14 @@ public class Player2DMovement : MonoBehaviour
     private Animator animator;
 
     private Player2DGroundController groundController;
+    private Player2DHurtController hurtController;
 
     private Vector2 movement;
 
     public float speed = 5f;
     public float jumpForce = 2f;
     public bool mov = true;
+    public bool golpeado = false;
 
     private void Awake()
     {
@@ -22,11 +24,12 @@ public class Player2DMovement : MonoBehaviour
         animator = GetComponent<Animator>();
 
         groundController = GetComponentInChildren<Player2DGroundController>();
+        hurtController = GetComponentInChildren<Player2DHurtController>();
     }
 
     void Update()
     {
-        if (mov)
+        if (mov && !golpeado)
         {
             float horizontalInput = Input.GetAxisRaw("Horizontal");
         
@@ -70,5 +73,15 @@ public class Player2DMovement : MonoBehaviour
     public void setMovTrue()
     {
         mov = true;
+    }
+
+    public void starRutinaSetGolpeadoFalse()
+    {
+        hurtController.StartCoroutine(hurtController.setGolpeadoFalse());
+    }
+
+    public void setGolpeadoMovementFalse()
+    {
+        golpeado = false;
     }
 }

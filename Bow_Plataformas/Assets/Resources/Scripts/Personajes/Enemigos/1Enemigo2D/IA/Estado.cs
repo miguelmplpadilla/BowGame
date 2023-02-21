@@ -5,7 +5,9 @@ using UnityEngine;
 
 public class Estado
 {
-    private GameObject player;
+    protected GameObject player;
+    protected GameObject self;
+    protected float speed;
 
     // 'ESTADOS' que tiene el NPC
     public enum ESTADO
@@ -23,14 +25,23 @@ public class Estado
     protected EVENTO faseActual; // Para guardar la fase en la que nos encontramos
     protected Estado siguienteEstado; // El estado que se EJECUTAR A CONTINUACI�N del estado actual
 
-    // Constructor
-    public Estado(GameObject p, GameObject self)
+    public void setVariables(GameObject p, GameObject s, float velocidad)
     {
         player = p;
+        self = s;
+        speed = velocidad;
+    }
+
+    public Estado()
+    {
     }
 
     // Las fases de cada estado
-    public virtual void Entrar() { faseActual = EVENTO.ACTUALIZAR; } // La primera fase que se ejecuta cuando cambiamos de estado. El siguiente estado deberia ser "actualizar".
+    public virtual void Entrar()
+    {
+        siguienteEstado = new Vigilar();
+        faseActual = EVENTO.ACTUALIZAR;
+    } // La primera fase que se ejecuta cuando cambiamos de estado. El siguiente estado deberia ser "actualizar".
     public virtual void Actualizar() { faseActual = EVENTO.ACTUALIZAR; } // Una vez estas en ACTUALIZAR, te quedas en ACTUALIZAR hasta que quieras cambiar de estado.
     public virtual void Salir() { faseActual = EVENTO.SALIR; } // La fase de SALIR es la ltima antes de cambiar de ESTADO, aqui deberiamos limpiar lo que haga falta.
 

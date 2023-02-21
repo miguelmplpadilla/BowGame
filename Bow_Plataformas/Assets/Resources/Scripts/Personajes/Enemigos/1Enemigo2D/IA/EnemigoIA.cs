@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,19 +8,25 @@ public class EnemigoIA : MonoBehaviour
 {
 
     public GameObject player;
-    public float distancia = 0;
+    public float speed = 1;
     
+    [SerializeReference]
     public Estado FSM;
+
+    private void Awake()
+    {
+        FSM = new Estado();
+    }
 
     void Start()
     {
         player = GameObject.Find("Player2D");
-        FSM = new Vigilar(player, gameObject); // CREAMOS EL ESTADO INICIAL DEL NPC
+        
+        FSM.setVariables(player, gameObject, speed);
     }
 
     void Update()
     {
-        distancia = Vector2.Distance(player.transform.position, transform.position);
         FSM = FSM.Procesar(); // INICIAMOS LA FSM
     }
 }
