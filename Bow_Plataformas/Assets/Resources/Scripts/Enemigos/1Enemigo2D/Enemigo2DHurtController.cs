@@ -10,6 +10,8 @@ public class Enemigo2DHurtController : MonoBehaviour
 
     private Rigidbody2D rigidbody;
     private SpriteRenderer spriteRenderer;
+    private Animator animator;
+    private Enemigo2DController enemigo2DController;
 
     private GameObject player;
 
@@ -17,6 +19,9 @@ public class Enemigo2DHurtController : MonoBehaviour
     {
         rigidbody = GetComponentInParent<Rigidbody2D>();
         spriteRenderer = GetComponentInParent<SpriteRenderer>();
+        animator = GetComponentInParent<Animator>();
+
+        enemigo2DController = GetComponentInParent<Enemigo2DController>();
     }
 
     private void Start()
@@ -27,8 +32,10 @@ public class Enemigo2DHurtController : MonoBehaviour
     public void hit(float damage)
     {
         vida -= damage;
+
+        enemigo2DController.mov = false;
         
-        spriteRenderer.color = Color.red;
+        animator.SetTrigger("hit");
             
         StartCoroutine("cambiarColor");
             

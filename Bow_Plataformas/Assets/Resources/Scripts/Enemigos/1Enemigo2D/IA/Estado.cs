@@ -1,10 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Estado
 {
-        // 'ESTADOS' que tiene el NPC
+    private GameObject player;
+
+    // 'ESTADOS' que tiene el NPC
     public enum ESTADO
     {
         VIGILAR, ATACAR
@@ -21,8 +24,9 @@ public class Estado
     protected Estado siguienteEstado; // El estado que se EJECUTAR A CONTINUACI�N del estado actual
 
     // Constructor
-    public Estado()
+    public Estado(GameObject p, GameObject self)
     {
+        player = p;
     }
 
     // Las fases de cada estado

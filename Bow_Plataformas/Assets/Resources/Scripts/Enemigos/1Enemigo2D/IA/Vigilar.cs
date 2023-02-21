@@ -6,8 +6,12 @@ using UnityEngine.AI;
 // Constructor para VIGILAR
 public class Vigilar : Estado
 {
-    public Vigilar() : base()
+    private GameObject player;
+    private GameObject self;
+    public Vigilar(GameObject p, GameObject s) : base(p,s)
     {
+        player = p;
+        self = s;
         Debug.Log("VIGILAR");
         nombre = ESTADO.VIGILAR; // Guardamos el nombre del estado en el que nos encontramos.
     }
@@ -23,7 +27,7 @@ public class Vigilar : Estado
 
         if (PuedeVerJugador())
         {
-            siguienteEstado = new Atacar();
+            siguienteEstado = new Atacar(player, self);
             faseActual = EVENTO.SALIR; // Cambiamos de FASE ya que pasamos de VIGILAR a ATACAR.
         }
     }
@@ -36,8 +40,7 @@ public class Vigilar : Estado
     // Puede el NPC ver el jugador?
     public bool PuedeVerJugador()
     {
-        
-        return false; // DE MOMENTO NO
+       return  Vector2.Distance(self.transform.position, player.transform.position) < 2;
     }
 }
 

@@ -6,9 +6,14 @@ using UnityEngine.AI;
 
 public class Atacar : Estado
 {
-    public Atacar() : base()
+    private GameObject player;
+    private GameObject self;
+    
+    public Atacar(GameObject p, GameObject s) : base(p,s)
     {
         Debug.Log("ATACAR");
+        player = p;
+        self = s;
         nombre = ESTADO.ATACAR; // Guardamos el nombre del estado en el que nos encontramos.
     }
 
@@ -23,7 +28,7 @@ public class Atacar : Estado
 
         if (!PuedeAtacar())
         {
-            siguienteEstado = new Vigilar(); // Si el NPC no puede atacar al jugador, lo ponemos a vigilar (por ejemplo).
+            siguienteEstado = new Vigilar(player, self); // Si el NPC no puede atacar al jugador, lo ponemos a vigilar (por ejemplo).
             faseActual = EVENTO.SALIR; // Cambiamos de FASE ya que pasamos de ATACAR a VIGILAR.
         }
     }
@@ -34,16 +39,8 @@ public class Atacar : Estado
         base.Salir();
     }
 
-
-
-
-
-
-
-
     public bool PuedeAtacar()
     {
-        // ...
-        return false; // El NPC NO ESTÁ lo suficientemente cerca para atacar al jugador.
+        return Vector2.Distance(self.transform.position, player.transform.position) > 0.4f;
     }
 }

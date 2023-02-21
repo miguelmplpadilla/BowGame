@@ -117,15 +117,15 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.6
-    functionName: setMovTrue
+  - time: 0.6666667
+    functionName: setReloadFalse
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.6666667
-    functionName: setReloadFalse
+    functionName: setMovTrue
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
