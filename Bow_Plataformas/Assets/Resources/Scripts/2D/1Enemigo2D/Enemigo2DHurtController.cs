@@ -14,6 +14,9 @@ public class Enemigo2DHurtController : MonoBehaviour
 
     private GameObject player;
     public GameObject itemDrop;
+    
+    public int numPuntos = 1;
+    public Animator puerta;
 
     public bool parry = false;
 
@@ -50,6 +53,9 @@ public class Enemigo2DHurtController : MonoBehaviour
                 GameObject itemInstanciado = Instantiate(itemDrop);
 
                 itemInstanciado.transform.position = transform.position + new Vector3(0,0.2f,0);
+                
+                itemInstanciado.GetComponentInChildren<ItemController>().setVariables(numPuntos, puerta);
+                
                 
                 enemigo2DController.muerto = true;
                 enemigo2DController.mov = false;

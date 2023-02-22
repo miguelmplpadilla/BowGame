@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Player2DHurtController : MonoBehaviour
 {
-    public float life = 10f;
+    public VariablesPlayer variablesPlayer;
 
     private Player2DMovement player2DMovement;
     private Player2DAtack player2DAtack;
@@ -37,7 +37,7 @@ public class Player2DHurtController : MonoBehaviour
                 
                 animator.SetTrigger("hit");
                 
-                life -= col.GetComponent<DamageController>().damage;
+                variablesPlayer.restarVida(col.GetComponent<DamageController>().damage);
             }
         }
     }

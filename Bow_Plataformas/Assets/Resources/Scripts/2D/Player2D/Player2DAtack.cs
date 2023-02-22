@@ -15,7 +15,6 @@ public class Player2DAtack : MonoBehaviour
 
     public GameObject bala;
     public GameObject shootPoint;
-    private RectTransform rectTransformBalas;
     private CameraController cameraController;
 
     public float velocidadDeslizarDividir = 2;
@@ -27,7 +26,7 @@ public class Player2DAtack : MonoBehaviour
     public bool atacando = false;
     public bool recargando = false;
 
-    public int balas = 3;
+    public VariablesPlayer variablesPlayer;
 
     private void Awake()
     {
@@ -39,7 +38,6 @@ public class Player2DAtack : MonoBehaviour
 
     private void Start()
     {
-        rectTransformBalas = GameObject.Find("Balas").GetComponent<RectTransform>();
         cameraController = GameObject.Find("CM").GetComponent<CameraController>();
     }
 
@@ -83,7 +81,7 @@ public class Player2DAtack : MonoBehaviour
 
             if (Input.GetButtonDown("Recargar"))
             {
-                if (balas < 3)
+                if (variablesPlayer.balas < 3)
                 {
                     recargar();
                 }
@@ -91,9 +89,9 @@ public class Player2DAtack : MonoBehaviour
         }
     }
 
-    public void shakeCamera()
+    public void shakeCamera(float amountShake)
     {
-        cameraController.shakeCamera(0.1f, 1);
+        cameraController.shakeCamera(0.1f, amountShake);
     }
 
     public void disparar()
@@ -104,17 +102,12 @@ public class Player2DAtack : MonoBehaviour
                     
         balaInstanciada.GetComponent<Rigidbody2D>().AddForce(new Vector2(transform.localScale.x, 0) * bulletForce, ForceMode2D.Impulse);
 
-        balas--;
-    }
-
-    private void LateUpdate()
-    {
-        rectTransformBalas.sizeDelta = new Vector2(13 * balas, rectTransformBalas.sizeDelta.y);
+        variablesPlayer.restarBalas(1);
     }
 
     public void comprobarBalas()
     {
-        if (balas <= 0)
+        if (variablesPlayer.balas <= 0)
         {
             recargar();
         }
@@ -138,9 +131,9 @@ public class Player2DAtack : MonoBehaviour
 
     public void sumarBalas()
     {
-        if (balas < 3)
+        if (variablesPlayer.balas < 3)
         {
-            balas++;
+            variablesPlayer.sumarBalas(1);
         }
         else
         {
