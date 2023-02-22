@@ -10,12 +10,17 @@ public class Enemigo2DController : MonoBehaviour
     public bool mov = true;
     private bool girando = false;
     public bool atacando = false;
+    public bool muerto = false;
+    public bool parring = false;
+    private bool parry = false;
 
     public float speed = 2;
+    public int numParrys = 0;
 
     private Vector2 escala;
 
     private Animator animator;
+    private Enemigo2DHurtController hurtController;
 
     private void Awake()
     {
@@ -23,6 +28,7 @@ public class Enemigo2DController : MonoBehaviour
         transform.localScale = escala;
 
         animator = GetComponent<Animator>();
+        hurtController = GetComponentInChildren<Enemigo2DHurtController>();
     }
 
     private void Start()
@@ -32,12 +38,22 @@ public class Enemigo2DController : MonoBehaviour
 
     void Update()
     {
-        if (mov)
+        if (mov && !muerto && !parring)
         {
             float distancia = Vector2.Distance(transform.position, player.transform.position);
 
             if (distancia < 2)
             {
+                /*if (numParrys < 2)
+                {
+                    if (player.GetComponent<Player2DAtack>().atacando && !parry)
+                    {
+                        animator.SetTrigger("parry");
+                        parring = true;
+                        parry = true;
+                    }
+                }*/
+                
                 if (distancia > 0.3f)
                 {
                     Vector2 seguirPlayer = new Vector2(player.transform.position.x, transform.position.y);
@@ -102,6 +118,25 @@ public class Enemigo2DController : MonoBehaviour
         {
             animator.SetBool("run", false);
         }
+    }
+
+    public void setParryHurtControllerTrue()
+    {
+        numParrys++;
+        hurtController.parry = true;
+    }
+
+    public void startSetParryFalse()
+    {
+        parring = false;
+        hurtController.parry = false;
+        StartCoroutine("setParryFalse");
+    }
+
+    private IEnumerator setParryFalse()
+    {
+        yield return new WaitForSeconds(2f);
+        parry = false;
     }
 
     private IEnumerator atacar()

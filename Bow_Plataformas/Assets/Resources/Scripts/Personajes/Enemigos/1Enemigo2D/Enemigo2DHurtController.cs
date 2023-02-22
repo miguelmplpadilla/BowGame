@@ -13,6 +13,11 @@ public class Enemigo2DHurtController : MonoBehaviour
     private Enemigo2DController enemigo2DController;
 
     private GameObject player;
+    public GameObject itemDrop;
+
+    public bool parry = false;
+
+    public float fuerzaEmpuje = 2;
 
     private void Awake()
     {
@@ -30,19 +35,44 @@ public class Enemigo2DHurtController : MonoBehaviour
 
     public void hit(float damage)
     {
-        vida -= damage;
-
-        enemigo2DController.mov = false;
-
-        StartCoroutine("cambiarColor");
-
-        if (vida <= 0)
+        if (!enemigo2DController.muerto && !parry)
         {
-            animator.SetTrigger("morir");
+            vida -= damage;
+
+            enemigo2DController.mov = false;
+            enemigo2DController.parring = false;
+            parry = false;
+
+            StartCoroutine("cambiarColor");
+
+            if (vida <= 0)
+            {
+                GameObject itemInstanciado = Instantiate(itemDrop);
+
+                itemInstanciado.transform.position = transform.position + new Vector3(0,0.2f,0);
+                
+                enemigo2DController.muerto = true;
+                enemigo2DController.mov = false;
+                animator.SetTrigger("morir");
+            }
+            else
+            {
+                animator.SetTrigger("hit");
+            }
         }
         else
         {
-            animator.SetTrigger("hit");
+            Vector2 direccionFuerza = Vector2.zero;
+            if (player.transform.position.x > transform.position.x)
+            {
+                direccionFuerza = Vector2.left;
+            }
+            else
+            {
+                direccionFuerza = Vector2.right;
+            }
+            
+            rigidbody.AddForce(direccionFuerza * fuerzaEmpuje * Time.deltaTime, ForceMode2D.Impulse);
         }
     }
 

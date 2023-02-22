@@ -16,6 +16,7 @@ public class Player2DAtack : MonoBehaviour
     public GameObject bala;
     public GameObject shootPoint;
     private RectTransform rectTransformBalas;
+    private CameraController cameraController;
 
     public float velocidadDeslizarDividir = 2;
     public float bulletForce = 2;
@@ -39,6 +40,7 @@ public class Player2DAtack : MonoBehaviour
     private void Start()
     {
         rectTransformBalas = GameObject.Find("Balas").GetComponent<RectTransform>();
+        cameraController = GameObject.Find("CM").GetComponent<CameraController>();
     }
 
     void Update()
@@ -53,7 +55,6 @@ public class Player2DAtack : MonoBehaviour
                 if (Input.GetButtonDown("Fire1"))
                 {
                     animator.SetTrigger("shoot");
-                    
                     shoot = true;
                 }
             }
@@ -90,6 +91,11 @@ public class Player2DAtack : MonoBehaviour
         }
     }
 
+    public void shakeCamera()
+    {
+        cameraController.shakeCamera(0.1f, 1);
+    }
+
     public void disparar()
     {
         GameObject balaInstanciada = Instantiate(bala);
@@ -103,7 +109,7 @@ public class Player2DAtack : MonoBehaviour
 
     private void LateUpdate()
     {
-        rectTransformBalas.sizeDelta = new Vector2(50 * balas, rectTransformBalas.sizeDelta.y);
+        rectTransformBalas.sizeDelta = new Vector2(13 * balas, rectTransformBalas.sizeDelta.y);
     }
 
     public void comprobarBalas()

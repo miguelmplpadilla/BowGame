@@ -232,7 +232,7 @@ RectTransform:
   m_GameObject: {fileID: 929856483}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalScale: {x: 2.2474499, y: 2.2474499, z: 2.2474499}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 475662751}
@@ -240,9 +240,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -52.3, y: 0}
-  m_SizeDelta: {x: 50, y: 50}
-  m_Pivot: {x: 0.000000058412482, y: 0.49999997}
+  m_AnchoredPosition: {x: -43.828278, y: 1.3000183}
+  m_SizeDelta: {x: 13, y: 17}
+  m_Pivot: {x: -0.00000003632158, y: 0.5000001}
 --- !u!114 &929856485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -263,7 +263,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -270518253, guid: 36eb5e0ed7a2be1429ecea2b1805cb08, type: 3}
+  m_Sprite: {fileID: 1471942734, guid: f78a4e4304638274b91e0aabe3a479ec, type: 3}
   m_Type: 2
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -294,7 +294,7 @@ GameObject:
   - component: {fileID: 936580642}
   - component: {fileID: 936580641}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: CanvasUIPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -375,7 +375,7 @@ RectTransform:
   m_Children:
   - {fileID: 475662751}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -579,6 +579,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1959996981}
+  - component: {fileID: 1959996983}
   - component: {fileID: 1959996982}
   m_Layer: 0
   m_Name: CM
@@ -641,6 +642,18 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 2095615869}
+--- !u!114 &1959996983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959996980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5188e7bf0489d641aefd389b8097e5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2095615868
 GameObject:
   m_ObjectHideFlags: 3
@@ -653,6 +666,7 @@ GameObject:
   - component: {fileID: 2095615872}
   - component: {fileID: 2095615871}
   - component: {fileID: 2095615870}
+  - component: {fileID: 2095615873}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -736,6 +750,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2095615873
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095615868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  m_PivotOffset: {x: 0, y: 0, z: 0}
+  m_AmplitudeGain: 0
+  m_FrequencyGain: 1
+  mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1001 &80063958334358837
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -800,6 +831,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1949013063335912190, guid: e4c45a8337a87584db193d53620fd7fd, type: 3}
+      propertyPath: itemDrop
+      value: 
+      objectReference: {fileID: 3929158303664021194, guid: 13f75b617b82d574d8a773ee04aef56a, type: 3}
     - target: {fileID: 1949013064096390544, guid: e4c45a8337a87584db193d53620fd7fd, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -920,7 +955,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4548483724090012197, guid: 0c00a6d93d631dc448a19ad21c313d7c, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4548483724090012197, guid: 0c00a6d93d631dc448a19ad21c313d7c, type: 3}
       propertyPath: m_LocalPosition.x

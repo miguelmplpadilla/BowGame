@@ -8,6 +8,7 @@ public class Player2DHurtController : MonoBehaviour
     public float life = 10f;
 
     private Player2DMovement player2DMovement;
+    private Player2DAtack player2DAtack;
     private Animator animator;
     private Rigidbody2D rigidbody;
 
@@ -16,6 +17,7 @@ public class Player2DHurtController : MonoBehaviour
     private void Awake()
     {
         player2DMovement = GetComponentInParent<Player2DMovement>();
+        player2DAtack = GetComponentInParent<Player2DAtack>();
         animator = GetComponentInParent<Animator>();
         rigidbody = GetComponentInParent<Rigidbody2D>();
     }
@@ -29,6 +31,8 @@ public class Player2DHurtController : MonoBehaviour
                 rigidbody.velocity = Vector2.zero;
                 player2DMovement.mov = true;
                 player2DMovement.golpeado = true;
+                player2DAtack.atacando = false;
+                player2DAtack.shoot = false;
                 golpeado = true;
                 
                 animator.SetTrigger("hit");
