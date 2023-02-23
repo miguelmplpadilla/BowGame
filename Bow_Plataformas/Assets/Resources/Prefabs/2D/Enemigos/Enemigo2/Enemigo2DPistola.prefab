@@ -79,7 +79,7 @@ MonoBehaviour:
   vida: 5
   itemDrop: {fileID: 4263328233616100026, guid: b781046d05f705841ac86cd4a4ea15f1, type: 3}
   salpicaduraSangre: {fileID: 4204156284614879869, guid: 90ea156c7ceb3084ea29505235afec5e, type: 3}
-  numPuntos: 4
+  numPuntos: 2
   puerta: {fileID: 0}
   fuerzaEmpuje: 2
 --- !u!61 &2848003652700543090

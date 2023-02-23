@@ -464,10 +464,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemigo2D
       objectReference: {fileID: 0}
-    - target: {fileID: 1949013064096390559, guid: e4c45a8337a87584db193d53620fd7fd, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4c45a8337a87584db193d53620fd7fd, type: 3}
 --- !u!1 &2095615868
@@ -597,10 +593,6 @@ PrefabInstance:
     - target: {fileID: 80063957790517966, guid: c904c6b59f768c048b47a78825d518d1, type: 3}
       propertyPath: m_RootOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 80063957790517966, guid: c904c6b59f768c048b47a78825d518d1, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 7.0746837
       objectReference: {fileID: 0}
     - target: {fileID: 80063957790517966, guid: c904c6b59f768c048b47a78825d518d1, type: 3}
       propertyPath: m_LocalPosition.x
