@@ -12,5 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e83a80928b10f42449ba66c6f9422abb, type: 3}
   m_Name: VariablesJugador
   m_EditorClassIdentifier: 
-  vida: 3
-  kunais: 5
+  vida: 10
+  balas: 0
+  puntos: 0
+  balasAlmacenadas: 0
+  maxVida: 10
+  maxBalas: 3
+  maxPuntos: 0
+  maxBalasAlmacenadas: 9

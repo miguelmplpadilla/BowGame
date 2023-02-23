@@ -30,5 +30,6 @@ public class GameManager : MonoBehaviour
     {
         variablesPlayer.actualizarBalas();
         variablesPlayer.actualizarVida();
+        variablesPlayer.actualizarNumBalas();
     }
 }

@@ -7,6 +7,8 @@ using UnityEngine;
 public class BalaController : MonoBehaviour
 {
     public float numDamage = 1;
+    public GameObject particulasColision;
+    
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.CompareTag("HurtBoxEnemigo"))
@@ -16,6 +18,8 @@ public class BalaController : MonoBehaviour
         
         if (!col.CompareTag("Player") && !col.CompareTag("Enemigo"))
         {
+            Instantiate(particulasColision, transform.position, Quaternion.identity);
+            
             Destroy(gameObject);
         }
     }

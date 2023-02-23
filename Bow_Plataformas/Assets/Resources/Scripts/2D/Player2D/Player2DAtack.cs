@@ -81,7 +81,7 @@ public class Player2DAtack : MonoBehaviour
 
             if (Input.GetButtonDown("Recargar"))
             {
-                if (variablesPlayer.balas < 3)
+                if (variablesPlayer.balas < 3 && variablesPlayer.balasAlmacenadas > 0)
                 {
                     recargar();
                 }
@@ -107,7 +107,7 @@ public class Player2DAtack : MonoBehaviour
 
     public void comprobarBalas()
     {
-        if (variablesPlayer.balas <= 0)
+        if (variablesPlayer.balas <= 0 && variablesPlayer.balasAlmacenadas > 0)
         {
             recargar();
         }
@@ -131,9 +131,10 @@ public class Player2DAtack : MonoBehaviour
 
     public void sumarBalas()
     {
-        if (variablesPlayer.balas < 3)
+        if (variablesPlayer.balas < 3 && variablesPlayer.balasAlmacenadas > 0)
         {
             variablesPlayer.sumarBalas(1);
+            variablesPlayer.restarBalasAlmacenadas(1);
         }
         else
         {

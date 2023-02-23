@@ -10,16 +10,19 @@ public class ItemController : MonoBehaviour
 
     public Animator puerta;
 
-    public int numAnimacion = 0;
+    public int numAnimacion;
 
     public VariablesPlayer variablesPlayer;
+
+    private void Awake()
+    {
+        GetComponentInParent<Animator>().SetInteger("numAnimacion", numAnimacion);
+    }
 
     public void setVariables(int num, Animator p)
     {
         numItems = num;
         puerta = p;
-        
-        GetComponentInParent<Animator>().SetInteger("numAnimacion", numAnimacion);
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -32,6 +35,9 @@ public class ItemController : MonoBehaviour
             } else if (idItem.Equals("llave"))
             {
                 puerta.SetBool("abierta", true);
+            } else if (idItem.Equals("bala"))
+            {
+                variablesPlayer.sumarBalasAlmacenadas(numItems);
             }
             
             Destroy(transform.parent.gameObject);

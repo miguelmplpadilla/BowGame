@@ -11,9 +11,12 @@ public class VariablesPlayer : ScriptableObject
     public float balas = 3;
     public float puntos = 0;
 
+    public int balasAlmacenadas = 9;
+
     public float maxVida = 10;
     public float maxBalas = 3;
     public float maxPuntos = 0;
+    public int maxBalasAlmacenadas = 9;
 
     private RectTransform imagenVida;
     private RectTransform imagenBalas;
@@ -24,9 +27,11 @@ public class VariablesPlayer : ScriptableObject
         vida = maxVida;
         balas = maxBalas;
         puntos = maxPuntos;
+        balasAlmacenadas = maxBalasAlmacenadas;
 
         imagenVida = GameObject.Find("VidaUI").GetComponent<RectTransform>();
         imagenBalas = GameObject.Find("BalasUI").GetComponent<RectTransform>();
+        textoPuntos = GameObject.Find("TextoNumBalas").GetComponent<TextMeshProUGUI>();
     }
 
     public void sumarVida(float vidaSumar)
@@ -49,14 +54,24 @@ public class VariablesPlayer : ScriptableObject
         puntos -= puntosRestar;
     }
     
-    public void sumarBalas(int kunaisSumar)
+    public void sumarBalas(int balasSumar)
     {
-        balas += kunaisSumar;
+        balas += balasSumar;
     }
     
-    public void restarBalas(int kunaisRestar)
+    public void restarBalas(int balasRestar)
     {
-        balas -= kunaisRestar;
+        balas -= balasRestar;
+    }
+    
+    public void sumarBalasAlmacenadas(int balasSumar)
+    {
+        balasAlmacenadas += balasSumar;
+    }
+    
+    public void restarBalasAlmacenadas(int balasRestar)
+    {
+        balasAlmacenadas -= balasRestar;
     }
 
     public void actualizarVida()
@@ -66,6 +81,11 @@ public class VariablesPlayer : ScriptableObject
     
     public void actualizarBalas()
     {
-        imagenBalas.sizeDelta = new Vector2(13*balas, imagenBalas.sizeDelta.y);
+        imagenBalas.sizeDelta = new Vector2(9.289f*balas, imagenBalas.sizeDelta.y);
+    }
+
+    public void actualizarNumBalas()
+    {
+        textoPuntos.text = balasAlmacenadas.ToString();
     }
 }

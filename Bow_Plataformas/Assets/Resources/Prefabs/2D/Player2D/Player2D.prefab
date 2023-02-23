@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37d0bf1287c50b84cb7a9eb570f5b02e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 10
+  variablesPlayer: {fileID: 11400000, guid: b15f49d642a9d474bb6683e04e8d7a93, type: 2}
   golpeado: 0
 --- !u!1 &2574903724692303359
 GameObject:
@@ -416,7 +416,7 @@ GameObject:
   - component: {fileID: 2574903725030066372}
   m_Layer: 3
   m_Name: Player2D
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -532,7 +532,7 @@ MonoBehaviour:
   shoot: 0
   atacando: 0
   recargando: 0
-  balas: 3
+  variablesPlayer: {fileID: 11400000, guid: b15f49d642a9d474bb6683e04e8d7a93, type: 2}
 --- !u!50 &2574903725030066374
 Rigidbody2D:
   serializedVersion: 4
@@ -859,9 +859,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.95686275}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.77254903}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
