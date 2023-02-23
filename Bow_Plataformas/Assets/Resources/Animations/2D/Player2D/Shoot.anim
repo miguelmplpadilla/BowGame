@@ -20,17 +20,17 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -2007492464, guid: c841491a858401a46bb6c6995ea414f8, type: 3}
+      value: {fileID: 1474105979, guid: 797e78e3d12809e498b26aa2301f5e5c, type: 3}
     - time: 0.06666667
-      value: {fileID: 321982178, guid: c841491a858401a46bb6c6995ea414f8, type: 3}
+      value: {fileID: -834309578, guid: 797e78e3d12809e498b26aa2301f5e5c, type: 3}
     - time: 0.13333334
-      value: {fileID: -1449200349, guid: c841491a858401a46bb6c6995ea414f8, type: 3}
+      value: {fileID: -1288397307, guid: 797e78e3d12809e498b26aa2301f5e5c, type: 3}
     - time: 0.2
-      value: {fileID: 1019924843, guid: c841491a858401a46bb6c6995ea414f8, type: 3}
+      value: {fileID: -1617366238, guid: 797e78e3d12809e498b26aa2301f5e5c, type: 3}
     - time: 0.26666668
-      value: {fileID: 1585448066, guid: c841491a858401a46bb6c6995ea414f8, type: 3}
+      value: {fileID: 991077024, guid: 797e78e3d12809e498b26aa2301f5e5c, type: 3}
     - time: 0.33333334
-      value: {fileID: 2046857718, guid: c841491a858401a46bb6c6995ea414f8, type: 3}
+      value: {fileID: -657499403, guid: 797e78e3d12809e498b26aa2301f5e5c, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -50,12 +50,12 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -2007492464, guid: c841491a858401a46bb6c6995ea414f8, type: 3}
-    - {fileID: 321982178, guid: c841491a858401a46bb6c6995ea414f8, type: 3}
-    - {fileID: -1449200349, guid: c841491a858401a46bb6c6995ea414f8, type: 3}
-    - {fileID: 1019924843, guid: c841491a858401a46bb6c6995ea414f8, type: 3}
-    - {fileID: 1585448066, guid: c841491a858401a46bb6c6995ea414f8, type: 3}
-    - {fileID: 2046857718, guid: c841491a858401a46bb6c6995ea414f8, type: 3}
+    - {fileID: 1474105979, guid: 797e78e3d12809e498b26aa2301f5e5c, type: 3}
+    - {fileID: -834309578, guid: 797e78e3d12809e498b26aa2301f5e5c, type: 3}
+    - {fileID: -1288397307, guid: 797e78e3d12809e498b26aa2301f5e5c, type: 3}
+    - {fileID: -1617366238, guid: 797e78e3d12809e498b26aa2301f5e5c, type: 3}
+    - {fileID: 991077024, guid: 797e78e3d12809e498b26aa2301f5e5c, type: 3}
+    - {fileID: -657499403, guid: 797e78e3d12809e498b26aa2301f5e5c, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -93,6 +93,13 @@ AnimationClip:
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 1
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.06666667
+    functionName: crearCasquilloBala
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.33333334

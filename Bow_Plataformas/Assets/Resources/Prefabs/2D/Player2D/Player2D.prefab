@@ -170,6 +170,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   variablesPlayer: {fileID: 11400000, guid: b15f49d642a9d474bb6683e04e8d7a93, type: 2}
   golpeado: 0
+--- !u!1 &1388950589
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1388950590}
+  m_Layer: 3
+  m_Name: PosicionCasquilloBala
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1388950590
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388950589}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.013, y: 0.236, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2574903725030066425}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2574903724692303359
 GameObject:
   m_ObjectHideFlags: 0
@@ -441,6 +472,7 @@ Transform:
   - {fileID: 2574903725875641673}
   - {fileID: 278753985}
   - {fileID: 615019849}
+  - {fileID: 1388950590}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -533,6 +565,8 @@ MonoBehaviour:
   atacando: 0
   recargando: 0
   variablesPlayer: {fileID: 11400000, guid: b15f49d642a9d474bb6683e04e8d7a93, type: 2}
+  casquilloBala: {fileID: 6272576176463397340, guid: c5948c93fd5bd0c46be76258b59758b3, type: 3}
+  posicionCasquilloBala: {fileID: 1388950589}
 --- !u!50 &2574903725030066374
 Rigidbody2D:
   serializedVersion: 4
@@ -803,7 +837,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2574903725875641673
 Transform:
   m_ObjectHideFlags: 0

@@ -28,6 +28,9 @@ public class Player2DAtack : MonoBehaviour
 
     public VariablesPlayer variablesPlayer;
 
+    public GameObject casquilloBala;
+    public GameObject posicionCasquilloBala;
+
     private void Awake()
     {
         player2DMovement = GetComponent<Player2DMovement>();
@@ -52,8 +55,11 @@ public class Player2DAtack : MonoBehaviour
 
                 if (Input.GetButtonDown("Fire1"))
                 {
-                    animator.SetTrigger("shoot");
-                    shoot = true;
+                    if (variablesPlayer.balas > 0)
+                    {
+                        animator.SetTrigger("shoot");
+                        shoot = true;
+                    }
                 }
             }
             else
@@ -138,7 +144,7 @@ public class Player2DAtack : MonoBehaviour
         }
         else
         {
-            player2DMovement.mov = true;
+            //player2DMovement.mov = true;
             setReloadFalse();
             animator.SetTrigger("stopReloading");
         }
@@ -173,6 +179,11 @@ public class Player2DAtack : MonoBehaviour
         }
     }
 
+    public void resetTriggerDisparar()
+    {
+        animator.ResetTrigger("shoot");
+    }
+
     private IEnumerator reiniciarAtaque()
     {
         yield return new WaitForSeconds(1f);
@@ -197,5 +208,10 @@ public class Player2DAtack : MonoBehaviour
     public void setShootFalse()
     {
         shoot = false;
+    }
+
+    public void crearCasquilloBala()
+    {
+        Instantiate(casquilloBala, posicionCasquilloBala.transform.position, Quaternion.identity);
     }
 }

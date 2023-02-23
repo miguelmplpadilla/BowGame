@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 797e78e3d12809e498b26aa2301f5e5c
+guid: fb15a85d676e260459fe7b2ba08cf5dd
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,253 +105,274 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Shoot 1_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 576
-        width: 192
-        height: 192
-      alignment: 9
-      pivot: {x: 0.5, y: 0.4166667}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d5621aede8d59994e917cf16aa8e8d87
-      internalID: 1474105979
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shoot 1_1
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 576
-        width: 192
-        height: 192
-      alignment: 9
-      pivot: {x: 0.5, y: 0.4166667}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 67e01e079eb1fa342a1fcf723c21e3f0
-      internalID: -834309578
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shoot 1_2
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 576
-        width: 192
-        height: 192
-      alignment: 9
-      pivot: {x: 0.5, y: 0.4166667}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 64d80d1156fe08346b849c5b0803b2f1
-      internalID: -1288397307
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shoot 1_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 384
-        width: 192
-        height: 192
-      alignment: 9
-      pivot: {x: 0.5, y: 0.4166667}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 767b4870929be9e498053cb152663500
-      internalID: -1617366238
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shoot 1_4
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 384
-        width: 192
-        height: 192
-      alignment: 9
-      pivot: {x: 0.5, y: 0.4166667}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e08f4795d1fcb6a45ad8a2ad2aea94cc
-      internalID: 991077024
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shoot 1_5
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 384
-        width: 192
-        height: 192
-      alignment: 9
-      pivot: {x: 0.5, y: 0.4166667}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cdcfea56bdb512940b0add86a0428599
-      internalID: -657499403
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shoot 1_6
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 192
-        width: 192
-        height: 192
-      alignment: 9
-      pivot: {x: 0.5, y: 0.4166667}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cb0df881df901a143b22da29c260d922
-      internalID: 1612678426
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shoot 1_7
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 192
-        width: 192
-        height: 192
-      alignment: 9
-      pivot: {x: 0.5, y: 0.4166667}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ba4472bb2c084d74e8a9681c696b86f6
-      internalID: 387416653
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shoot 1_8
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 192
-        width: 192
-        height: 192
-      alignment: 9
-      pivot: {x: 0.5, y: 0.4166667}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d42d796412afbb6479ec5bb7d246eeb3
-      internalID: -291551842
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shoot 1_9
+      name: ExplosionEnemigoBala_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 192
-        height: 192
-      alignment: 9
-      pivot: {x: 0.5, y: 0.4166667}
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f5087e8a7a2b4e4cb0a8fa6574c46b3
-      internalID: -1622574981
+      spriteID: 9871b2ed0653f034a9c83bf11551999a
+      internalID: 1827320414
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shoot 1_10
+      name: ExplosionEnemigoBala_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 410f162c1949e1f4591783a363fed3d7
+      internalID: 164575362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplosionEnemigoBala_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcaaeaa7d162b1143805ea316341a452
+      internalID: 1685597859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplosionEnemigoBala_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fda9905ab74ab8f408aa6da5bf8188ef
+      internalID: 644550035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplosionEnemigoBala_4
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7133ec5bf39f1bd49a850bc8dd51c01f
+      internalID: -1477813228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplosionEnemigoBala_5
       rect:
         serializedVersion: 2
         x: 192
         y: 0
-        width: 192
-        height: 192
-      alignment: 9
-      pivot: {x: 0.5, y: 0.4166667}
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 016a8b53e86db9e418bdcbd445cceeb5
-      internalID: 762408015
+      spriteID: 764624a815e65f54f83e1374e5d0a708
+      internalID: -863673257
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shoot 1_11
+      name: ExplosionEnemigoBala_6
       rect:
         serializedVersion: 2
-        x: 384
+        x: 224
         y: 0
-        width: 192
-        height: 192
-      alignment: 9
-      pivot: {x: 0.5, y: 0.4166667}
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 106bcd28e85814e418ad603f5f808a3e
-      internalID: 13368859
+      spriteID: 203c35d32ceda8f4abc7082f3e6ccdd3
+      internalID: 63560377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplosionEnemigoBala_7
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9564bac2f956ef14dada9b59b55052b6
+      internalID: 1715676072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplosionEnemigoBala_8
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7825e0eb837f60747a1f20c434318825
+      internalID: 1269839587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplosionEnemigoBala_9
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 687a70cdaa6068340b746888513aa1b2
+      internalID: 1149324609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplosionEnemigoBala_10
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca3b58a9d423589428ad7ae040aca35c
+      internalID: -99068489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplosionEnemigoBala_11
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ad2963dcb8d2804dab884f6895e071f
+      internalID: 1123791132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplosionEnemigoBala_12
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b158f421ae61fde4da8827bf8a2515d1
+      internalID: 1636195652
       vertices: []
       indices: 
       edges: []
@@ -359,7 +380,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 8ef84b39ae18d674da797ddf5b22040f
+    spriteID: ac180c1ad421ffa45ac284238aef80ef
     internalID: 0
     vertices: []
     indices: 
@@ -367,18 +388,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Shoot 1_6: 1612678426
-      Shoot 1_4: 991077024
-      Shoot 1_7: 387416653
-      Shoot 1_1: -834309578
-      Shoot 1_10: 762408015
-      Shoot 1_5: -657499403
-      Shoot 1_2: -1288397307
-      Shoot 1_9: -1622574981
-      Shoot 1_0: 1474105979
-      Shoot 1_11: 13368859
-      Shoot 1_3: -1617366238
-      Shoot 1_8: -291551842
+      ExplosionEnemigoBala_8: 1269839587
+      ExplosionEnemigoBala_10: -99068489
+      ExplosionEnemigoBala_7: 1715676072
+      ExplosionEnemigoBala_2: 1685597859
+      ExplosionEnemigoBala_6: 63560377
+      ExplosionEnemigoBala_1: 164575362
+      ExplosionEnemigoBala_4: -1477813228
+      ExplosionEnemigoBala_11: 1123791132
+      ExplosionEnemigoBala_3: 644550035
+      ExplosionEnemigoBala_0: 1827320414
+      ExplosionEnemigoBala_5: -863673257
+      ExplosionEnemigoBala_12: 1636195652
+      ExplosionEnemigoBala_9: 1149324609
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

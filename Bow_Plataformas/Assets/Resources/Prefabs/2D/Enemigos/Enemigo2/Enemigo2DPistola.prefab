@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1158111204768048778
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5370219990600359079}
+  m_Layer: 13
+  m_Name: ShootPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5370219990600359079
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158111204768048778}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.164, y: 0.14, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2848003652940932891}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2848003652700543088
 GameObject:
   m_ObjectHideFlags: 0
@@ -9,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2848003652700543091}
-  - component: {fileID: 2848003652700543093}
+  - component: {fileID: 3700846798049440532}
   - component: {fileID: 2848003652700543090}
   m_Layer: 0
   m_Name: HurtCollider
@@ -33,7 +64,7 @@ Transform:
   m_Father: {fileID: 2848003652940932891}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2848003652700543093
+--- !u!114 &3700846798049440532
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,16 +73,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 2848003652700543088}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f817508dfad0b841b975c53b77cbbe2, type: 3}
+  m_Script: {fileID: 11500000, guid: 0bf2ca6f8576a774aa8c174d2d9a0d9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: 3
-  itemDrop: {fileID: 7455691263909336669, guid: 9f9980607a7b2ab4a85dd2f4c4b08d05, type: 3}
-  salpicaduraSangre: {fileID: 5884398989406662067, guid: 0aefb63cf9ab49047a20f3a2d58c0d6d, type: 3}
-  manchaSangre: {fileID: 487208114876922240, guid: 3e889a23905441844aa62d02d87a8e58, type: 3}
-  numPuntos: 1
+  vida: 5
+  itemDrop: {fileID: 4263328233616100026, guid: b781046d05f705841ac86cd4a4ea15f1, type: 3}
+  salpicaduraSangre: {fileID: 4204156284614879869, guid: 90ea156c7ceb3084ea29505235afec5e, type: 3}
+  numPuntos: 4
   puerta: {fileID: 0}
-  parry: 0
   fuerzaEmpuje: 2
 --- !u!61 &2848003652700543090
 BoxCollider2D:
@@ -89,7 +118,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2848003652940932891}
   - component: {fileID: 2848003652940932888}
-  - component: {fileID: 2848003652940932889}
+  - component: {fileID: 2777078205819089384}
   - component: {fileID: 2848003652940932886}
   - component: {fileID: 2848003652940932887}
   - component: {fileID: 4362419267557179527}
@@ -115,6 +144,7 @@ Transform:
   - {fileID: 2848003652700543091}
   - {fileID: 4362419266915371250}
   - {fileID: 4362419266873609281}
+  - {fileID: 5370219990600359079}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -170,7 +200,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2848003652940932889
+--- !u!114 &2777078205819089384
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -179,15 +209,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 2848003652940932884}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5727287dd418d3d40847154d96efb5f5, type: 3}
+  m_Script: {fileID: 11500000, guid: 1cc8e32a958ff3a44b5187624e8b0313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mov: 1
   atacando: 0
   muerto: 0
-  parring: 0
   speed: 0.2
-  numParrys: 0
+  manchaSangre: {fileID: 487208114876922240, guid: 3e889a23905441844aa62d02d87a8e58, type: 3}
+  colorSangre: {r: 0.8962264, g: 0, b: 0, a: 1}
+  bala: {fileID: 4634011292621399715, guid: 2b0f87da01e4e0544a8d7ed8b4cf170f, type: 3}
+  shootPoint: {fileID: 1158111204768048778}
+  fuerzaBala: 0.5
 --- !u!61 &2848003652940932886
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -413,7 +446,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 1947053419, guid: 99fb454ee802c03469cf06e74abebd28, type: 3}
+  m_Sprite: {fileID: -558701815, guid: 4055cd5e69761e04698bdbbb75dea8d4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

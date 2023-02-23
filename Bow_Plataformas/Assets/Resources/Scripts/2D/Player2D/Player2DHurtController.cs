@@ -38,6 +38,11 @@ public class Player2DHurtController : MonoBehaviour
                 animator.SetTrigger("hit");
                 
                 variablesPlayer.restarVida(col.GetComponent<DamageController>().damage);
+
+                if (col.GetComponent<DamageController>().destruir)
+                {
+                    Destroy(col.gameObject);
+                }
             }
         }
     }
