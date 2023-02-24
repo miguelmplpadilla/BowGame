@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -24,6 +25,10 @@ public class EnemigoPistolaHurtController : MonoBehaviour
     
     private Vector2 posicionInstanciar;
 
+    public RectTransform rectTransformBarraVida;
+    public RectTransform rectTransformBarraVidaHijo;
+    public float numTamano;
+
     private void Awake()
     {
         rigidbody = GetComponentInParent<Rigidbody2D>();
@@ -36,6 +41,12 @@ public class EnemigoPistolaHurtController : MonoBehaviour
     private void Start()
     {
         player = GameObject.Find("Player2D");
+    }
+
+    private void LateUpdate()
+    {
+        rectTransformBarraVida.sizeDelta = new Vector2(numTamano * vida, rectTransformBarraVida.sizeDelta.y);
+        rectTransformBarraVidaHijo.sizeDelta = new Vector2(numTamano * vida, rectTransformBarraVidaHijo.sizeDelta.y);
     }
 
     public void hit(float damage)

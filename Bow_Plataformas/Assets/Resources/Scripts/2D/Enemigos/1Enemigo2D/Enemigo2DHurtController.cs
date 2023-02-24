@@ -28,6 +28,10 @@ public class Enemigo2DHurtController : MonoBehaviour
     public float fuerzaEmpuje = 2;
     
     private Vector2 posicionInstanciar;
+    
+    public RectTransform rectTransformBarraVida;
+    public RectTransform rectTransformBarraVidaHijo;
+    public float numTamano;
 
     private void Awake()
     {
@@ -41,6 +45,12 @@ public class Enemigo2DHurtController : MonoBehaviour
     private void Start()
     {
         player = GameObject.Find("Player2D");
+    }
+    
+    private void LateUpdate()
+    {
+        rectTransformBarraVida.sizeDelta = new Vector2(numTamano * vida, rectTransformBarraVida.sizeDelta.y);
+        rectTransformBarraVidaHijo.sizeDelta = new Vector2(numTamano * vida, rectTransformBarraVidaHijo.sizeDelta.y);
     }
 
     public void hit(float damage)
