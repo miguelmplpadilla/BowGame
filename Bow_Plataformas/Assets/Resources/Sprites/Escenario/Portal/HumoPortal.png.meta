@@ -1,0 +1,959 @@
+fileFormatVersion: 2
+guid: e8c67c016f0b90e4b9727b4f4eb7f90a
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HumoPortal_0
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 1215
+        width: 224
+        height: 135
+      alignment: 9
+      pivot: {x: 0.375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db2e0c15692b2304fa998bc5e1ca24bb
+      internalID: 1567618658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumoPortal_1
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1215
+        width: 224
+        height: 135
+      alignment: 9
+      pivot: {x: 0.375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 141b433bac7268542b97b8d80a399f84
+      internalID: 1265015925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumoPortal_2
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 1215
+        width: 224
+        height: 135
+      alignment: 9
+      pivot: {x: 0.375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b98d716ffd38cf43b97d7017da3bce9
+      internalID: 492199729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumoPortal_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1080
+        width: 224
+        height: 135
+      alignment: 9
+      pivot: {x: 0.375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 393e90f58799f364d869fc84ba315809
+      internalID: -1064787619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumoPortal_4
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 1080
+        width: 224
+        height: 135
+      alignment: 9
+      pivot: {x: 0.375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4754f7a6a146c57458f19fa0e235ba9b
+      internalID: -1599097687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumoPortal_5
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1080
+        width: 224
+        height: 135
+      alignment: 9
+      pivot: {x: 0.375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e209869c92b0864c9a6047d6468ce2b
+      internalID: -692646056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumoPortal_6
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 1080
+        width: 224
+        height: 135
+      alignment: 9
+      pivot: {x: 0.375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50c0ff7610eacaf47b1c553997ead10e
+      internalID: 1732903410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumoPortal_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 945
+        width: 224
+        height: 135
+      alignment: 9
+      pivot: {x: 0.375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7690a23905e6a654aba219e3b14a2bbd
+      internalID: -1817359798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumoPortal_8
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 945
+        width: 224
+        height: 135
+      alignment: 9
+      pivot: {x: 0.375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 681404634e76f464ca5ae527f46921a8
+      internalID: -1550996615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumoPortal_9
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 945
+        width: 224
+        height: 135
+      alignment: 9
+      pivot: {x: 0.375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a900c6114e26a22488d99b9d7694c5b1
+      internalID: -571353895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumoPortal_10
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 945
+        width: 224
+        height: 135
+      alignment: 9
+      pivot: {x: 0.375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56c8a3f31a84e3c4a872dcc9d092cce0
+      internalID: -329209841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumoPortal_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 810
+        width: 224
+        height: 135
+      alignment: 9
+      pivot: {x: 0.375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62e0808b8c1e5844abb883c0aa9639e6
+      internalID: 2092861422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumoPortal_12
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 810
+        width: 224
+        height: 135
+      alignment: 9
+      pivot: {x: 0.375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a7974960dd4d764b8458ede9d83eb26
+      internalID: -1354863090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumoPortal_13
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 810
+        width: 224
+        height: 135
+      alignment: 9
+      pivot: {x: 0.375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3e2720a0853dc34ba7c035fd903a40d
+      internalID: -1427843483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumoPortal_14
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 810
+        width: 224
+        height: 135
+      alignment: 9
+      pivot: {x: 0.375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83200e78865d3474e9a270e7d0881e80
+      internalID: -374423141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumoPortal_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 675
+        width: 224
+        height: 135
+      alignment: 9
+      pivot: {x: 0.375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5cec5e7b89756e48aca90191ab95279
+      internalID: -520531288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumoPortal_16
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 675
+        width: 224
+        height: 135
+      alignment: 9
+      pivot: {x: 0.375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a607f9924dd04084198dca5493e51843
+      internalID: -1336609702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumoPortal_17
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 675
+        width: 224
+        height: 135
+      alignment: 9
+      pivot: {x: 0.375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1fb7ddd3b7b82b40866c0d97c9ca1e9
+      internalID: -86129689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumoPortal_18
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 675
+        width: 224
+        height: 135
+      alignment: 9
+      pivot: {x: 0.375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 415ad3c2bd658d244abe5ceac3c412f3
+      internalID: 1644964023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumoPortal_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 540
+        width: 224
+        height: 135
+      alignment: 9
+      pivot: {x: 0.375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78b64ce5db4933144b1143db1132ed87
+      internalID: -16437693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumoPortal_20
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 540
+        width: 224
+        height: 135
+      alignment: 9
+      pivot: {x: 0.375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c278ccbfa47640f41ab7723ab66026d0
+      internalID: -2043821512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumoPortal_21
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 540
+        width: 224
+        height: 135
+      alignment: 9
+      pivot: {x: 0.375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fab060a29141e040ba1089db4e05374
+      internalID: 1522931898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumoPortal_22
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 540
+        width: 224
+        height: 135
+      alignment: 9
+      pivot: {x: 0.375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99f2c82a95881c24da84bcda36d626f9
+      internalID: 2088433454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumoPortal_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 405
+        width: 224
+        height: 135
+      alignment: 9
+      pivot: {x: 0.375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 225e51fe1698cf241a5a5a3e2701d1b1
+      internalID: 405561940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumoPortal_24
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 405
+        width: 224
+        height: 135
+      alignment: 9
+      pivot: {x: 0.375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31e2c0a4c429d16469a33b3d6a0b3a45
+      internalID: 910263283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumoPortal_25
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 405
+        width: 224
+        height: 135
+      alignment: 9
+      pivot: {x: 0.375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d1741cb02e6c4d46baddaacf3111374
+      internalID: -2070731087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumoPortal_26
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 405
+        width: 224
+        height: 135
+      alignment: 9
+      pivot: {x: 0.375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b00b8883322013542a1f6ffb2d2dc778
+      internalID: -1371040300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumoPortal_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 270
+        width: 224
+        height: 135
+      alignment: 9
+      pivot: {x: 0.375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e3dd9fc6304fd14595f9cb4be2a079f
+      internalID: -328979746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumoPortal_28
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 270
+        width: 224
+        height: 135
+      alignment: 9
+      pivot: {x: 0.375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e4a049f7ef155b498947713bcc7f4f9
+      internalID: 1625746628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumoPortal_29
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 270
+        width: 224
+        height: 135
+      alignment: 9
+      pivot: {x: 0.375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b62f35afa2dcaf41bb1972b3fb17718
+      internalID: -1631784666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumoPortal_30
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 270
+        width: 224
+        height: 135
+      alignment: 9
+      pivot: {x: 0.375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67fd6f06ccf7b744392621f44cc7db0e
+      internalID: 2044282625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumoPortal_31
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 135
+        width: 224
+        height: 135
+      alignment: 9
+      pivot: {x: 0.375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04845515800b3e14f96881c18262007c
+      internalID: -304333981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumoPortal_32
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 135
+        width: 224
+        height: 135
+      alignment: 9
+      pivot: {x: 0.375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4ab3e8d6a98add4bbb014559887381a
+      internalID: 849037265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumoPortal_33
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 135
+        width: 224
+        height: 135
+      alignment: 9
+      pivot: {x: 0.375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40f32e612b56fb24f8de12d4974c80ca
+      internalID: -1631435084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumoPortal_34
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 135
+        width: 224
+        height: 135
+      alignment: 9
+      pivot: {x: 0.375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 816c79ce40c91e74582b3cb529e89c38
+      internalID: 829886695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumoPortal_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 224
+        height: 135
+      alignment: 9
+      pivot: {x: 0.375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6476d42097fb56a429be4795140f7775
+      internalID: 70838532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumoPortal_36
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 224
+        height: 135
+      alignment: 9
+      pivot: {x: 0.375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0a5feb97a136e74b988c404a21dc116
+      internalID: -1812388503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumoPortal_37
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 224
+        height: 135
+      alignment: 9
+      pivot: {x: 0.375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43f0094513270d94fbc8cc649e044567
+      internalID: -1320565441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: a6677ec269bd43345898aa906ca1a7be
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      HumoPortal_4: -1599097687
+      HumoPortal_11: 2092861422
+      HumoPortal_24: 910263283
+      HumoPortal_8: -1550996615
+      HumoPortal_20: -2043821512
+      HumoPortal_6: 1732903410
+      HumoPortal_21: 1522931898
+      HumoPortal_34: 829886695
+      HumoPortal_15: -520531288
+      HumoPortal_1: 1265015925
+      HumoPortal_30: 2044282625
+      HumoPortal_0: 1567618658
+      HumoPortal_13: -1427843483
+      HumoPortal_5: -692646056
+      HumoPortal_28: 1625746628
+      HumoPortal_35: 70838532
+      HumoPortal_14: -374423141
+      HumoPortal_12: -1354863090
+      HumoPortal_33: -1631435084
+      HumoPortal_29: -1631784666
+      HumoPortal_7: -1817359798
+      HumoPortal_25: -2070731087
+      HumoPortal_37: -1320565441
+      HumoPortal_3: -1064787619
+      HumoPortal_10: -329209841
+      HumoPortal_18: 1644964023
+      HumoPortal_22: 2088433454
+      HumoPortal_2: 492199729
+      HumoPortal_32: 849037265
+      HumoPortal_19: -16437693
+      HumoPortal_36: -1812388503
+      HumoPortal_16: -1336609702
+      HumoPortal_17: -86129689
+      HumoPortal_27: -328979746
+      HumoPortal_26: -1371040300
+      HumoPortal_31: -304333981
+      HumoPortal_23: 405561940
+      HumoPortal_9: -571353895
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
