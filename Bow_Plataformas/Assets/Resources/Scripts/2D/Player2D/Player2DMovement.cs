@@ -10,6 +10,7 @@ public class Player2DMovement : MonoBehaviour
 
     private Player2DGroundController groundController;
     private Player2DHurtController hurtController;
+    private Interactuar2DController interactuar2DController;
 
     private Vector2 movement;
 
@@ -25,11 +26,13 @@ public class Player2DMovement : MonoBehaviour
 
         groundController = GetComponentInChildren<Player2DGroundController>();
         hurtController = GetComponentInChildren<Player2DHurtController>();
+
+        interactuar2DController = GetComponentInChildren<Interactuar2DController>();
     }
 
     void Update()
     {
-        if (mov && !golpeado)
+        if (mov && !golpeado && !interactuar2DController.interactuando)
         {
             float horizontalInput = Input.GetAxisRaw("Horizontal");
         

@@ -31,12 +31,15 @@ public class Player2DAtack : MonoBehaviour
     public GameObject casquilloBala;
     public GameObject posicionCasquilloBala;
 
+    private Interactuar2DController interactuar2DController;
+
     private void Awake()
     {
         player2DMovement = GetComponent<Player2DMovement>();
         animator = GetComponent<Animator>();
         rigidbody = GetComponent<Rigidbody2D>();
         agarrarBorde = GetComponentInChildren<Player2DAgarrarBorde>();
+        interactuar2DController = GetComponentInChildren<Interactuar2DController>();
     }
 
     private void Start()
@@ -46,7 +49,7 @@ public class Player2DAtack : MonoBehaviour
 
     void Update()
     {
-        if (!shoot && !agarrarBorde.enganchado && !recargando)
+        if (!shoot && !agarrarBorde.enganchado && !recargando && !interactuar2DController.interactuando)
         {
             if (Input.GetButton("Fire2"))
             {

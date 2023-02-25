@@ -13,6 +13,8 @@ public class VariablesPlayer : ScriptableObject
 
     public int balasAlmacenadas = 9;
 
+    public int numTeseractos;
+
     public float maxVida = 10;
     public float maxBalas = 3;
     public float maxPuntos = 0;
@@ -24,6 +26,8 @@ public class VariablesPlayer : ScriptableObject
 
     public void inicializacion()
     {
+        numTeseractos = 0;
+            
         vida = maxVida;
         balas = maxBalas;
         puntos = maxPuntos;
