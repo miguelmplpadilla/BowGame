@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 
 public class Totem2DController : MonoBehaviour
@@ -13,8 +14,13 @@ public class Totem2DController : MonoBehaviour
     public bool[] braserosEncendidos;
 
     private GameObject player;
+    private CinemachineVirtualCamera cinemachineVirtualCamera;
     
     private BotonInteractuarController botonInteractuarController;
+
+    public Animator animatorHumoPortal;
+    public GameObject posicionPlayer;
+    public GameObject posicionCamara;
 
     private void Awake()
     {
@@ -31,6 +37,7 @@ public class Totem2DController : MonoBehaviour
     private void Start()
     {
         player = GameObject.Find("Player2D");
+        cinemachineVirtualCamera = GameObject.Find("CM").GetComponent<CinemachineVirtualCamera>();
     }
 
     public void inter(GameObject intController)
@@ -56,10 +63,11 @@ public class Totem2DController : MonoBehaviour
         if (numTeseractos == braseros.Length)
         {
             GetComponent<Animator>().SetTrigger("convertirRojo");
+        } else
+        {
+            player.GetComponent<Player2DMovement>().mov = true;
+            player.GetComponentInChildren<Interactuar2DController>().interactuando = false;
         }
-        
-        player.GetComponent<Player2DMovement>().mov = true;
-        player.GetComponentInChildren<Interactuar2DController>().interactuando = false;
     }
 
     public void interEnter()
@@ -70,5 +78,12 @@ public class Totem2DController : MonoBehaviour
     public void interExit()
     {
         botonInteractuarController.visible();
+    }
+
+    public void encenderPortal()
+    {
+        player.transform.position = posicionPlayer.transform.position;
+        cinemachineVirtualCamera.Follow = posicionCamara.transform;
+        animatorHumoPortal.SetTrigger("explotar");
     }
 }

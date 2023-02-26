@@ -16,7 +16,7 @@ public class BalaController : MonoBehaviour
             col.SendMessage("hit", numDamage);
         }
         
-        if (!col.CompareTag("Player") && !col.CompareTag("Enemigo") && !col.CompareTag("Inter"))
+        if (!col.CompareTag("Player") && !col.CompareTag("Enemigo") && !col.CompareTag("Inter") && !col.CompareTag("ItemDrop"))
         {
             Instantiate(particulasColision, transform.position, Quaternion.identity);
             

@@ -524,6 +524,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Lanzargranada_20
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 29
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a796a8caf57330841855d7fafb0bd8a2
+      internalID: 928781655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -540,6 +561,7 @@ TextureImporter:
       Lanzargranada_3: 1726494646
       Lanzargranada_16: 411374624
       Lanzargranada_15: -824584413
+      Lanzargranada_20: 928781655
       Lanzargranada_14: 1527099194
       Lanzargranada_7: 1616246943
       Lanzargranada_1: 1842215559

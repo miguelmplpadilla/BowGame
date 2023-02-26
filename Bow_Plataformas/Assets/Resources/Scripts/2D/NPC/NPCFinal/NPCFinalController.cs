@@ -9,6 +9,10 @@ public class NPCFinalController : MonoBehaviour
     private GameObject player;
     private Animator animator;
 
+    public GameObject granada;
+    public GameObject throwPoint;
+    public float fuerzaGranada;
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -46,5 +50,14 @@ public class NPCFinalController : MonoBehaviour
         yield return new WaitForSeconds(2f);
         
         GameObject.Find("HumoPortal").GetComponent<Animator>().SetTrigger("explotar");
+    }
+
+    public void lanzarGranada()
+    {
+        Vector2 direccionLanzarGranada = transform.localScale;
+
+        GameObject granadaInstanciada = Instantiate(granada, throwPoint.transform.position, Quaternion.identity);
+        
+        granadaInstanciada.GetComponent<Rigidbody2D>().AddForce(direccionLanzarGranada * fuerzaGranada, ForceMode2D.Impulse);
     }
 }

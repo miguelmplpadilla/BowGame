@@ -16,12 +16,12 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/2D/BackgroundController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/2D/Enemigos/ManchaSangreController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Escenario/Plataforma/PlataformaHorizontalController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Escenario/Puente/PuenteController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Escenario/Puerta/PuertaController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Escenario/Totem/PuertaTotemController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Personajes/NPCs/NPCFinalController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Editor/CanvasRenderer/ChangingHierarchyOfCanvasRenderer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../TheGuanchoGame/The_Guancho_Game/Assets/Resources/Scripts/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../TheGuanchoGame/The_Guancho_Game/Assets/Resources/Scripts/Personajes/Player/CameraController.cs" root0="SKIP_HIGHLIGHTING" />
@@ -145,6 +145,7 @@
       <workItem from="1677229856521" duration="3790000" />
       <workItem from="1677264108764" duration="7984000" />
       <workItem from="1677326058023" duration="2304000" />
+      <workItem from="1677342222857" duration="6151000" />
     </task>
     <servers />
   </component>

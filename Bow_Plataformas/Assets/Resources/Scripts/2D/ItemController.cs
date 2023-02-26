@@ -38,8 +38,11 @@ public class ItemController : MonoBehaviour
             } else if (idItem.Equals("bala"))
             {
                 variablesPlayer.sumarBalasAlmacenadas(numItems);
+            } else if (idItem.Equals("teseracto"))
+            {
+                variablesPlayer.sumarTeseracto(numItems);
             }
-            
+
             Destroy(transform.parent.gameObject);
         }
     }

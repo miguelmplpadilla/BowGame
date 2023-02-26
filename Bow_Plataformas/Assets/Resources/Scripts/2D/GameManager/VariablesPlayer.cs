@@ -13,7 +13,7 @@ public class VariablesPlayer : ScriptableObject
 
     public int balasAlmacenadas = 9;
 
-    public int numTeseractos;
+    public int numTeseractos = 0;
 
     public float maxVida = 10;
     public float maxBalas = 3;
@@ -22,6 +22,7 @@ public class VariablesPlayer : ScriptableObject
 
     private RectTransform imagenVida;
     private RectTransform imagenBalas;
+    private RectTransform imagenTeseractos;
     private TextMeshProUGUI textoPuntos;
 
     public void inicializacion()
@@ -36,6 +37,7 @@ public class VariablesPlayer : ScriptableObject
         imagenVida = GameObject.Find("VidaUI").GetComponent<RectTransform>();
         imagenBalas = GameObject.Find("BalasUI").GetComponent<RectTransform>();
         textoPuntos = GameObject.Find("TextoNumBalas").GetComponent<TextMeshProUGUI>();
+        imagenTeseractos = GameObject.Find("Teseractos").GetComponent<RectTransform>();
     }
 
     public void sumarVida(float vidaSumar)
@@ -46,6 +48,16 @@ public class VariablesPlayer : ScriptableObject
     public void restarVida(float vidaRestar)
     {
         vida -= vidaRestar;
+    }
+    
+    public void sumarTeseracto(int teseractoSumar)
+    {
+        numTeseractos += teseractoSumar;
+    }
+    
+    public void restarTeseracto(int teseractoRestar)
+    {
+        numTeseractos -= teseractoRestar;
     }
     
     public void sumarPuntos(float puntosSumar)
@@ -91,5 +103,18 @@ public class VariablesPlayer : ScriptableObject
     public void actualizarNumBalas()
     {
         textoPuntos.text = balasAlmacenadas.ToString();
+    }
+
+    public void actualizarTeseractos()
+    {
+        imagenTeseractos.sizeDelta = new Vector2(7.5f * numTeseractos, imagenTeseractos.sizeDelta.y);
+    }
+
+    public void actualizarImagenes()
+    {
+        actualizarBalas();
+        actualizarVida();
+        actualizarNumBalas();
+        actualizarTeseractos();
     }
 }

@@ -28,8 +28,6 @@ public class GameManager : MonoBehaviour
 
     private void LateUpdate()
     {
-        variablesPlayer.actualizarBalas();
-        variablesPlayer.actualizarVida();
-        variablesPlayer.actualizarNumBalas();
+        variablesPlayer.actualizarImagenes();
     }
 }

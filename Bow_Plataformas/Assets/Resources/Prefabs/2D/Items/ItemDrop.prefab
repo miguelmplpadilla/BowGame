@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1921537710}
   m_Layer: 0
   m_Name: ItemCollider
-  m_TagString: Untagged
+  m_TagString: ItemDrop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 5380608900318998555}
   m_Layer: 14
   m_Name: ItemDropTransparencia
-  m_TagString: Untagged
+  m_TagString: ItemDrop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -188,7 +188,7 @@ GameObject:
   - component: {fileID: 805377251}
   m_Layer: 14
   m_Name: ItemDrop
-  m_TagString: Untagged
+  m_TagString: ItemDrop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -16,14 +16,6 @@ public class PortalController : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            humo.SetTrigger("explotar");
-        }
-    }
-
     public void setAnimatorEncendido()
     {
         animator.SetTrigger("encender");

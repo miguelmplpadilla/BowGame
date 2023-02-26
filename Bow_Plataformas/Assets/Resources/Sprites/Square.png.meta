@@ -161,7 +161,7 @@ TextureImporter:
         width: 4
         height: 4
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -169,6 +169,27 @@ TextureImporter:
       bones: []
       spriteID: ed4bdcb023a613d41908354d2f428266
       internalID: -354191741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Teseracto
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 236
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d50257e796935ef4faf2e294f75fa5b0
+      internalID: 851843916
       vertices: []
       indices: 
       edges: []
@@ -189,6 +210,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Square_0: -354191741
+      Teseracto: 851843916
       Square: 7482667652216324306
   spritePackingTag: 
   pSDRemoveMatte: 0
