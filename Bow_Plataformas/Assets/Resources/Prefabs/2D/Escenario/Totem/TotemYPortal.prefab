@@ -128,6 +128,10 @@ PrefabInstance:
       propertyPath: NPCFinal
       value: 
       objectReference: {fileID: 182698247696761567, guid: 19b7b322979cdd442b25be597be38c18, type: 3}
+    - target: {fileID: 8506019172607614216, guid: 005a7223fa2f60f468651e6b0d523898, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2413806693520163455, guid: cf6e65fe05058e44f9c1161a7ea8395c, type: 3}
     - target: {fileID: 8625194253985469195, guid: 005a7223fa2f60f468651e6b0d523898, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -174,15 +178,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9143020731916274577, guid: 005a7223fa2f60f468651e6b0d523898, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5170757
+      value: 2.1277637
       objectReference: {fileID: 0}
     - target: {fileID: 9143020731916274577, guid: 005a7223fa2f60f468651e6b0d523898, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5170757
+      value: 2.1277637
       objectReference: {fileID: 0}
     - target: {fileID: 9143020731916274577, guid: 005a7223fa2f60f468651e6b0d523898, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.5170757
+      value: 2.1277637
+      objectReference: {fileID: 0}
+    - target: {fileID: 9143020731916274577, guid: 005a7223fa2f60f468651e6b0d523898, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.20201
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 005a7223fa2f60f468651e6b0d523898, type: 3}
@@ -268,6 +276,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Totem2D
       objectReference: {fileID: 0}
+    - target: {fileID: 170017391923307756, guid: 7346d87e46ec93c4bb42f3fc86c246ba, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.4584
+      objectReference: {fileID: 0}
+    - target: {fileID: 170017391923307756, guid: 7346d87e46ec93c4bb42f3fc86c246ba, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.4584
+      objectReference: {fileID: 0}
+    - target: {fileID: 170017391923307756, guid: 7346d87e46ec93c4bb42f3fc86c246ba, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.4584
+      objectReference: {fileID: 0}
+    - target: {fileID: 170017391923307757, guid: 7346d87e46ec93c4bb42f3fc86c246ba, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2413806693520163455, guid: cf6e65fe05058e44f9c1161a7ea8395c, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7346d87e46ec93c4bb42f3fc86c246ba, type: 3}
 --- !u!4 &7510180010751497294 stripped

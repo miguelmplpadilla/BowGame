@@ -21,10 +21,12 @@ public class GranadaFinalController : MonoBehaviour
 
     IEnumerator explosionFinal()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
         
-        GetComponentInParent<Rigidbody2D>().velocity = Vector2.zero;
+        GetComponentInParent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
         
+        yield return new WaitForSeconds(2f);
+
         animator.SetTrigger("explotar");
     }
 

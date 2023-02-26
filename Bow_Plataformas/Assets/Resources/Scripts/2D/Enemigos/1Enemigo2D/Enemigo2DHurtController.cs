@@ -31,6 +31,7 @@ public class Enemigo2DHurtController : MonoBehaviour
     
     public RectTransform rectTransformBarraVida;
     public RectTransform rectTransformBarraVidaHijo;
+    private Animator animatorBarraVida;
     public float numTamano;
 
     private void Awake()
@@ -45,6 +46,8 @@ public class Enemigo2DHurtController : MonoBehaviour
     private void Start()
     {
         player = GameObject.Find("Player2D");
+
+        animatorBarraVida = rectTransformBarraVida.GetComponent<Animator>();
     }
     
     private void LateUpdate()
@@ -58,7 +61,7 @@ public class Enemigo2DHurtController : MonoBehaviour
         if (!enemigo2DController.muerto && !parry)
         {
             posicionInstanciar = transform.position + new Vector3(0,0.2f,0);
-            
+            animatorBarraVida.SetTrigger("aparecer");
             vida -= damage;
 
             enemigo2DController.mov = false;

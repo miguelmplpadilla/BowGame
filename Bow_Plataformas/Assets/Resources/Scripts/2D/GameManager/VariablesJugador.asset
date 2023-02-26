@@ -15,8 +15,8 @@ MonoBehaviour:
   vida: 10
   balas: 3
   puntos: 0
-  balasAlmacenadas: 6
-  numTeseractos: 1
+  balasAlmacenadas: 9
+  numTeseractos: 0
   maxVida: 10
   maxBalas: 3
   maxPuntos: 0

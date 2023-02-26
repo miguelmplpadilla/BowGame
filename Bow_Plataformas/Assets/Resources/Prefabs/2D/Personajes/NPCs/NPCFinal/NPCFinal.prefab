@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   granada: {fileID: 8526222475792989726, guid: 80091574e54cc7942b0ba7c6fce0568f, type: 3}
   throwPoint: {fileID: 5807359777755383410}
-  fuerzaGranada: 2
+  fuerzaGranada: 1.5
 --- !u!95 &3877140176173801294
 Animator:
   serializedVersion: 4

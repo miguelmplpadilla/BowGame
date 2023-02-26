@@ -23,6 +23,7 @@ public class VariablesPlayer : ScriptableObject
     private RectTransform imagenVida;
     private RectTransform imagenBalas;
     private RectTransform imagenTeseractos;
+    private TextMeshProUGUI textoBalas;
     private TextMeshProUGUI textoPuntos;
 
     public void inicializacion()
@@ -36,7 +37,8 @@ public class VariablesPlayer : ScriptableObject
 
         imagenVida = GameObject.Find("VidaUI").GetComponent<RectTransform>();
         imagenBalas = GameObject.Find("BalasUI").GetComponent<RectTransform>();
-        textoPuntos = GameObject.Find("TextoNumBalas").GetComponent<TextMeshProUGUI>();
+        textoBalas = GameObject.Find("TextoNumBalas").GetComponent<TextMeshProUGUI>();
+        textoPuntos = GameObject.Find("TextoPuntos").GetComponent<TextMeshProUGUI>();
         imagenTeseractos = GameObject.Find("Teseractos").GetComponent<RectTransform>();
     }
 
@@ -102,12 +104,17 @@ public class VariablesPlayer : ScriptableObject
 
     public void actualizarNumBalas()
     {
-        textoPuntos.text = balasAlmacenadas.ToString();
+        textoBalas.text = balasAlmacenadas.ToString();
     }
 
     public void actualizarTeseractos()
     {
         imagenTeseractos.sizeDelta = new Vector2(7.5f * numTeseractos, imagenTeseractos.sizeDelta.y);
+    }
+
+    public void actualizarPuntos()
+    {
+        textoPuntos.text = puntos.ToString();
     }
 
     public void actualizarImagenes()
@@ -116,5 +123,6 @@ public class VariablesPlayer : ScriptableObject
         actualizarVida();
         actualizarNumBalas();
         actualizarTeseractos();
+        actualizarPuntos();
     }
 }
