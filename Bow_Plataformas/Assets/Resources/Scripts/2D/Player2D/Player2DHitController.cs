@@ -12,6 +12,7 @@ public class Player2DHitController : MonoBehaviour
     {
         if (col.CompareTag("HurtBoxEnemigo"))
         {
+            transform.parent.parent = null;
             col.SendMessage("hit", numDamage);
         }
     }

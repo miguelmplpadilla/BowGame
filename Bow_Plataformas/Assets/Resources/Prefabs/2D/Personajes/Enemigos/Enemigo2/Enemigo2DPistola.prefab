@@ -80,7 +80,7 @@ MonoBehaviour:
   itemDrop: {fileID: 4263328233616100026, guid: b781046d05f705841ac86cd4a4ea15f1, type: 3}
   salpicaduraSangre: {fileID: 4204156284614879869, guid: 90ea156c7ceb3084ea29505235afec5e, type: 3}
   numPuntos: 2
-  puerta: {fileID: 0}
+  puertas: []
   fuerzaEmpuje: 2
   rectTransformBarraVida: {fileID: 5958060344938840580}
   rectTransformBarraVidaHijo: {fileID: 5958060345777169462}
@@ -727,13 +727,17 @@ PrefabInstance:
       propertyPath: color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3395830600023889869, guid: 36bc9db38d681964f993b76405a8b443, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5012029706431590960, guid: 36bc9db38d681964f993b76405a8b443, type: 3}
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5012029706431590960, guid: 36bc9db38d681964f993b76405a8b443, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.68
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5012029706431590960, guid: 36bc9db38d681964f993b76405a8b443, type: 3}
       propertyPath: m_LocalPosition.y

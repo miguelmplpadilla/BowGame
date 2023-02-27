@@ -354,11 +354,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2848003652940932891, guid: ee75026b16f10894ca547bb1fece2880, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.68
+      value: -0.49
       objectReference: {fileID: 0}
     - target: {fileID: 2848003652940932891, guid: ee75026b16f10894ca547bb1fece2880, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.11
+      value: 0.67
       objectReference: {fileID: 0}
     - target: {fileID: 2848003652940932891, guid: ee75026b16f10894ca547bb1fece2880, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1271,7 +1271,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8448482411263895222, guid: 72ad65f2073f980499fca98b4e202e3f, type: 3}
       propertyPath: m_Name
-      value: PruebaMapaDesbloqueable
+      value: MapaDesbloqueable
       objectReference: {fileID: 0}
     - target: {fileID: 8448482411263895223, guid: 72ad65f2073f980499fca98b4e202e3f, type: 3}
       propertyPath: m_Color.a

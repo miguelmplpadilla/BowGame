@@ -14,7 +14,7 @@ public class CofreController : MonoBehaviour
     public GameObject itemPoint;
 
     public int numPuntos;
-    public Animator puerta;
+    public Animator[] puertas;
 
     public GameObject itemMostrar;
     public Sprite spriteItemMostrar;
@@ -51,7 +51,7 @@ public class CofreController : MonoBehaviour
 
     public void throwItem()
     {
-        Instantiate(item, itemPoint.transform.position, Quaternion.identity).GetComponentInChildren<ItemController>().setVariables(numPuntos, puerta);
+        Instantiate(item, itemPoint.transform.position, Quaternion.identity).GetComponentInChildren<ItemController>().setVariables(numPuntos, puertas);
     }
 
     public void interEnter()

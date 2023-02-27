@@ -19,7 +19,7 @@ public class EnemigoPistolaHurtController : MonoBehaviour
 
 
     public int numPuntos = 1;
-    public Animator puerta;
+    public Animator[] puertas;
 
     public float fuerzaEmpuje = 2;
     
@@ -73,7 +73,7 @@ public class EnemigoPistolaHurtController : MonoBehaviour
 
                 itemInstanciado.transform.position = posicionInstanciar;
 
-                itemInstanciado.GetComponentInChildren<ItemController>().setVariables(numPuntos, puerta);
+                itemInstanciado.GetComponentInChildren<ItemController>().setVariables(numPuntos, puertas);
                 
                 
                 enemigoPistolaController.muerto = true;

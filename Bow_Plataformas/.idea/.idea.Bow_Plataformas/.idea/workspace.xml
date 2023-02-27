@@ -2,7 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de905aa9-cf14-4e92-a33c-a2617a55a2d3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Bow_Plataformas/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Bow_Plataformas/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PostProcesing.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PostProcesing.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/2D/Player2D/Hit.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Animations/2D/Player2D/Hit.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/2D/Camara2D.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/2D/Camara2D.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/2D/MiniMapa/RenderTextures/MiniMapaCompleto.renderTexture" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/2D/MiniMapa/RenderTextures/MiniMapaCompleto.renderTexture" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/2D/Personajes/Enemigos/Enemigo2/Enemigo2DPistola.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/2D/Personajes/Enemigos/Enemigo2/Enemigo2DPistola.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/2D/Personajes/NPCs/NPC1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/2D/Personajes/NPCs/NPC1.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Scenes/Escena3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scenes/Escena3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scenes/EscernaPruebas2D.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scenes/EscernaPruebas2D.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/2D/Cofre/CofreController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/2D/Cofre/CofreController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/2D/Enemigos/1Enemigo2D/Enemigo2DHurtController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/2D/Enemigos/1Enemigo2D/Enemigo2DHurtController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/2D/Enemigos/2Enemigo2D/EnemigoPistolaHurtController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/2D/Enemigos/2Enemigo2D/EnemigoPistolaHurtController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/2D/ItemController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/2D/ItemController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/2D/Player2D/Player2DHitController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/2D/Player2D/Player2DHitController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,6 +168,7 @@
       <workItem from="1677492341281" duration="2643000" />
       <workItem from="1677510221520" duration="1650000" />
       <workItem from="1677527994296" duration="89000" />
+      <workItem from="1677536357084" duration="1285000" />
     </task>
     <servers />
   </component>

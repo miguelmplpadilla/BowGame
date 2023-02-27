@@ -8,7 +8,7 @@ public class ItemController : MonoBehaviour
     public string idItem = "";
     public int numItems = 1;
 
-    public Animator puerta;
+    public Animator[] puertas;
 
     public int numAnimacion;
 
@@ -19,10 +19,10 @@ public class ItemController : MonoBehaviour
         GetComponentInParent<Animator>().SetInteger("numAnimacion", numAnimacion);
     }
 
-    public void setVariables(int num, Animator p)
+    public void setVariables(int num, Animator[] p)
     {
         numItems = num;
-        puerta = p;
+        puertas = p;
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -34,7 +34,10 @@ public class ItemController : MonoBehaviour
                 variablesPlayer.sumarPuntos(numItems);
             } else if (idItem.Equals("llave"))
             {
-                puerta.SetBool("abierta", true);
+                for (int i = 0; i < puertas.Length; i++)
+                {
+                    puertas[i].SetBool("abierta", true);
+                }
             } else if (idItem.Equals("bala"))
             {
                 variablesPlayer.sumarBalasAlmacenadas(numItems);

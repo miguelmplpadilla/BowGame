@@ -21,7 +21,7 @@ public class Enemigo2DHurtController : MonoBehaviour
 
 
     public int numPuntos = 1;
-    public Animator puerta;
+    public Animator[] puertas;
 
     public bool parry = false;
 
@@ -81,7 +81,7 @@ public class Enemigo2DHurtController : MonoBehaviour
                 itemInstanciado.transform.position = posicionInstanciar;
                 manchaSangreInstanciada.transform.position = posicionInstanciar;
 
-                itemInstanciado.GetComponentInChildren<ItemController>().setVariables(numPuntos, puerta);
+                itemInstanciado.GetComponentInChildren<ItemController>().setVariables(numPuntos, puertas);
                 
                 
                 enemigo2DController.muerto = true;
