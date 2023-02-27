@@ -13,6 +13,8 @@ public class Pausa2DController : MonoBehaviour
 
     private Canvas selfCanvas;
     private PostProcessVolume mainCamera;
+    private ChromaticAberration chromaticAberration;
+    private Grain grain;
 
     private void Awake()
     {
@@ -22,15 +24,18 @@ public class Pausa2DController : MonoBehaviour
     private void Start()
     {
         mainCamera = GameObject.Find("MainCamera").GetComponent<PostProcessVolume>();
+        mainCamera.profile.TryGetSettings(out chromaticAberration);
+        mainCamera.profile.TryGetSettings(out grain);
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            //mainCamera.GetComponent<ChromaticAberration>().enabled.value = !pausado;
-            //mainCamera.GetComponent<Grain>().enabled.value = !pausado;
-            
+
+            chromaticAberration.active = !pausado;
+            grain.active = !pausado;
+
             selfCanvas.enabled = !pausado;
             
             foreach (var canvas in canvasDesactivar)

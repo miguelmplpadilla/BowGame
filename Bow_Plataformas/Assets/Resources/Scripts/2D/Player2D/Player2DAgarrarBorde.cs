@@ -39,11 +39,11 @@ public class Player2DAgarrarBorde : MonoBehaviour
                     transform.parent.parent = borde.transform.parent;
                     if (transform.parent.localScale.x > 0)
                     {
-                        transform.parent.localPosition = new Vector3(0.616999984f, 0.289799988f, 0);
+                        transform.parent.localPosition = new Vector3(-0.125999987f,-0.207199991f,0);
                     }
                     else
                     {
-                        transform.parent.localPosition = new Vector3(0.871699989f, 0.289799988f, 0);
+                        transform.parent.localPosition = new Vector3(0.126899958f,-0.207199991f,0);
                     }
                 }
                 animator.SetBool("enganchado", true);

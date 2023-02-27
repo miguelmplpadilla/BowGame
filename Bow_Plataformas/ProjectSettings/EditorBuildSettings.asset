@@ -21,6 +21,6 @@ EditorBuildSettings:
     path: Assets/Resources/Scenes/EscenaFinJuego.unity
     guid: 435e2464297d4fd4f9859b997de43a89
   - enabled: 1
-    path: Assets/Resources/Scenes/Escena3.unity
+    path: Assets/Resources/Scenes/EscernaPruebas2D.unity
     guid: be3cb0e44d42356439f652457b3d4bf0
   m_configObjects: {}
