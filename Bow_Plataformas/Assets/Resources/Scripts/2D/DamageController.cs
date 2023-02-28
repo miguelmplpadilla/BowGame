@@ -14,13 +14,35 @@ public class DamageController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (bala)
-        {
-            Instantiate(particulasColisionBala, transform.position, Quaternion.identity);
-        }
-        
         if (col.CompareTag("HitBoxPlayer") && destruir)
         {
+            if (bala)
+            {
+                Instantiate(particulasColisionBala, transform.position, Quaternion.identity);
+            }
+            Destroy(gameObject);
+        }
+
+        if (col.CompareTag("Ground"))
+        {
+            if (bala)
+            {
+                Instantiate(particulasColisionBala, transform.position, Quaternion.identity);
+            }
+            
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.CompareTag("Ground"))
+        {
+            if (bala)
+            {
+                Instantiate(particulasColisionBala, transform.position, Quaternion.identity);
+            }
+            
             Destroy(gameObject);
         }
     }
