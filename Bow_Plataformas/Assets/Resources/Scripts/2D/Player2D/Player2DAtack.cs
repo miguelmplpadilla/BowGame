@@ -51,12 +51,12 @@ public class Player2DAtack : MonoBehaviour
     {
         if (!shoot && !agarrarBorde.enganchado && !recargando && !interactuar2DController.interactuando)
         {
-            if (Input.GetButton("Fire2"))
+            if (Input.GetAxis("Fire2") > 0)
             {
                 animator.SetBool("point", true);
                 player2DMovement.mov = false;
 
-                if (Input.GetButtonDown("Fire1"))
+                if (Input.GetAxis("Fire1") > 0)
                 {
                     if (variablesPlayer.balas > 0)
                     {
@@ -73,7 +73,7 @@ public class Player2DAtack : MonoBehaviour
                 {
                     player2DMovement.mov = true;
                     
-                    if (Input.GetButtonDown("Fire1"))
+                    if (Input.GetAxis("Fire1") > 0)
                     {
                         StopCoroutine("reiniciarAtaque");
                         animator.SetInteger("ataque", numAtaque);
@@ -157,7 +157,7 @@ public class Player2DAtack : MonoBehaviour
     {
         if (!player2DMovement.mov)
         {
-            if (Input.GetButton("Fire2") || atacando)
+            if (Input.GetAxis("Fire2") > 0 || atacando)
             {
                 if (rigidbody.velocity.x != 0)
                 {

@@ -12,7 +12,7 @@ public class Estado
     // 'ESTADOS' que tiene el NPC
     public enum ESTADO
     {
-        VIGILAR, ATACAR
+        VIGILAR, ATACAR, PATRULLA
     };
 
     // 'EVENTOS' - En que parte nos encontramos del estado
@@ -39,10 +39,9 @@ public class Estado
     // Las fases de cada estado
     public virtual void Entrar()
     {
-        siguienteEstado = new Vigilar();
         faseActual = EVENTO.ACTUALIZAR;
     } // La primera fase que se ejecuta cuando cambiamos de estado. El siguiente estado deberia ser "actualizar".
-    public virtual void Actualizar() { faseActual = EVENTO.ACTUALIZAR; } // Una vez estas en ACTUALIZAR, te quedas en ACTUALIZAR hasta que quieras cambiar de estado.
+    public virtual void Actualizar() { faseActual = EVENTO.ACTUALIZAR;} // Una vez estas en ACTUALIZAR, te quedas en ACTUALIZAR hasta que quieras cambiar de estado.
     public virtual void Salir() { faseActual = EVENTO.SALIR; } // La fase de SALIR es la ltima antes de cambiar de ESTADO, aqui deberiamos limpiar lo que haga falta.
 
     // Este es la funcion a la que llamaremos para que el NPC inicie la maquina de estados. Vincula los EVENTOS con las funciones que ejecuta cada uno

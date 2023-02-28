@@ -15,7 +15,7 @@ public class EnemigoIA : MonoBehaviour
 
     private void Awake()
     {
-        FSM = new Estado();
+        FSM = new Patrulla();
     }
 
     void Start()

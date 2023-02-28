@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: VariablesJugador
   m_EditorClassIdentifier: 
   vida: 10
-  balas: 3
-  puntos: 0
-  balasAlmacenadas: 9
+  balas: 2
+  puntos: 10
+  balasAlmacenadas: 7
   numTeseractos: 0
   maxVida: 10
   maxBalas: 3

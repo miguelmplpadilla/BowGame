@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 // Constructor para VIGILAR
-public class Vigilar : Estado
+public class Vigilar : Patrulla
 {
     public Vigilar() : base()
     {

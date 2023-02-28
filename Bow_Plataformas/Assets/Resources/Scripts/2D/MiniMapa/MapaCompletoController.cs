@@ -7,7 +7,7 @@ public class MapaCompletoController : MonoBehaviour
     private bool mapaMostrado = false;
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.M))
+        if (Input.GetButtonDown("Map"))
         {
             GetComponent<Canvas>().enabled = !mapaMostrado;
             mapaMostrado = !mapaMostrado;

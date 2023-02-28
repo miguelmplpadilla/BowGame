@@ -23,14 +23,19 @@ public class DesbloquearMapaController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (lastPosition != transform.position)
-        {
-            lineRenderer.positionCount++;
-            int positionIndex = lineRenderer.positionCount - 1;
-        
-            lineRenderer.SetPosition(positionIndex, transform.position);
+        float distancia = Vector2.Distance(lastPosition, transform.position);
 
-            lastPosition = transform.position;
+        if (distancia > 0.5f)
+        {
+            if (lastPosition != transform.position)
+            {
+                lineRenderer.positionCount++;
+                int positionIndex = lineRenderer.positionCount - 1;
+        
+                lineRenderer.SetPosition(positionIndex, transform.position);
+
+                lastPosition = transform.position;
+            }
         }
     }
 }

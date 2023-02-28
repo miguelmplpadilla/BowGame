@@ -30,7 +30,7 @@ public class Pausa2DController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetButtonDown("Pause"))
         {
 
             chromaticAberration.active = !pausado;

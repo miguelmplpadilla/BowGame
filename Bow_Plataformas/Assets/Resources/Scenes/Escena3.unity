@@ -1525,22 +1525,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 576719876}
     m_Modifications:
-    - target: {fileID: 1573408720, guid: e4c45a8337a87584db193d53620fd7fd, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -11.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1573408720, guid: e4c45a8337a87584db193d53620fd7fd, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -8.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1949013063335912190, guid: e4c45a8337a87584db193d53620fd7fd, type: 3}
-      propertyPath: itemDrop
-      value: 
-      objectReference: {fileID: 2808317147997868506, guid: 59be24b4e4148b642bda87c10e6101c9, type: 3}
-    - target: {fileID: 1949013063335912190, guid: e4c45a8337a87584db193d53620fd7fd, type: 3}
-      propertyPath: numPuntos
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 1949013064096390544, guid: e4c45a8337a87584db193d53620fd7fd, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -5642,6 +5626,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1418487063, guid: d17811d618e3e4f4aa104156c4b809a3, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 294912
+      objectReference: {fileID: 0}
     - target: {fileID: 2574903725030066371, guid: d17811d618e3e4f4aa104156c4b809a3, type: 3}
       propertyPath: m_Name
       value: Player2D
@@ -8017,6 +8005,10 @@ PrefabInstance:
       propertyPath: orthographic size
       value: 18.241905
       objectReference: {fileID: 0}
+    - target: {fileID: 7225363551531937685, guid: a728befabdcf01648b9e5b5a48c1fe76, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 294912
+      objectReference: {fileID: 0}
     - target: {fileID: 7225363551531937687, guid: a728befabdcf01648b9e5b5a48c1fe76, type: 3}
       propertyPath: m_Name
       value: CamaraMapaCompleto
@@ -8543,6 +8535,10 @@ PrefabInstance:
     - target: {fileID: 3700846798049440532, guid: ee75026b16f10894ca547bb1fece2880, type: 3}
       propertyPath: numPuntos
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7314759535891913945, guid: ee75026b16f10894ca547bb1fece2880, type: 3}
+      propertyPath: color.a
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee75026b16f10894ca547bb1fece2880, type: 3}

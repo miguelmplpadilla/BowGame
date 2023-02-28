@@ -312,11 +312,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vida: 3
-  itemDrop: {fileID: 7455691263909336669, guid: 9f9980607a7b2ab4a85dd2f4c4b08d05, type: 3}
+  itemDrop: {fileID: 2808317147997868506, guid: 59be24b4e4148b642bda87c10e6101c9, type: 3}
   salpicaduraSangre: {fileID: 5884398989406662067, guid: 0aefb63cf9ab49047a20f3a2d58c0d6d, type: 3}
   manchaSangre: {fileID: 487208114876922240, guid: 3e889a23905441844aa62d02d87a8e58, type: 3}
-  numPuntos: 1
-  puerta: {fileID: 0}
+  numPuntos: 5
+  puertas: []
   parry: 0
   fuerzaEmpuje: 2
   rectTransformBarraVida: {fileID: 1396668275}

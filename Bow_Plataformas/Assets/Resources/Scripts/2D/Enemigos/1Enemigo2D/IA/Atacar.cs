@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 
-public class Atacar : Estado
+public class Atacar : Patrulla
 {
     
     public Atacar()
