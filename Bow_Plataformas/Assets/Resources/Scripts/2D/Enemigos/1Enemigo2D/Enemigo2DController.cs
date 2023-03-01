@@ -40,21 +40,16 @@ public class Enemigo2DController : MonoBehaviour
     {
         if (mov && !muerto && !parring)
         {
-            float distancia = Vector2.Distance(transform.position, player.transform.position);
+            Vector2 playerHorizontalPosition = new Vector2(player.transform.position.x, transform.position.y);
+            Vector2 playerVerticalPosition = new Vector2(transform.position.x, player.transform.position.y);
+            
+            float distanciaHorizontal = Vector2.Distance(transform.position, playerHorizontalPosition);
 
-            if (distancia < 2)
+            float distanciaVertical = Vector2.Distance(transform.position, playerVerticalPosition);
+
+            if (distanciaHorizontal < 2 && distanciaVertical < 0.2f)
             {
-                /*if (numParrys < 2)
-                {
-                    if (player.GetComponent<Player2DAtack>().atacando && !parry)
-                    {
-                        animator.SetTrigger("parry");
-                        parring = true;
-                        parry = true;
-                    }
-                }*/
-                
-                if (distancia > 0.3f)
+                if (distanciaHorizontal > 0.3f)
                 {
                     Vector2 seguirPlayer = new Vector2(player.transform.position.x, transform.position.y);
                     transform.position = Vector2.MoveTowards(transform.position, seguirPlayer, speed * Time.deltaTime);
@@ -112,6 +107,10 @@ public class Enemigo2DController : MonoBehaviour
                     
                     animator.SetBool("run", false);
                 }
+            }
+            else
+            {
+                animator.SetBool("run", false);
             }
         }
         else

@@ -136,6 +136,8 @@ public class Player2DAtack : MonoBehaviour
     {
         recargando = false;
         animator.SetBool("reloading", false);
+        
+        player2DMovement.mov = true;
     }
 
     public void sumarBalas()
@@ -147,7 +149,6 @@ public class Player2DAtack : MonoBehaviour
         }
         else
         {
-            //player2DMovement.mov = true;
             setReloadFalse();
             animator.SetTrigger("stopReloading");
         }

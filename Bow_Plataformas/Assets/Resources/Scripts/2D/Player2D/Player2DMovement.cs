@@ -7,10 +7,12 @@ public class Player2DMovement : MonoBehaviour
 {
     private Rigidbody2D rigidbody;
     private Animator animator;
+    private Animator animatorPolvo;
 
     private Player2DGroundController groundController;
     private Player2DHurtController hurtController;
     private Interactuar2DController interactuar2DController;
+    private Player2DAtack player2DAtack;
 
     private Vector2 movement;
 
@@ -28,6 +30,10 @@ public class Player2DMovement : MonoBehaviour
         hurtController = GetComponentInChildren<Player2DHurtController>();
 
         interactuar2DController = GetComponentInChildren<Interactuar2DController>();
+
+        animatorPolvo = transform.Find("Polvo").GetComponent<Animator>();
+
+        player2DAtack = GetComponent<Player2DAtack>();
     }
 
     void Update()
@@ -54,6 +60,17 @@ public class Player2DMovement : MonoBehaviour
             rigidbody.velocity =
                 transform.TransformDirection(new Vector3(horizontalvelocity, rigidbody.velocity.y, 0));
 
+            if (Input.GetButton("Sprint"))
+            {
+                speed = 1.2f;
+            }
+            else
+            {
+                speed = 0.8f;
+            }
+            
+            animator.SetFloat("horizontalVelocity", speed);
+
             if (Input.GetButtonDown("Jump"))
             {
                 if (groundController.isGrounded)
@@ -61,8 +78,28 @@ public class Player2DMovement : MonoBehaviour
                     saltar();
                 }
             }
+            
+            if (groundController.isGrounded && !player2DAtack.atacando && !player2DAtack.shoot)
+            {
+                if (speed > 0.8f)
+                {
+                    animatorPolvo.SetBool("moviendose", true);
+                }
+                else
+                {
+                    animatorPolvo.SetBool("moviendose", false);
+                }
+            }
+            else
+            {
+                animatorPolvo.SetBool("moviendose", false);
+            }
         }
-        
+        else
+        {
+            animatorPolvo.SetBool("moviendose", false);
+        }
+
         animator.SetFloat("verticalVelocity", rigidbody.velocity.y);
         
         animator.SetBool("grounded", groundController.isGrounded);

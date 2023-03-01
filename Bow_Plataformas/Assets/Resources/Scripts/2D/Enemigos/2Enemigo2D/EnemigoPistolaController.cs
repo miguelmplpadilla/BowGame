@@ -42,11 +42,17 @@ public class EnemigoPistolaController : MonoBehaviour
     {
         if (mov && !muerto)
         {
-            float distancia = Vector2.Distance(transform.position, player.transform.position);
+            Vector2 playerHorizontalPosition = new Vector2(player.transform.position.x, transform.position.y);
+            Vector2 playerVerticalPosition = new Vector2(transform.position.x, player.transform.position.y);
+            
+            float distanciaHorizontal = Vector2.Distance(transform.position, playerHorizontalPosition);
 
-            if (distancia < 2)
+            float distanciaVertical = Vector2.Distance(transform.position, playerVerticalPosition);
+            
+
+            if (distanciaHorizontal < 2 && distanciaVertical < 0.2f)
             {
-                if (distancia > 1f)
+                if (distanciaHorizontal > 1f)
                 {
                     if (!atacando)
                     {
@@ -71,6 +77,17 @@ public class EnemigoPistolaController : MonoBehaviour
                 {
                     if (!atacando)
                     {
+                        if (player.transform.position.x > transform.position.x)
+                        {
+                            escala = new Vector2(1, 1);
+                        }
+                        else if (player.transform.position.x < transform.position.x)
+                        {
+                            escala = new Vector2(-1, 1);
+                        }
+                        
+                        transform.localScale = escala;
+                        
                         StartCoroutine("atacar");
                         atacando = true;
                         mov = false;
@@ -78,6 +95,10 @@ public class EnemigoPistolaController : MonoBehaviour
                     
                     animator.SetBool("run", false);
                 }
+            }
+            else
+            {
+                animator.SetBool("run", false);
             }
         }
         else
