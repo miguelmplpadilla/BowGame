@@ -20,9 +20,13 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F2))
+        if (variablesPlayer.vida <= 0)
         {
-            SceneManager.LoadScene("ScenePruebaScriptableObject");
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                Time.timeScale = 1;
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
         }
     }
 

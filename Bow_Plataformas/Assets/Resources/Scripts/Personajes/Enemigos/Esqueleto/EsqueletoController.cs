@@ -23,26 +23,29 @@ public class EsqueletoController : MonoBehaviour
         hurtEnemyController = GetComponentInChildren<HurtEnemyController>();
     }
 
-    
+
     void Update()
     {
         float distancia = Vector3.Distance(player.transform.position, transform.position);
 
         if (!hurtEnemyController.muerto && seguirPlayer)
         {
-            if (distancia > 0.6f)
+            if (distancia < 2)
             {
-                animator.SetBool("run", true);
-                navMeshAgent.SetDestination(player.transform.position);
-            }
-            else
-            {
-                animator.SetBool("run", false);
-                transform.LookAt(player.transform);
-                if (!atacando)
+                if (distancia > 0.6f)
                 {
-                    StartCoroutine("atacar");
-                    atacando = true;
+                    animator.SetBool("run", true);
+                    navMeshAgent.SetDestination(player.transform.position);
+                }
+                else
+                {
+                    animator.SetBool("run", false);
+                    transform.LookAt(player.transform);
+                    if (!atacando)
+                    {
+                        StartCoroutine("atacar");
+                        atacando = true;
+                    }
                 }
             }
         }
@@ -56,6 +59,7 @@ public class EsqueletoController : MonoBehaviour
             animator.SetTrigger("atacar");
             StartCoroutine("setAtacandoFalse");
         }
+
         yield return null;
     }
 

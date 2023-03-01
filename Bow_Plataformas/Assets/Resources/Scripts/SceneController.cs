@@ -83,7 +83,7 @@ public class SceneController : MonoBehaviour
     public void volverEscenaPrincipal()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene("EscenaPrincipal");
+        SceneManager.LoadScene("MenuInicio2D");
     }
     
     private void actualizarTemporizador()

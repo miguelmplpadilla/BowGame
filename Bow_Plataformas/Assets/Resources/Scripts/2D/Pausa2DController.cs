@@ -3,13 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
+using UnityEngine.SceneManagement;
 
 public class Pausa2DController : MonoBehaviour
 {
     public GameObject[] canvasDesactivar;
 
-    [SerializeField]
-    private bool pausado = false;
+    [SerializeField] private bool pausado = false;
 
     private Canvas selfCanvas;
     private PostProcessVolume mainCamera;
@@ -32,20 +32,28 @@ public class Pausa2DController : MonoBehaviour
     {
         if (Input.GetButtonDown("Pause"))
         {
-
             chromaticAberration.active = !pausado;
             grain.active = !pausado;
 
             selfCanvas.enabled = !pausado;
-            
+
             foreach (var canvas in canvasDesactivar)
             {
                 canvas.GetComponent<Canvas>().enabled = pausado;
             }
-            
+
             Time.timeScale = Convert.ToInt32(pausado);
-            
+
             pausado = !pausado;
+        }
+
+        if (pausado)
+        {
+            if (Input.GetKeyDown(KeyCode.V))
+            {
+                Time.timeScale = 1;
+                SceneManager.LoadScene("MenuInicio2D");
+            }
         }
     }
 }
