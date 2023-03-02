@@ -49,50 +49,54 @@ public class Player2DAtack : MonoBehaviour
 
     void Update()
     {
-        if (!shoot && !agarrarBorde.enganchado && !recargando && !interactuar2DController.interactuando)
+        if (variablesPlayer.vida > 0)
         {
-            if (Input.GetAxis("Fire2") > 0)
+            if (!shoot && !agarrarBorde.enganchado && !recargando && !interactuar2DController.interactuando)
             {
-                animator.SetBool("point", true);
-                player2DMovement.mov = false;
-
-                if (Input.GetAxis("Fire1") > 0)
+                if (Input.GetAxis("Fire2") > 0)
                 {
-                    if (variablesPlayer.balas > 0)
-                    {
-                        animator.SetTrigger("shoot");
-                        shoot = true;
-                    }
-                }
-            }
-            else
-            {
-                animator.SetBool("point", false);
+                    animator.SetBool("point", true);
+                    player2DMovement.mov = false;
 
-                if (!atacando)
-                {
-                    player2DMovement.mov = true;
-                    
                     if (Input.GetAxis("Fire1") > 0)
                     {
-                        StopCoroutine("reiniciarAtaque");
-                        animator.SetInteger("ataque", numAtaque);
-                        animator.SetTrigger("atacar");
-                        numAtaque++;
-                        atacando = true;
+                        if (variablesPlayer.balas > 0)
+                        {
+                            animator.SetTrigger("shoot");
+                            shoot = true;
+                        }
                     }
                 }
                 else
                 {
-                    player2DMovement.mov = false;
-                }
-            }
+                    animator.SetBool("point", false);
 
-            if (Input.GetButtonDown("Recargar"))
-            {
-                if (variablesPlayer.balas < 3 && variablesPlayer.balasAlmacenadas > 0)
+                    if (!atacando)
+                    {
+                        player2DMovement.mov = true;
+                    
+                        if (Input.GetAxis("Fire1") > 0)
+                        {
+                            StopCoroutine("reiniciarAtaque");
+                            animator.SetInteger("ataque", numAtaque);
+                            animator.SetTrigger("atacar");
+                            animator.SetBool("atacando", true);
+                            numAtaque++;
+                            atacando = true;
+                        }
+                    }
+                    else
+                    {
+                        player2DMovement.mov = false;
+                    }
+                }
+
+                if (Input.GetButtonDown("Recargar"))
                 {
-                    recargar();
+                    if (variablesPlayer.balas < 3 && variablesPlayer.balasAlmacenadas > 0)
+                    {
+                        recargar();
+                    }
                 }
             }
         }
@@ -207,6 +211,7 @@ public class Player2DAtack : MonoBehaviour
     public void setAtacandoFalse()
     {
         atacando = false;
+        animator.SetBool("atacando", false);
     }
 
     public void setShootFalse()

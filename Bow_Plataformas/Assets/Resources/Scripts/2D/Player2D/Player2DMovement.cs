@@ -38,52 +38,59 @@ public class Player2DMovement : MonoBehaviour
 
     void Update()
     {
-        if (mov && !golpeado && !interactuar2DController.interactuando)
+        if (hurtController.variablesPlayer.vida > 0)
         {
-            float horizontalInput = Input.GetAxisRaw("Horizontal");
-        
-            movement = new Vector2(horizontalInput, 0f);
-        
-            float horizontalvelocity = movement.normalized.x * speed;
-
-            if (horizontalvelocity != 0)
+            if (mov && !golpeado && !interactuar2DController.interactuando)
             {
-                animator.SetBool("run", true);
-
-                transform.localScale = new Vector3(movement.normalized.x, 1, 1);
-            }
-            else
-            {
-                animator.SetBool("run", false);
-            }
-
-            rigidbody.velocity =
-                transform.TransformDirection(new Vector3(horizontalvelocity, rigidbody.velocity.y, 0));
-
-            if (Input.GetButton("Sprint"))
-            {
-                speed = 1.2f;
-            }
-            else
-            {
-                speed = 0.8f;
-            }
+                float horizontalInput = Input.GetAxisRaw("Horizontal");
             
-            animator.SetFloat("horizontalVelocity", speed);
-
-            if (Input.GetButtonDown("Jump"))
-            {
-                if (groundController.isGrounded)
+                movement = new Vector2(horizontalInput, 0f);
+            
+                float horizontalvelocity = movement.normalized.x * speed;
+    
+                if (horizontalvelocity != 0)
                 {
-                    saltar();
+                    animator.SetBool("run", true);
+    
+                    transform.localScale = new Vector3(movement.normalized.x, 1, 1);
                 }
-            }
-            
-            if (groundController.isGrounded && !player2DAtack.atacando && !player2DAtack.shoot)
-            {
-                if (speed > 0.8f)
+                else
                 {
-                    animatorPolvo.SetBool("moviendose", true);
+                    animator.SetBool("run", false);
+                }
+    
+                rigidbody.velocity =
+                    transform.TransformDirection(new Vector3(horizontalvelocity, rigidbody.velocity.y, 0));
+    
+                if (Input.GetButton("Sprint"))
+                {
+                    speed = 1.2f;
+                }
+                else
+                {
+                    speed = 0.8f;
+                }
+                
+                animator.SetFloat("horizontalVelocity", speed);
+    
+                if (Input.GetButtonDown("Jump"))
+                {
+                    if (groundController.isGrounded)
+                    {
+                        saltar();
+                    }
+                }
+                
+                if (groundController.isGrounded && !player2DAtack.atacando && !player2DAtack.shoot)
+                {
+                    if (speed > 0.8f)
+                    {
+                        animatorPolvo.SetBool("moviendose", true);
+                    }
+                    else
+                    {
+                        animatorPolvo.SetBool("moviendose", false);
+                    }
                 }
                 else
                 {
@@ -94,15 +101,11 @@ public class Player2DMovement : MonoBehaviour
             {
                 animatorPolvo.SetBool("moviendose", false);
             }
+    
+            animator.SetFloat("verticalVelocity", rigidbody.velocity.y);
+            
+            animator.SetBool("grounded", groundController.isGrounded);
         }
-        else
-        {
-            animatorPolvo.SetBool("moviendose", false);
-        }
-
-        animator.SetFloat("verticalVelocity", rigidbody.velocity.y);
-        
-        animator.SetBool("grounded", groundController.isGrounded);
     }
 
     public void saltar()

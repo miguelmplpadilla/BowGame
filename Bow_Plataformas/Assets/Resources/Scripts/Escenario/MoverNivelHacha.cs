@@ -14,7 +14,8 @@ public class MoverNivelHacha : MonoBehaviour
     {
         if (other.CompareTag("Hacha"))
         {
-            SceneManager.LoadScene(nivelMover);
+            PlayerPrefs.SetString("EscenaCargar", nivelMover);
+            SceneManager.LoadScene("LoadingScene");
         }
     }
 }

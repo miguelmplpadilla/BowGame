@@ -32,6 +32,8 @@ public class Pausa2DController : MonoBehaviour
     {
         if (Input.GetButtonDown("Pause"))
         {
+            Cursor.visible = !pausado;
+            
             chromaticAberration.active = !pausado;
             grain.active = !pausado;
 
@@ -46,14 +48,13 @@ public class Pausa2DController : MonoBehaviour
 
             pausado = !pausado;
         }
+    }
 
-        if (pausado)
-        {
-            if (Input.GetKeyDown(KeyCode.V))
-            {
-                Time.timeScale = 1;
-                SceneManager.LoadScene("MenuInicio2D");
-            }
-        }
+    public void volverMenuInicio()
+    {
+        Time.timeScale = 1;
+                
+        PlayerPrefs.SetString("EscenaCargar", "MenuInicio2D");
+        SceneManager.LoadScene("LoadingScene");
     }
 }

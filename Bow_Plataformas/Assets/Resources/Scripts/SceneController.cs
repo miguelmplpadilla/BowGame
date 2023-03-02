@@ -49,7 +49,7 @@ public class SceneController : MonoBehaviour
             temporizadorTMP.text = "";
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetButtonDown("Pause"))
         {
             pausarDespausarJuego();
         }

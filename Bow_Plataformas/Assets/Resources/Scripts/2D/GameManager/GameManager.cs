@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        Cursor.visible = false;
+        
         Debug.Log("VidaPlayer: "+variablesPlayer.vida);
         Debug.Log("BalasPlayer: "+variablesPlayer.balas);
         Debug.Log("PuntosPlayer: "+variablesPlayer.puntos);
@@ -18,16 +20,11 @@ public class GameManager : MonoBehaviour
         variablesPlayer.inicializacion();
     }
 
-    private void Update()
+    public void reiniciarEscena()
     {
-        if (variablesPlayer.vida <= 0)
-        {
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                Time.timeScale = 1;
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            }
-        }
+        Time.timeScale = 1;
+        PlayerPrefs.SetString("EscenaCargar", SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("LoadingScene");
     }
 
     private void LateUpdate()

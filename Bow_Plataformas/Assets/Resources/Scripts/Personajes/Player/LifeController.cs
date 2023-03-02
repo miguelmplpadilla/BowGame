@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LifeController : MonoBehaviour
@@ -44,11 +45,16 @@ public class LifeController : MonoBehaviour
                 muerto = true;
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.Y))
+        {
+            takeDamage(5);
+        }
     }
 
     public void takeDamage(float damage)
     {
-        if (!hited && !playerController.saltando && !playerController.atacando && !playerController.dash)
+        if (!hited && !playerController.saltando && !playerController.atacando && !playerController.dash && !muerto)
         {
             vida -= damage;
             animator.SetTrigger("hit");
@@ -60,5 +66,11 @@ public class LifeController : MonoBehaviour
     public void setHitedFalse()
     {
         hited = false;
+    }
+
+    public void reiniciarEscena()
+    {
+        PlayerPrefs.SetString("EscenaCargar", SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("LoadingScene");
     }
 }

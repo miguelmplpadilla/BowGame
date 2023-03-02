@@ -44,14 +44,6 @@ public class Player2DHurtController : MonoBehaviour
         canvasMuerte = GameObject.Find("CanvasMuerte").GetComponent<Canvas>();
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Y))
-        {
-            hit(1, null);
-        }
-    }
-
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.CompareTag("HitBoxEnemigo"))
@@ -131,5 +123,7 @@ public class Player2DHurtController : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
 
         canvasMuerte.enabled = true;
+        
+        Cursor.visible = true;
     }
 }

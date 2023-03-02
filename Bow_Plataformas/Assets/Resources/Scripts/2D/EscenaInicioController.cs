@@ -12,11 +12,13 @@ public class EscenaInicioController : MonoBehaviour
 
     public void moverEscenaJuego()
     {
-        SceneManager.LoadScene("Escena3");
+        PlayerPrefs.SetString("EscenaCargar", "Escena3");
+        SceneManager.LoadScene("LoadingScene");
     }
 
     public void moverNivelesExtra()
     {
-        SceneManager.LoadScene("EscenaPrincipal");
+        PlayerPrefs.SetString("EscenaCargar", "EscenaPrincipal");
+        SceneManager.LoadScene("LoadingScene");
     }
 }
