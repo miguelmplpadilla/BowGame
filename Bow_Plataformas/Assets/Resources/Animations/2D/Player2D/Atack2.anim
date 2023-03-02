@@ -187,6 +187,13 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 0.4
+    functionName: setMovTrue
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.4
     functionName: setGolpeadoMovementFalse
     data: 
     objectReferenceParameter: {fileID: 0}
@@ -195,6 +202,13 @@ AnimationClip:
     messageOptions: 0
   - time: 0.4
     functionName: starRutinaSetGolpeadoFalse
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.4
+    functionName: setShootFalse
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

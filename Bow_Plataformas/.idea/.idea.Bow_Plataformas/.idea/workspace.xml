@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="de905aa9-cf14-4e92-a33c-a2617a55a2d3" name="Changes" comment="" />
+    <list default="true" id="de905aa9-cf14-4e92-a33c-a2617a55a2d3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Bow_Plataformas/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Bow_Plataformas/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/2D/Player2D/Atack1.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Animations/2D/Player2D/Atack1.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/2D/Player2D/Atack2.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Animations/2D/Player2D/Atack2.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animations/2D/Player2D/Atack3.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Animations/2D/Player2D/Atack3.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scenes/2D/Escena3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scenes/2D/Escena3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scenes/2D/EscenaFinJuego.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scenes/2D/EscenaFinJuego.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/2D/GameManager/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/2D/GameManager/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,22 +26,22 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/2D/BackgroundController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/2D/Cofre/CofreController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/2D/Enemigos/ManchaSangreController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/2D/MiniMapa/MapaCompletoController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/2D/Pausa2DController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Escenario/Plataforma/PlataformaHorizontalController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Escenario/Puente/PuenteController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Escenario/Puerta/PuertaController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Escenario/Totem/PuertaTotemController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.postprocessing@3.2.2/PostProcessing/Shaders/Builtins/MultiScaleVODownsample1.compute" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.postprocessing@3.2.2/PostProcessing/Shaders/Builtins/SubpixelMorphologicalAntialiasing.hlsl" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Escenario/Plataforma/PlataformaHorizontalController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/2D/Enemigos/ManchaSangreController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Escenario/Puerta/PuertaController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Text.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Editor/CanvasRenderer/ChangingHierarchyOfCanvasRenderer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../TheGuanchoGame/The_Guancho_Game/Assets/Resources/Scripts/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../TheGuanchoGame/The_Guancho_Game/Assets/Resources/Scripts/Personajes/Player/CameraController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../TheGuanchoGame/The_Guancho_Game/Assets/Resources/Scripts/Personajes/Player/PlayerGanchoController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/2D/Pausa2DController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Escenario/Puente/PuenteController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.postprocessing@3.2.2/PostProcessing/Shaders/Builtins/SubpixelMorphologicalAntialiasing.hlsl" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Escenario/Totem/PuertaTotemController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/2D/MiniMapa/MapaCompletoController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/2D/Cofre/CofreController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../TheGuanchoGame/The_Guancho_Game/Assets/Resources/Scripts/Personajes/Player/PlayerMovement.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../TheGuanchoGame/The_Guancho_Game/Assets/Resources/Scripts/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../TheGuanchoGame/The_Guancho_Game/Assets/Resources/Scripts/Personajes/Player/PlayerGanchoController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../TheGuanchoGame/The_Guancho_Game/Assets/Resources/Scripts/VariablesPlayer.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -44,13 +53,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  }
-}</component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="rider.run.widget.enabled.cache" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/../BOW\Bow_Plataformas.exe" />
@@ -172,6 +180,7 @@
       <workItem from="1677687154224" duration="8895000" />
       <workItem from="1677745115004" duration="6932000" />
       <workItem from="1677753560744" duration="1496000" />
+      <workItem from="1677777154609" duration="2163000" />
     </task>
     <servers />
   </component>

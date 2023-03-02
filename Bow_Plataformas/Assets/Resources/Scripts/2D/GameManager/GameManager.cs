@@ -29,6 +29,9 @@ public class GameManager : MonoBehaviour
 
     private void LateUpdate()
     {
-        variablesPlayer.actualizarImagenes();
+        if (!SceneManager.GetActiveScene().name.Equals("EscenaFinJuego"))
+        {
+            variablesPlayer.actualizarImagenes();
+        }
     }
 }
