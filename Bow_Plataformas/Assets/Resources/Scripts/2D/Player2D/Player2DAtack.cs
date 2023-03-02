@@ -51,7 +51,7 @@ public class Player2DAtack : MonoBehaviour
     {
         if (variablesPlayer.vida > 0)
         {
-            if (!shoot && !agarrarBorde.enganchado && !recargando && !interactuar2DController.interactuando)
+            if (!shoot && !agarrarBorde.enganchado && !recargando && !interactuar2DController.interactuando && !player2DMovement.golpeado)
             {
                 if (Input.GetAxis("Fire2") > 0)
                 {
@@ -97,6 +97,13 @@ public class Player2DAtack : MonoBehaviour
                     {
                         recargar();
                     }
+                }
+            }
+            else
+            {
+                if (Input.GetAxis("Fire2") == 0)
+                {
+                    animator.SetBool("point", false);
                 }
             }
         }

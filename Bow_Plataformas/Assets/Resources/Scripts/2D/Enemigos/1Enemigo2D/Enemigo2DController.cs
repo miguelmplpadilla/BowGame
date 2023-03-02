@@ -54,25 +54,18 @@ public class Enemigo2DController : MonoBehaviour
                     Vector2 seguirPlayer = new Vector2(player.transform.position.x, transform.position.y);
                     transform.position = Vector2.MoveTowards(transform.position, seguirPlayer, speed * Time.deltaTime);
                     
-                    if (!girando)
+                    if (player.transform.position.x > transform.position.x)
                     {
-                        if (player.transform.position.x > transform.position.x && escala.x != 1)
-                        {
-                            animator.SetTrigger("girar");
-                            escala = new Vector2(1, 1);
-                            girando = true;
-                            mov = false;
-                        }
-                        else if (player.transform.position.x < transform.position.x && escala.x == 1)
-                        {
-                            animator.SetTrigger("girar");
-                            escala = new Vector2(-1, 1);
-                            girando = true;
-                            mov = false;
-                        }
-                        
-                        animator.SetBool("run", true);
+                        escala = new Vector2(1, 1);
                     }
+                    else if (player.transform.position.x < transform.position.x)
+                    {
+                        escala = new Vector2(-1, 1);
+                    }
+                        
+                    transform.localScale = escala;
+                    
+                    animator.SetBool("run", true);
                 }
                 else
                 {
@@ -82,27 +75,18 @@ public class Enemigo2DController : MonoBehaviour
                         atacando = true;
                         mov = false;
                         
-                        if (!girando)
+                        if (player.transform.position.x > transform.position.x)
                         {
-                            if (player.transform.position.x > transform.position.x && escala.x != 1)
-                            {
-                                StopCoroutine("atacar");
-                                animator.SetTrigger("girar");
-                                escala = new Vector2(1, 1);
-                                girando = true;
-                                mov = false;
-                            }
-                            else if (player.transform.position.x < transform.position.x && escala.x == 1)
-                            {
-                                StopCoroutine("atacar");
-                                animator.SetTrigger("girar");
-                                escala = new Vector2(-1, 1);
-                                girando = true;
-                                mov = false;
-                            }
-                        
-                            animator.SetBool("run", true);
+                            escala = new Vector2(1, 1);
                         }
+                        else if (player.transform.position.x < transform.position.x)
+                        {
+                            escala = new Vector2(-1, 1);
+                        }
+                        
+                        transform.localScale = escala;
+                        
+                        animator.SetBool("run", true);
                     }
                     
                     animator.SetBool("run", false);

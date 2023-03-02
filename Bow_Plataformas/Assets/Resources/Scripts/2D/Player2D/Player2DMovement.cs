@@ -81,7 +81,7 @@ public class Player2DMovement : MonoBehaviour
                     }
                 }
                 
-                if (groundController.isGrounded && !player2DAtack.atacando && !player2DAtack.shoot)
+                if (groundController.isGrounded && !player2DAtack.atacando && !player2DAtack.shoot && horizontalvelocity != 0)
                 {
                     if (speed > 0.8f)
                     {
